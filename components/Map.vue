@@ -26,8 +26,8 @@ export default {
       new mapboxgl.Map({
         accessToken: this.token,
         container: "mapa", // <div id="map"></div>
-        style: "mapbox://styles/mapbox/streets-v9", // default style
-        center: [-21.9270884, 64.1436456], // starting position as [lng, lat]
+        style: "mapbox://styles/hiurequeiroz/ckrau98ov3haa19kygrezgvbg", // default style
+        center: this.defaultCoord, // starting position as [lng, lat]
         zoom: 13,
       });
   },
