@@ -13,6 +13,7 @@
       ></Nav>
     </div>
     <Map height="500px" :places="places" :token="page.mapBoxToken"></Map>
+    <Footer></Footer>
   </main>
 </template>
 
