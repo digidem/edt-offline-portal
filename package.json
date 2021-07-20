@@ -1,6 +1,7 @@
 {
   "name": "Portal",
   "scripts": {
+    "postinstall": "cp content/index-example.md content/index.md",
     "dev": "nuxt",
     "build": "nuxt build",
     "generate": "nuxt generate",
