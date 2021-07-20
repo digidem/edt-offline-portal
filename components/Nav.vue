@@ -1,14 +1,16 @@
 <template>
-  <div
-    class="flex flex-col items-center gap-y-15px p-25px blur-sm hover:blur-none cursor-pointer hover:shadow-2xl rounded-full hover:bg-red-50"
-  >
-    <h2>{{ nome }}</h2>
+  <NuxtLink :to="link">
     <div
-      :style="`background-image: url(${icone});`"
-      class="h-150px w-150px bg-cover"
-    ></div>
-    <p>{{ detalhe }}</p>
-  </div>
+      class="flex flex-col items-center gap-y-15px p-25px blur-sm hover:blur-none cursor-pointer hover:shadow-2xl rounded-full hover:bg-red-50"
+    >
+      <h2>{{ nome }}</h2>
+      <div
+        :style="`background-image: url(${icone});`"
+        class="h-150px w-150px bg-cover"
+      ></div>
+      <p>{{ detalhe }}</p>
+    </div>
+  </NuxtLink>
 </template>
 
 <script>
@@ -17,11 +19,23 @@ export default {
     nome: String,
     ilustra: String,
     detalhe: String,
+    index: Number,
   },
   data() {
     return {
       icone: require(`~/assets/${this.ilustra}`),
     };
+  },
+  computed: {
+    link() {
+      console.log(this.index);
+      switch (this.index) {
+        case 0:
+          return "/sobre";
+        default:
+          return "/";
+      }
+    },
   },
 };
 </script>

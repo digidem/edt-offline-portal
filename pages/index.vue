@@ -10,6 +10,7 @@
         :nome="menus.nome"
         :detalhe="menus.detalhe"
         :ilustra="menus.icone"
+        :index="index"
       ></Nav>
     </div>
     <Map height="500px" :places="places" :token="page.mapBoxToken"></Map>
