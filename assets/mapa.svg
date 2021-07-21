@@ -49,27 +49,29 @@
      inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg18"
-     inkscape:pagecheckerboard="true" />
+     inkscape:pagecheckerboard="true"
+     inkscape:document-rotation="0" />
   <title
      id="title2">Artboard 88</title>
   <path
-     d="M147.572,140.551,206,209.182,264.391,140.6c.012-.014.024-.029.037-.043a51.248,51.248,0,0,0,10.035-16.4c.016-.047.034-.093.051-.139a73.009,73.009,0,0,0-8.536-67.28,72.971,72.971,0,0,0-119.956,0,73.012,73.012,0,0,0-8.536,67.28A54.424,54.424,0,0,0,147.572,140.551ZM206,41.387a57.057,57.057,0,1,1-57.056,57.056A57.121,57.121,0,0,1,206,41.387Z"
+     d="m 133.78236,167.00622 68.75673,80.7634 68.7132,-80.70573 c 0.0141,-0.0164 0.0282,-0.0342 0.0436,-0.0506 a 60.307478,60.307478 0 0 0 11.80896,-19.29914 c 0.0188,-0.0553 0.04,-0.10945 0.06,-0.16358 a 85.915326,85.915326 0 0 0 -10.04497,-79.173568 85.870609,85.870609 0 0 0 -141.16149,0 85.918857,85.918857 0 0 0 -10.04496,79.173568 64.044922,64.044922 0 0 0 11.86897,19.45565 z M 202.53909,50.312295 a 67.143376,67.143376 0 1 1 -67.1422,67.142195 67.21869,67.21869 0 0 1 67.1422,-67.142195 z"
      id="path4"
-     style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1" />
+     style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.17677;stroke-opacity:1" />
   <path
-     d="M206,139.5a41.057,41.057,0,1,0-41.056-41.057A41.1,41.1,0,0,0,206,139.5Z"
+     d="m 202.53909,165.76944 a 48.314942,48.314942 0 1 0 -48.31376,-48.31495 48.365543,48.365543 0 0 0 48.31376,48.31495 z"
      id="path6"
-     style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1" />
+     style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.17677;stroke-opacity:1" />
   <path
-     d="M129.509,142.865,79,177.9V486.672l110-76.108V213.617l-53.344-62.651A78.514,78.514,0,0,1,129.509,142.865Z"
+     d="M 112.52623,169.7293 53.088389,210.95768 V 574.31353 L 182.53388,484.75137 V 252.98863 l -62.774,-73.72626 a 92.393485,92.393485 0 0 1 -7.23365,-9.53307 z"
      id="path8"
-     style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1" />
+     style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.17677;stroke-opacity:1" />
   <path
-     d="M212.15,226.708a7.873,7.873,0,0,1-6.032,2.815,3.767,3.767,0,0,1-1.118-.108v181.99l104,73.579V177.86l-34.264-24.632Z"
+     d="m 209.77627,268.39382 a 9.2647668,9.2647668 0 0 1 -7.09832,3.31263 4.4329197,4.4329197 0 0 1 -1.31563,-0.1271 v 214.16169 l 122.38483,86.58609 V 210.91061 l -40.3211,-28.98638 z"
      id="path10"
-     style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1" />
+     style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.17677;stroke-opacity:1" />
   <polygon
-     points="325 485.157 433 410.928 433 102.248 325 177.821 325 485.157"
+     points="325,485.157 433,410.928 433,102.248 325,177.821 "
      id="polygon12"
-     style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1" />
+     style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1"
+     transform="matrix(1.1767771,0,0,1.1767771,-39.87701,1.6090174)" />
 </svg>

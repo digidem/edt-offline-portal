@@ -1,6 +1,6 @@
 <template>
   <article>
-    <h2 class="">{{ page.titulo }}</h2>
+    <h2 class="text-3xl">{{ page.titulo }}</h2>
     <nuxt-content :document="page" />
   </article>
 </template>
@@ -18,8 +18,4 @@ export default {
 };
 </script>
 
-<style>
-h2 {
-  font-size: 2em;
-}
-</style>
+<style></style>

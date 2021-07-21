@@ -5,16 +5,12 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    data-name="Your Icon"
    viewBox="0 0 100 125"
    x="0px"
    y="0px"
    version="1.1"
-   id="svg1016"
-   sodipodi:docname="comunidade.svg"
-   inkscape:version="1.0.2 (e86c870879, 2021-01-15)">
+   id="svg1016">
   <metadata
      id="metadata1020">
     <rdf:RDF>
@@ -27,28 +23,6 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <sodipodi:namedview
-     pagecolor="#000000"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1366"
-     inkscape:window-height="704"
-     id="namedview1018"
-     showgrid="false"
-     inkscape:pagecheckerboard="true"
-     inkscape:zoom="3.856"
-     inkscape:cx="50"
-     inkscape:cy="62.5"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg1016"
-     inkscape:document-rotation="0" />
   <defs
      id="defs976">
     <style

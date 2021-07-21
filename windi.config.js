@@ -3,6 +3,7 @@ export default {
       /* ... */
     },
     shortcuts: {
-      'icone': 'w-55px h-55px cursor-pointer shadow-lg rounded-lg bg-opacity-80',
+      'icone': 'w-55px h-55px cursor-pointer',
+      'divicone': 'w-full border-1 flex justify-center shadow-lg hover:bg-red-600 bg-opacity-95'
     },
   }
