@@ -7,7 +7,7 @@
     </NuxtLink>
 
     <NuxtLink to="/sobre" class="divicone">
-      <img src="~/assets/comunidade.svg?data" alt="iconeSobre" class="icone" />
+      <img src="~/assets/comunidade.svg" alt="iconeSobre" class="icone" />
     </NuxtLink>
 
     <NuxtLink to="/mapa" class="divicone">
