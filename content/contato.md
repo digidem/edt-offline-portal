@@ -1,3 +1,3 @@
 ---
-titulo: contato
+titulo: Contato
 ---
