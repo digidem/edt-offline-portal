@@ -1,11 +1,13 @@
 <template>
   <article>
     <h2 class="text-3xl py-20px text-center">Aplicativos e Serviços</h2>
-    <div class="flex flex-wrap max-w-968px mx-auto py-5vh">
+    <div
+      class="flex flex-col xl:flex-row max-w-full items-center xl:items-stretch mx-auto py-5vh"
+    >
       <div
         v-for="(app, index) in apps"
         :key="index"
-        class="w-34vw border-2 shadow-xl rounded py-10px my-5px mx-5px"
+        class="w-90vw xl:w-1/3 max-w-full md:max-w-1/2 border-2 shadow-xl rounded py-10px my-5px"
       >
         <NuxtLink :to="app.link" class="flex flex-row">
           <div
