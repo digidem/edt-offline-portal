@@ -28,12 +28,15 @@ export default {
   },
   computed: {
     link() {
-      console.log(this.index);
       switch (this.index) {
         case 0:
           return "/sobre";
         default:
           return "/";
+        case 1:
+          return "/apps";
+        case 2:
+          return "/contato";
       }
     },
   },

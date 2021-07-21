@@ -7,7 +7,8 @@ export default {
     buildModules: [
       'nuxt-windicss',
       '@nuxtjs/pwa',
-      '@nuxtjs/localforage'
+      '@nuxtjs/localforage',
+      "@nuxtjs/svg"
     ],
     components: true,
     build: {
@@ -15,6 +16,6 @@ export default {
   },
   server: {
       host: "0.0.0.0"
-  }
+  },
 
   }

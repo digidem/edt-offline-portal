@@ -9,7 +9,7 @@
 export default {
   layout: "pages",
   async asyncData({ $content }) {
-    const page = await $content("sobre").fetch();
+    const page = await $content("contato").fetch();
 
     return {
       page,
@@ -17,9 +17,3 @@ export default {
   },
 };
 </script>
-
-<style>
-h2 {
-  font-size: 2em;
-}
-</style>

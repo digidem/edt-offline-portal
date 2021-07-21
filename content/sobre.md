@@ -1,5 +1,5 @@
 ---
-titulo: Sobre nós
+titulo: Sobre
 ---
 
 Lorem ipsum
