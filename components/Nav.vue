@@ -6,7 +6,7 @@
       <h2>{{ nome }}</h2>
       <div
         :style="icone"
-        class="h-150px w-150px bg-cover hover:animate-bounce"
+        class="h-150px w-150px bg-cover transform hover:scale-110"
       ></div>
       <p>{{ detalhe }}</p>
     </div>
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import getImage from '../libs/getImage'
+import getImage from "../libs/getImage";
 
 export default {
   props: {

@@ -15,8 +15,8 @@ export default {
     return {
       map: null,
       hoveredStateId: null,
-      //precisamos puxar do ssb
-      defaultCoord: [-47.46, -14.06],
+      //precisamos puxar do ssb -22.895717028291195, -45.838459009922474
+      defaultCoord: [-45.83, -22.89],
     };
   },
   mounted() {
