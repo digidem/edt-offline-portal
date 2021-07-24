@@ -9,14 +9,14 @@
         :key="index"
         class="w-90vw lg:w-70vw xl:w-1/3 max-w-full md:max-w-1/2 border-2 shadow-xl rounded my-5px bg-green-50"
       >
-        <NuxtLink :to="app.link" class="flex flex-row">
+        <NuxtLink :to="app.link" class="flex flex-col sm:flex-row">
           <div
             v-if="app.imagem"
             :style="getBackground(app.imagem)"
             alt="imagem serviço"
-            class="w-1/3 bg-cover bg-center"
+            class="h-195px sm:h-auto sm:w-1/3 bg-cover bg-center"
           />
-          <div class="w-2/3 pl-25px py-25px rounded-3">
+          <div class="sm:w-2/3 pl-25px py-25px rounded-3">
             <h3 class="pb-2 text-xl">{{ app.titulo }}</h3>
             <p>{{ app.descricao }}</p>
           </div>
