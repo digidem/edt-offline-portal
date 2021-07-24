@@ -2,12 +2,12 @@
   <article>
     <h2 class="text-3xl py-20px text-center">Aplicativos e Serviços</h2>
     <div
-      class="flex flex-col xl:flex-row max-w-full items-center xl:items-stretch mx-auto py-5vh"
+      class="flex flex-col lg:flex-row lg:flex-wrap max-w-full lg:max-w-4/5 items-center lg:items-stretch mx-auto py-5vh"
     >
       <div
         v-for="(app, index) in apps"
         :key="index"
-        class="w-90vw xl:w-1/3 max-w-full md:max-w-1/2 border-2 shadow-xl rounded py-10px my-5px"
+        class="w-90vw lg:w-70vw xl:w-1/3 max-w-full md:max-w-1/2 border-2 shadow-xl rounded py-10px my-5px bg-green-50"
       >
         <NuxtLink :to="app.link" class="flex flex-row">
           <div
@@ -16,7 +16,7 @@
             alt="imagem serviço"
             class="w-1/3 bg-cover bg-center"
           />
-          <div class="w-2/3 pl-25px py-25px">
+          <div class="w-2/3 pl-25px py-25px rounded-3">
             <h3 class="pb-2 text-xl">{{ app.titulo }}</h3>
             <p>{{ app.descricao }}</p>
           </div>
