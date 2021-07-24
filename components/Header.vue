@@ -1,6 +1,6 @@
 <template>
   <div
-    :style="banner && `background-image: url(${banner});`"
+    :style="banner"
     class="h-70vh bg-gradient-to-r from-yellow-400 via-green-500 to-red-500"
   >
     <h1 class="mx-auto text-center pt-20vh text-5xl">
@@ -10,6 +10,8 @@
 </template>
 
 <script>
+import getImage from '../libs/getImage'
+
 export default {
   props: {
     titulo: String,
@@ -17,7 +19,7 @@ export default {
   },
   data() {
     return {
-      banner: this.img ? require(`~/assets/${this.img}`) : null,
+      banner: getImage(this.img, true)
     };
   },
 };
