@@ -7,7 +7,7 @@
       <div
         v-for="(app, index) in apps"
         :key="index"
-        class="w-90vw lg:w-70vw xl:w-1/3 max-w-full md:max-w-1/2 border-2 shadow-xl rounded py-10px my-5px bg-green-50"
+        class="w-90vw lg:w-70vw xl:w-1/3 max-w-full md:max-w-1/2 border-2 shadow-xl rounded my-5px bg-green-50"
       >
         <NuxtLink :to="app.link" class="flex flex-row">
           <div
@@ -27,6 +27,8 @@
 </template>
 
 <script>
+import getImage from '../libs/getImage'
+
 export default {
   layout: "pages",
   async asyncData({ $content }) {
@@ -37,8 +39,7 @@ export default {
   },
   methods: {
     getBackground(img) {
-      const imagem = require(`~/assets/${img}`);
-      return `background-image: url("${imagem}");`;
+      return getImage(img, true)
     },
   },
 };

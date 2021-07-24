@@ -5,7 +5,7 @@
     >
       <h2>{{ nome }}</h2>
       <div
-        :style="`background-image: url(${icone});`"
+        :style="icone"
         class="h-150px w-150px bg-cover hover:animate-bounce"
       ></div>
       <p>{{ detalhe }}</p>
@@ -14,6 +14,8 @@
 </template>
 
 <script>
+import getImage from '../libs/getImage'
+
 export default {
   props: {
     nome: String,
@@ -23,7 +25,7 @@ export default {
   },
   data() {
     return {
-      icone: require(`~/assets/${this.ilustra}`),
+      icone: getImage(this.ilustra, true),
     };
   },
   computed: {
