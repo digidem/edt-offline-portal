@@ -13,7 +13,7 @@
         :index="index"
       ></Nav>
     </div>
-    <Map height="500px" :places="places" :token="page.mapBoxToken"></Map>
+    <Map height="500px" :places="places" :tileServer="tileServer" :token="page.mapBoxToken"></Map>
     <Footer></Footer>
   </main>
 </template>
@@ -21,7 +21,10 @@
 <script>
 export default {
   data() {
-    return { places: [] };
+    return {
+      places: [],
+      tileServer: process.env.tileServer
+    };
   },
   head: {
     link: [

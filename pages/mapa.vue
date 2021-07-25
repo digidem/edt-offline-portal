@@ -1,8 +1,6 @@
 <template>
   <article>
-    <!-- <h2 class="">{{ page.titulo }}</h2> -->
-    <!-- <nuxt-content :document="page" /> -->
-    <Map height="90vh" :places="places" :token="page.mapBoxToken"></Map>
+    <Map v-if="process" height="90vh" :places="places" :tileServer="process.env.tileServer" :token="page.mapBoxToken"></Map>
   </article>
 </template>
 
