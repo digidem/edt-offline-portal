@@ -23,14 +23,13 @@ export default {
   data() {
     return {
       places: [],
-      tileServer: process.env.tileServer
     };
   },
   head: {
     link: [
       {
         rel: "stylesheet",
-        href: "https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css",
+        href: "/mapbox.css",
       },
     ],
   },
