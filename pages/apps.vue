@@ -9,7 +9,7 @@
         :key="index"
         class="w-90vw lg:w-70vw xl:w-1/3 max-w-full md:max-w-1/2 border-2 shadow-xl rounded my-5px bg-green-50"
       >
-        <NuxtLink :to="app.link" class="flex flex-col sm:flex-row">
+        <a target="_blank" :href="app.link" class="flex flex-col sm:flex-row">
           <div
             v-if="app.imagem"
             :style="getBackground(app.imagem)"
@@ -20,7 +20,7 @@
             <h3 class="pb-2 text-xl">{{ app.titulo }}</h3>
             <p>{{ app.descricao }}</p>
           </div>
-        </NuxtLink>
+        </a>
       </div>
     </div>
   </article>

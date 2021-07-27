@@ -1,8 +1,8 @@
 <template>
   <div
-    class="bg-red-400 flex flex-row justify-around justify-items-center items-center shadow"
+    class="bg-red-400 flex flex-row justify-around justify-items-center items-center sm:justify-end shadow"
   >
-    <NuxtLink to="/" class="divicone">
+    <NuxtLink to="/" class="divicone sm:self-start">
       <img src="~/assets/home.svg" alt="iconeHome" class="icone" />
     </NuxtLink>
 

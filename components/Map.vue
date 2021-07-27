@@ -1,18 +1,25 @@
 <template>
   <div id="mapa" class="map" :style="{ height }">
     <client-only>
+      <div :class="`py-15px text-center z-99 bg-red-500`">
+        {{territoryInfo || 'Selecione um território'}}
+      </div>
       <MglMap
         :mapStyle="mapStyle"
-        :accessToken="token"
+        :accessToken="accessToken"
+        :testMode="true"
         :center="center"
         :zoom="zoom"
         :minZoom="1"
-        :maxZoom="19"
-        :maxBounds="false"
+        :maxZoom="17"
         :attributionControl="false"
         @load="onMapLoaded"
       >
-        <MglGeolocateControl ref="geolocateControl" position="top-right" :trackUserLocation="true" />
+        <!-- <MglGeolocateControl
+          ref="geolocateControl"
+          position="top-right"
+          :trackUserLocation="true"
+        /> -->
         <MglMarker
           v-for="marker in markers"
           :key="marker.id"
@@ -79,7 +86,7 @@ export default {
     MglGeojsonLayer: () => {
       if (process.client) {
         return import("vue-mapbox")
-          .then(m => m.MglGeojsonLayer)
+          .then((m) => m.MglGeojsonLayer)
           .catch();
       }
     },
@@ -93,23 +100,30 @@ export default {
     return {
       map: null,
       hoveredStateId: null,
+      territoryInfo: null,
       markers: [],
       //precisamos puxar do ssb -22.895717028291195, -45.838459009922474
-      defaultCoord: [0.232306, -66.632219],
-      maxBounds: [],
-      zoom: 13,
-      mapStyle: this.token
-        ? "mapbox://styles/hiurequeiroz/ckrau98ov3haa19kygrezgvbg"
-        : {
+      defaultCoord: [-66.632219, 0.232306],
+      maxBounds: [
+        -66.90009833136597,
+        0.1864650000058674,
+        -66.39184866864048,
+        0.43502700001310757,
+      ],
+      zoom: 1,
+      currentZoom: this.zoom,
+      offline: false,
+      mapStyle: {
             version: 8,
             sources: {
               "simple-tiles": {
                 type: "raster",
                 tiles: [
-                  `${this.tileServer ||
-                    "http://api-mapa.balaio.org"}/{z}/{x}/{y}.jpeg`,
+                  `${process.env.tileServer ||
+                    "http://localhost:3000"}/{z}/{x}/{y}.jpeg`,
                 ],
                 tileSize: 256,
+                attribution: ''
               },
             },
             layers: [
@@ -117,8 +131,8 @@ export default {
                 id: "simple-tiles",
                 type: "raster",
                 source: "simple-tiles",
-                minzoom: 10,
-                maxzoom: 16,
+                minzoom: 1,
+                maxzoom: 18,
               },
             ],
           },
@@ -130,6 +144,7 @@ export default {
       nativeGeoJsonlayerName: {
         id: "layer_native_land_name",
         type: "symbol",
+        glyphs: "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
         layout: {
           "text-field": ["get", "Name"],
           "text-font": ["DIN Offc Pro Medium", "Arial Unicode MS Bold"],
@@ -166,16 +181,22 @@ export default {
     };
   },
   mounted() {
-    console.log('TILE SERVER', this.tileServer)
+    console.log("TOKEN", this.token);
   },
   computed: {
     center() {
       return this.defaultCoord;
     },
+    accessToken() {
+      return this.token || null;
+    },
   },
   methods: {
-    onMapLoaded(map) {
+    onMapLoaded({ map }) {
       console.log("MAP LOADED", map);
+      map.on("zoomend", (e) => {
+        this.currentZoom = e.target.getZoom();
+      });
     },
     handleEnter({ map, marker }) {
       // map.easeTo({ center: marker._lngLat, zoom: this.$static.metadata.maxZoom, offset: [0, 300] });
@@ -206,6 +227,7 @@ export default {
     },
     layerClick({ mapboxEvent }) {
       const url = mapboxEvent.features[0].properties.description;
+      this.territoryInfo = mapboxEvent.features[0].properties.Name
       // const win = window.open(url, "_blank");
       // win.focus();
     },
@@ -218,6 +240,7 @@ map {
   background: grey;
   width: 100%;
 }
+
 .marker {
   width: 0;
   height: 0;
@@ -245,13 +268,7 @@ map {
 .popup {
   z-index: 999;
 }
-.button {
-  position: absolute;
-  bottom: 50px;
-  right: 45vw;
-  left: 45vw;
-  width: 45vw;
-}
+
 .z-max {
   z-index: 99;
 }

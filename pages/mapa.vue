@@ -1,6 +1,6 @@
 <template>
   <article>
-    <Map v-if="process" height="90vh" :places="places" :tileServer="process.env.tileServer" :token="page.mapBoxToken"></Map>
+    <Map height="90vh" :places="places" :token="page.mapBoxToken"></Map>
   </article>
 </template>
 
