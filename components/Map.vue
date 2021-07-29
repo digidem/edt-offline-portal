@@ -7,7 +7,6 @@
       <MglMap
         :mapStyle="mapStyle"
         :accessToken="accessToken"
-        :testMode="true"
         :center="center"
         :zoom="zoom"
         :minZoom="1"

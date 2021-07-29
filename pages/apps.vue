@@ -17,7 +17,7 @@
             class="h-195px sm:h-auto sm:w-1/3 bg-cover bg-center"
           />
           <div class="sm:w-2/3 pl-25px py-25px rounded-3">
-            <h3 class="pb-2 text-xl">{{ app.titulo }}</h3>
+            <h3 class="pb-2 text-xl font-semibold">{{ app.titulo }}</h3>
             <p>{{ app.descricao }}</p>
           </div>
         </a>
