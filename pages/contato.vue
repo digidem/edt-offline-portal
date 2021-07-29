@@ -1,7 +1,9 @@
 <template>
   <article>
-    <h2 class="text-3xl">{{ page.titulo }}</h2>
-    <nuxt-content :document="page" />
+    <h2 class="text-3xl text-center py-10px">{{ page.titulo }}</h2>
+    <div class="w-90vw m-auto py-10px">
+      <nuxt-content :document="page" />
+    </div>
   </article>
 </template>
 

@@ -12,8 +12,9 @@ ou
 ou
 `npm run dev`
 
-## First step
-Edit index.md with your configs
+## Usage
+
+In the index.md frontmetter you can set your homepage.
 
 
 ## About the stack
@@ -37,9 +38,9 @@ https://github.com/nuxt-community/localforage-module
 ### PWA
 https://pwa.nuxtjs.org/setup
 
-----
+---
 
-[PT-BR]
+#  - [PT-BR]
 
 
 ## Instalar 
