@@ -2,7 +2,7 @@
   <main>
     <Header :titulo="page.titulo" :img="page.imagemBanner"> </Header>
     <div
-      class="flex flex-col md:flex-row items-center text-center justify-around py-100px gap-y-50px"
+      class="flex flex-col md:flex-row items-center text-center justify-around py-100px gap-y-50px bg-red-100"
     >
       <Nav
         v-for="(menus, index) in page.menus"
@@ -20,9 +20,12 @@
 
 <script>
 export default {
-  data() {
+  async asyncData({ $content }) {
+    const places = await $content("places").fetch();
+    const page = await $content("index").fetch();
     return {
-      places: [],
+      places,
+      page,
     };
   },
   head: {
@@ -32,12 +35,6 @@ export default {
         href: "/mapbox.css",
       },
     ],
-  },
-  async asyncData({ $content }) {
-    const page = await $content("index").fetch();
-    return {
-      page,
-    };
   },
 };
 </script>

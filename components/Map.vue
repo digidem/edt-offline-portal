@@ -2,7 +2,7 @@
   <div id="mapa" class="map" :style="{ height }">
     <client-only>
       <div :class="`py-15px text-center z-99 bg-red-500`">
-        {{territoryInfo || 'Selecione um território'}}
+        {{ territoryInfo || "Selecione um território" }}
       </div>
       <MglMap
         :mapStyle="mapStyle"
@@ -21,33 +21,15 @@
           :trackUserLocation="true"
         /> -->
         <MglMarker
-          v-for="marker in markers"
-          :key="marker.id"
-          :coordinates="marker.coords"
+          v-for="(place, key) in places"
+          :key="key"
+          :color="getRandomColor()"
+          :coordinates="[place.lon, place.lat]"
           @mouseenter="handleEnter"
         >
-          <div slot="marker" class="marker">
-            <span>
-              <v-icon :color="marker.color" size="22">{{ marker.icon }}</v-icon>
-            </span>
-          </div>
           <MglPopup :offset="35" anchor="bottom" class="popup">
             <div class="caption">
-              <h3>{{ marker.nome }}</h3>
-              <g-image
-                :alt="marker.nome"
-                v-show="marker.imagem"
-                :src="marker.imagem || ''"
-              />
-              <!-- <p>{{ marker.descricao }}</p> -->
-              <!-- <v-icon
-                v-for="category in marker.allCat"
-                :color="category.color"
-                :key="category.id"
-                size="22"
-                class="pl-2"
-                >{{ category.icon }}</v-icon
-              > -->
+              <h3>{{ place.nome }}</h3>
             </div>
           </MglPopup>
         </MglMarker>
@@ -90,6 +72,20 @@ export default {
           .catch();
       }
     },
+    MglMarker: () => {
+      if (process.client) {
+        return import("vue-mapbox")
+          .then((m) => m.MglMarker)
+          .catch();
+      }
+    },
+    MglPopup: () => {
+      if (process.client) {
+        return import("vue-mapbox")
+          .then((m) => m.MglPopup)
+          .catch();
+      }
+    },
   },
   props: {
     places: { type: Array, default: [] },
@@ -101,7 +97,6 @@ export default {
       map: null,
       hoveredStateId: null,
       territoryInfo: null,
-      markers: [],
       //precisamos puxar do ssb -22.895717028291195, -45.838459009922474
       defaultCoord: [-66.632219, 0.232306],
       maxBounds: [
@@ -114,28 +109,28 @@ export default {
       currentZoom: this.zoom,
       offline: false,
       mapStyle: {
-            version: 8,
-            sources: {
-              "simple-tiles": {
-                type: "raster",
-                tiles: [
-                  `${process.env.tileServer ||
-                    "http://localhost:3000"}/{z}/{x}/{y}.jpeg`,
-                ],
-                tileSize: 256,
-                attribution: ''
-              },
-            },
-            layers: [
-              {
-                id: "simple-tiles",
-                type: "raster",
-                source: "simple-tiles",
-                minzoom: 1,
-                maxzoom: 18,
-              },
+        version: 8,
+        sources: {
+          "simple-tiles": {
+            type: "raster",
+            tiles: [
+              `${process.env.tileServer ||
+                "http://localhost:3000"}/{z}/{x}/{y}.jpeg`,
             ],
+            tileSize: 256,
+            attribution: "",
           },
+        },
+        layers: [
+          {
+            id: "simple-tiles",
+            type: "raster",
+            source: "simple-tiles",
+            minzoom: 1,
+            maxzoom: 18,
+          },
+        ],
+      },
       nativeGeoJsonSource: {
         type: "geojson",
         data: "/geojson/territories.geojson",
@@ -199,7 +194,7 @@ export default {
       });
     },
     handleEnter({ map, marker }) {
-      // map.easeTo({ center: marker._lngLat, zoom: this.$static.metadata.maxZoom, offset: [0, 300] });
+      map.easeTo({ center: marker._lngLat, zoom: 14, offset: [0, 50] });
     },
     layerHover({ mapboxEvent, map }) {
       if (mapboxEvent.features.length > 0) {
@@ -227,9 +222,17 @@ export default {
     },
     layerClick({ mapboxEvent }) {
       const url = mapboxEvent.features[0].properties.description;
-      this.territoryInfo = mapboxEvent.features[0].properties.Name
+      this.territoryInfo = mapboxEvent.features[0].properties.Name;
       // const win = window.open(url, "_blank");
       // win.focus();
+    },
+    getRandomColor() {
+      var letters = "0123456789ABCDEF";
+      var color = "#";
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
     },
   },
 };

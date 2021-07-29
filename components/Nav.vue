@@ -3,7 +3,7 @@
     <div
       class="flex flex-col items-center gap-y-15px p-25px blur-sm hover:blur-none cursor-pointer"
     >
-      <h2>{{ nome }}</h2>
+      <h2 class="font-extrabold uppercase">{{ nome }}</h2>
       <div
         :style="icone"
         class="h-150px w-150px bg-cover transform hover:scale-110"

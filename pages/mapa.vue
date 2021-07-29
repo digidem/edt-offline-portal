@@ -7,9 +7,6 @@
 <script>
 export default {
   layout: "pages",
-  data() {
-    return { places: [] };
-  },
   head: {
     link: [
       {
@@ -20,9 +17,10 @@ export default {
   },
   async asyncData({ $content }) {
     const page = await $content("index").fetch();
-
+    const places = await $content("places").fetch();
     return {
       page,
+      places
     };
   },
 };
