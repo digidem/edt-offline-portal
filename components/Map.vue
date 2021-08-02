@@ -28,7 +28,9 @@
         >
           <MglPopup :offset="35" anchor="bottom" class="popup">
             <div class="caption">
-              <h3>{{ place.nome }}</h3>
+              <h3 class="font-bold">{{ place.nome }}</h3>
+              <p v-if="place.familias">Famílias: {{ place.familias }}</p>
+              <p v-if="place.etnias">Etnias: {{ place.etnias}}</p>
             </div>
           </MglPopup>
         </MglMarker>

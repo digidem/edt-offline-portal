@@ -1,5 +1,7 @@
 ---
-nome: La Mirim
-lat: 0.274350
-lon: -66.640086
+nome: Balaio
+familias: 30
+etnias: Dessano e Tukano
+lat: 0.388225
+lon: -66.646950
 ---

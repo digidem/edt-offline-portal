@@ -1,5 +1,5 @@
 ---
-nome: Balaio
-lat: 0.388225
-lon: -66.646950
+nome: Rodrigo Cibele
+lat: 0.344597
+lon: -66.634722
 ---

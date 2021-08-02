@@ -1,5 +1,5 @@
 ---
-titulo: Jellyfin
+titulo: Mídia
 link: http://flix.balaio.org
 descricao: Séries, documentários, filmes, além de várias opções musicais curados por nós da comunidade.
 imagem: jellyfin.png
