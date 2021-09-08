@@ -1,9 +1,9 @@
 <template>
   <div
     :style="banner"
-    class="h-70vh bg-gradient-to-r from-yellow-400 via-green-500 to-red-500"
+    class="h-70vh bg-gradient-to-r from-yellow-400 via-green-500 to-red-500 bg-cover bg-bottom"
   >
-    <h1 class="mx-auto text-center pt-20vh text-5xl">
+    <h1 class="mx-auto text-center text-5xl text-white bg-light-blue-900 bg-opacity-65 relative top-45 w-95vw md:w-70vw rounded p-4">
       {{ titulo }}
     </h1>
   </div>

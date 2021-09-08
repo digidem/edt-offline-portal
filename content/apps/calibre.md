@@ -1,6 +1,6 @@
 ---
 titulo: Biblioteca
-link: http://biblioteca.balaio.org
+link: http://biblioteca.janeraka.org
 descricao: Biblioteca virtual
 imagem: calibre.png
 ativo: sim
