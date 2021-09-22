@@ -12,6 +12,18 @@
         :ilustra="menus.icone"
         :index="index"
       ></Nav>
+      <a href="http://ryru.janeraka.org">
+        <div
+          class="flex flex-col items-center gap-y-15px p-25px blur-sm hover:blur-none cursor-pointer"
+        >
+          <h2 class="font-extrabold uppercase">Ryru</h2>
+          <div
+            :style="ryru"
+            class="h-150px w-150px bg-cover transform hover:scale-110"
+          ></div>
+          <p>Memória Awaete</p>
+        </div>
+      </a>
     </div>
     <Map height="500px" :places="places" :token="page.mapBoxToken"></Map>
     <Footer></Footer>
@@ -19,6 +31,8 @@
 </template>
 
 <script>
+import getImage from "../libs/getImage";
+
 export default {
   async asyncData({ $content }) {
     const places = await $content("places").fetch();
@@ -35,6 +49,11 @@ export default {
         href: "/mapbox.css",
       },
     ],
+  },
+  data() {
+    return {
+      ryru: getImage("janeraka.png", true),
+    };
   },
 };
 </script>

@@ -1,8 +1,20 @@
 <template>
   <div id="mapa" class="map" :style="{ height }">
     <client-only>
-      <div :class="`py-15px text-center z-99 bg-red-500`">
-        {{ territoryInfo || "Selecione um território" }}
+      <div :class="`py-15px text-center z-99 bg-red-500 flex justify-around`">
+        <span :v-if="nativelands">{{
+          territoryInfo || "Selecione um território"
+        }}</span>
+        <div>
+          <button
+            :class="
+              `${nativelands ? 'bg-red-300' : 'bg-gray-100'} rounded py-1 px-2`
+            "
+            @click="toggleNative"
+          >
+            Histórico
+          </button>
+        </div>
       </div>
       <MglMap
         :mapStyle="mapStyle"
@@ -30,12 +42,13 @@
             <div class="caption">
               <h3 class="font-bold">{{ place.nome }}</h3>
               <p v-if="place.familias">Famílias: {{ place.familias }}</p>
-              <p v-if="place.etnias">Etnias: {{ place.etnias}}</p>
+              <p v-if="place.etnias">Etnias: {{ place.etnias }}</p>
             </div>
           </MglPopup>
         </MglMarker>
         <!-- TODO: Remove if NATIVE_LANDS if false -->
         <MglGeojsonLayer
+          v-if="nativelands"
           sourceId="native_land"
           :source="nativeGeoJsonSource"
           layerId="layer_native_land"
@@ -51,10 +64,16 @@
           :layer="nativeGeoJsonlayerName"
         />
         <MglGeojsonLayer
-          sourceId="terra_balaio"
+          sourceId="terra_koatinemo"
           :source="geoJsonSource"
-          layerId="layer_balaio"
+          layerId="layer_koatinemo"
           :layer="geoJsonlayer"
+        />
+        <MglGeojsonLayer
+          sourceId="terra_itunaitata"
+          :source="geoJsonSourceItuna"
+          layerId="layer_itunaitata"
+          :layer="geoJsonlayerItuna"
         />
       </MglMap>
     </client-only>
@@ -95,6 +114,7 @@ export default {
   },
   data() {
     return {
+      nativelands: true,
       map: null,
       hoveredStateId: null,
       territoryInfo: null,
@@ -156,18 +176,30 @@ export default {
           "fill-opacity": [
             "case",
             ["boolean", ["feature-state", "hover"], false],
-            0.9,
-            0.4,
+            0.7,
+            0.2,
           ],
           "fill-color": ["get", "color"],
         },
       },
+      geoJsonSourceItuna: {
+        type: "geojson",
+        data: "/geojson/ti_itunaitata.geojson",
+      },
+      geoJsonlayerItuna: {
+        id: "terra_itunaitata_layer",
+        type: "line",
+        paint: {
+          "line-color": "orange",
+          "line-width": 4,
+        },
+      },
       geoJsonSource: {
         type: "geojson",
-        data: "/geojson/ti_balaio.geojson",
+        data: "/geojson/ti_koatinemo.geojson",
       },
       geoJsonlayer: {
-        id: "terra_balaio_layer",
+        id: "terra_koatinemo_layer",
         type: "line",
         paint: {
           "line-color": "red",
@@ -188,6 +220,9 @@ export default {
     },
   },
   methods: {
+    toggleNative() {
+      this.nativelands = !this.nativelands;
+    },
     onMapLoaded({ map }) {
       console.log("MAP LOADED", map);
       map.on("zoomend", (e) => {

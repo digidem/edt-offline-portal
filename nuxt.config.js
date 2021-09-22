@@ -1,6 +1,6 @@
 export default {
   env: {
-    tileServer: process.env.TILE_SERVER || "http://localhost:3000",
+    tileServer: process.env.TILE_SERVER || "https://api-mapa.janeraka.org",
   },
   plugins: [{ src: "~/plugins/mapbox.client" }],
   modules: ["@nuxt/content", "nuxt-i18n"],
