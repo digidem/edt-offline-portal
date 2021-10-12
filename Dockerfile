@@ -10,11 +10,10 @@ RUN apk add git
 
 # copy the app, note .dockerignore
 COPY . /usr/src/nuxt-app/
-RUN npm install -g yarn
-RUN yarn install --network-timeout 600000
+RUN npm install
 # build necessary, even if no static files are needed,
 # since it builds the server as well
-RUN yarn build
+RUN npm build
 
 # expose 3000 on container
 EXPOSE 3000
@@ -25,5 +24,5 @@ ENV NUXT_HOST=0.0.0.0
 ENV NUXT_PORT=3000
 
 # start the app
-CMD [ "yarn", "start" ]
+CMD [ "npm", "start" ]
 
