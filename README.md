@@ -15,6 +15,8 @@ ou
 ## First step
 Edit index.md with your configs
 
+## Docker
+`docker run -d communityfirst/portal`
 
 ## About the stack
 ### Nuxt framework
