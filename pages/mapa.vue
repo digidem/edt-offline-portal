@@ -11,16 +11,16 @@ export default {
     link: [
       {
         rel: "stylesheet",
-        href: "/mapbox.css",
+        href: "https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css",
       },
     ],
   },
   async asyncData({ $content }) {
     const page = await $content("index").fetch();
-    const places = await $content("places").fetch();
+    const places = await $content("lugares").fetch();
     return {
       page,
-      places
+      places,
     };
   },
 };

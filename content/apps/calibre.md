@@ -1,7 +1,7 @@
 ---
 titulo: Biblioteca
-link: http://biblioteca.janeraka.org
-descricao: Biblioteca virtual
+link: http://biblioteca.psp.app.br
+descricao: Biblioteca virtual de livros e PDFs.
 imagem: calibre.png
 ativo: sim
 ---
