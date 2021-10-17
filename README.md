@@ -16,6 +16,8 @@ ou
 
 In the index.md frontmetter you can set your homepage.
 
+## Docker
+`docker run -d communityfirst/portal`
 
 ## About the stack
 ### Nuxt framework
