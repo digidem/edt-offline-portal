@@ -1,4 +1,4 @@
-FROM node:16-alpine
+FROM node:16.11.0-alpine
 
 # create destination directory
 RUN mkdir -p /usr/src/nuxt-app
@@ -10,10 +10,10 @@ RUN apk add git
 
 # copy the app, note .dockerignore
 COPY . /usr/src/nuxt-app/
-RUN npm install --fetch-retry-maxtimeout 300000  --no-optional
+RUN yarn
 # build necessary, even if no static files are needed,
 # since it builds the server as well
-RUN npm run build
+RUN yarn build
 
 # expose 3000 on container
 EXPOSE 3000
@@ -25,4 +25,3 @@ ENV NUXT_PORT=3000
 
 # start the app
 CMD [ "npm", "run", "dev" ]
-
