@@ -1,18 +1,7 @@
 ---
-titulo: Intranet Comunitária
-subtitulo: 
-sobre: História de la comunidad!
-imagemBanner: baner2.png
-menus:
-  - nome: Historia da Comunidade
-    detalhe: Saiba mas sobre a rede.
-    icone: icone.png
-  - nome: Apps
-    detalhe: Aplicativos e seviços locais
-    icone: icone2.png
-  - nome: Faça parte
-    detalhe: Seja mais um nó dessa rede
-    icone: icone3.png
-mapBoxToken:
+title: P2P Hotspot
+icon: wifi.png
+image: 201812graph.png
 ---
 
+Give visibility to Free, Libre and Open Source software (FLOSS) as well as making accessible Distributed/Peer-to-peer protocols which enable Data Sovereignty

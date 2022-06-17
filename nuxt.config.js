@@ -1,10 +1,21 @@
+import messages from './messages'
+
 export default {
-  env: {
-    tileServer: process.env.TILE_SERVER || "https://api-mapa.janeraka.org",
+  env: {},
+  modules: ["@nuxt/content", '@nuxtjs/i18n'],
+  i18n: {
+    locales: ['en', 'pt', 'es'],
+    defaultLocale: 'en',
+    vueI18n: {
+      fallbackLocale: 'en',
+      messages,
+    },
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',  // recommended
+    }
   },
-  plugins: [{ src: "~/plugins/mapbox.client" }],
-  modules: ["@nuxt/content", "nuxt-i18n"],
-  i18n: {},
   buildModules: [
     "nuxt-windicss",
     "@nuxtjs/pwa",
@@ -13,7 +24,7 @@ export default {
   ],
   components: true,
   build: {
-    extend(config, ctx) {}, // blah blah
+    extend(config, ctx) { }, // blah blah
   },
   server: {
     host: "0.0.0.0",

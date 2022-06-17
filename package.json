@@ -1,5 +1,5 @@
 {
-  "name": "Portal",
+  "name": "p2p-hotspot-portal",
   "scripts": {
     "postinstall": "cp content/index-example.md content/index.md",
     "dev": "nuxt",
@@ -9,12 +9,10 @@
   },
   "dependencies": {
     "@nuxt/content": "^1.15.1",
+    "@nuxtjs/i18n": "^7.2.2",
     "@nuxtjs/svg": "^0.4.0",
     "is-http": "^0.0.2",
-    "mapbox-gl": "^2.8.2",
-    "nuxt": "^2.15.8",
-    "nuxt-i18n": "^6.27.3",
-    "vue-mapbox": "^0.4.1"
+    "nuxt": "^2.15.8"
   },
   "devDependencies": {
     "@nuxtjs/localforage": "^1.1.0",
