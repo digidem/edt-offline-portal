@@ -50,6 +50,7 @@
         :apps="localizedApps.filter(a => category.slug === a.category) "
       />
     </div>
+    <button class="mx-auto">Continue browsing</button>
     <Footer />
   </article>
 </template>

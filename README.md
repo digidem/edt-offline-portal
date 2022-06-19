@@ -75,11 +75,3 @@ Para escrever no markdown, podemos começar com essas [instruções](https://nux
 )
 ### CSS
 Sobre estilos e css usamos [windcss](https://windicss.org/features/important-prefix.html) uma simplificação para [tailwindcss](https://tailwindcss.com/docs) onde podemos encontrar a documentação sobre como usar estas coisas.
-
-
-### Armazenamento local
-https://github.com/nuxt-community/localforage-module
-
-### PWA
-https://pwa.nuxtjs.org/setup
-
