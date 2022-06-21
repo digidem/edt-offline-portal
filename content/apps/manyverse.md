@@ -1,7 +1,7 @@
 ---
 title: Manyverse
 locale: en
-category: networking
+category: 
 link: https://www.manyver.se
 description: Offline-first, decentralized social network and messaging app
 image: manyverse.png

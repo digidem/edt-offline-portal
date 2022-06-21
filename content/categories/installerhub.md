@@ -5,4 +5,4 @@ locale: en
 order: 1
 ---
 
-The place where apps are discovered and installed from is the starting point for most users in the digital world, who are limited by what is presented by the copororate App Stores. Here we present alternatives.
+Start by installing f-droid, the free alternative to the Google Play store. You need to download the file from <a href="http://p2p.local:80/assets/fdroid.apk">here</a> and open in on your phone. You'll need to give permission to install software from unknown sources.

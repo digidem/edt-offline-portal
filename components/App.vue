@@ -5,7 +5,6 @@
         <div class="content">
           <h2>{{title}}</h2>
           <NuxtContent :document="document" tag="content" />
-          <p>{{$t('supportedApps')}}</p>
           <ul class="flex flex-col list-none">
             <li v-for="app in apps" :key="app.slug">
               <NuxtLink
