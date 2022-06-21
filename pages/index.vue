@@ -17,7 +17,7 @@
         "
       >
         <div class="content capa">
-          <div class="flex">
+          <div class="flex text-center mx-auto">
             <img
               class="max-h-40px"
               :src="require(`~/assets/images/${page.icon}`)"
@@ -27,16 +27,20 @@
           </div>
           <NuxtContent :document="page" tag="content" />
           <p class="major"></p>
-          <ul class="actions vertical pt-15vh">
+          <ul class="actions vertical pt-5vh">
             <li>
               <a href="#first" class="button big wide">{{
-                $t("getStarted")
+                $t('getStarted')
               }}</a>
             </li>
           </ul>
         </div>
         <div>
-          <img class="blur-2rem" :src="require(`~/assets/images/${page.image}`)" alt="" />
+          <img
+            class="blur-2rem"
+            :src="require(`~/assets/images/${page.image}`)"
+            alt=""
+          />
         </div>
       </section>
       <App
@@ -47,57 +51,66 @@
         :image="category.image"
         :title="category.title"
         :document="category"
-        :apps="localizedApps.filter(a => category.slug === a.category) "
+        :apps="localizedApps.filter(a => category.slug === a.category)"
       />
     </div>
-    <button class="mx-auto">Continue browsing</button>
+    <button class="mx-auto" @click="this.auth">
+      Continue browsing
+    </button>
     <Footer />
   </article>
 </template>
 
 <script>
-import getImage from "@/libs/getImage";
+import getImage from '@/libs/getImage'
 
 export default {
-  async asyncData({ $content }) {
-    const categories = await $content("categories").fetch();
-    const apps = await $content("apps").fetch();
-    const page = await $content("index").fetch();
-    console.log("🚀 ~ file: index.vue ~ line 66 ~ asyncData ~ page", page)
+  async asyncData ({ $content }) {
+    const categories = await $content('categories').fetch()
+    const apps = await $content('apps').fetch()
+    const page = await $content('index').fetch()
     return {
       page,
       apps,
-      categories,
-    };
+      categories
+    }
   },
-  mounted() {
+  mounted () {
     console.log('Browser locale', this.$i18n.getBrowserLocale())
-    this.switchLocalePath(this.locale);
+    this.switchLocalePath(this.locale)
   },
   computed: {
-    localizedCategories() {
-      return this.categories.filter(
-        (c) => c.locale === this.locale
-      ).sort((a, b) => a.order - b.order );
+    localizedCategories () {
+      return this.categories
+        .filter(c => c.locale === this.locale)
+        .sort((a, b) => a.order - b.order)
     },
-    localizedApps() {
-      return this.apps.filter(
-        (c) => c.locale === this.locale
-      );
+    localizedApps () {
+      return this.apps.filter(c => c.locale === this.locale)
     },
-    locale() {
+    locale () {
       return this.$i18n.getLocaleCookie()
     }
   },
   methods: {
-    getBackground(img) {
-      return getImage(img, true);
+    getBackground (img) {
+      return getImage(img, true)
     },
-  },
-};
+    auth: async () => {
+      console.log('GONNA TRY AUTH')
+      const { hostname, protocol } = window.location
+      await this.$http
+        .$get(`${protocol}//${hostname}:9090/do_login`)
+        .then(res => {
+          console.log('Authorized Internet access', res)
+        })
+        .catch(err => console.log('Error on fetch', err))
+    }
+  }
+}
 </script>
 <style>
-@import "~/assets/css/main.css";
+@import '~/assets/css/main.css';
 .nuxt-content a {
   color: blue;
 }

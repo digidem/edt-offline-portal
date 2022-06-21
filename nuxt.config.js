@@ -1,8 +1,9 @@
 import messages from './messages'
 
 export default {
+  target: 'static', // default is 'server'
   env: {},
-  modules: ["@nuxt/content", '@nuxtjs/i18n'],
+  modules: ["@nuxt/content", '@nuxtjs/i18n', '@nuxt/http'],
   i18n: {
     locales: ['en', 'pt', 'es'],
     defaultLocale: 'en',

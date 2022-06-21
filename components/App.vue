@@ -37,9 +37,6 @@
 <script>
 
 export default {
-    mounted () {
-      console.log('apps', this.apps)
-    },
     props: {
         orientation: {
             type: String,
