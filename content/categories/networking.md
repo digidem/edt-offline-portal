@@ -4,9 +4,10 @@ image: manyverse.png
 locale: en
 order: 3
 ---
+
 We're going to install Manyverse, the decentralized social network. Look for it on f-droid.
 Once you've installed, you can see that other users connected to the hotspot will appear automatically on the "connections" tab, with an wi-fi icon under their names. You can start following them already!
-However, to connect to other people outside of this room, you need an invitation to a "pub" or a "room". Conveniently, this hotspot already runs a pub that you can connect to: just paste the invitation below where it says "paste invitations" (also on the connections tab). 
+However, to connect to other people outside of this room, you need an invitation to a "pub" or a "room". Conveniently, this hotspot already runs a pub that you can connect to: just paste the invitation below where it says "paste invitations" (also on the connections tab).
 
 <invite></invite>
 

@@ -9,12 +9,12 @@
 
 <script>
 export default {
-  layout: 'items',
+  layout: "items",
   async asyncData({ $content, params }) {
-    const apps = await $content('apps', params.slug).fetch()
+    const apps = await $content("apps", params.slug).fetch();
     return {
       apps,
-    }
+    };
   },
-}
+};
 </script>
