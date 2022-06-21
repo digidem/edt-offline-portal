@@ -5,7 +5,8 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "generate": "nuxt generate",
-    "start": "nuxt start"
+    "start": "nuxt start",
+    "release": "nuxt build && nuxt generate && zip -r portal.zip dist"
   },
   "dependencies": {
     "@nuxt/content": "^1.15.1",
