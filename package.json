@@ -5,11 +5,12 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "generate": "nuxt generate",
-    "start": "nuxt start"
+    "start": "nuxt start",
+    "release": "nuxt build && nuxt generate && zip -r portal.zip dist"
   },
   "dependencies": {
     "@nuxt/content": "^1.15.1",
-    "@nuxt/http": "^0.6.4",
+    "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/i18n": "^7.2.2",
     "@nuxtjs/svg": "^0.4.0",
     "is-http": "^0.0.2",
