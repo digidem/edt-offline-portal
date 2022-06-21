@@ -3,7 +3,7 @@ import messages from './messages'
 export default {
   target: 'static', // default is 'server'
   env: {},
-  modules: ["@nuxt/content", '@nuxtjs/i18n', '@nuxt/http'],
+  modules: ["@nuxt/content", '@nuxtjs/i18n', '@nuxtjs/axios'],
   i18n: {
     locales: ['en', 'pt', 'es'],
     defaultLocale: 'en',

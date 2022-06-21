@@ -96,15 +96,21 @@ export default {
     getBackground (img) {
       return getImage(img, true)
     },
-    auth: async () => {
-      console.log('GONNA TRY AUTH')
+    async auth () {
       const { hostname, protocol } = window.location
-      await this.$http
-        .$get(`${protocol}//${hostname}:9090/do_login`)
-        .then(res => {
-          console.log('Authorized Internet access', res)
-        })
-        .catch(err => console.log('Error on fetch', err))
+      let auth = {
+        success: false
+      }
+      try {
+        const ip = await this.$axios.$post(`${protocol}//${hostname}/auth`)
+        auth = {
+          success: true,
+          ip
+        }
+      } catch (err) {
+        console.log(err)
+      }
+      return auth
     }
   }
 }
