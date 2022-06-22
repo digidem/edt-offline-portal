@@ -1,30 +1,38 @@
 <template>
-  <div class="p-6 border bg-white dark:bg-black dark:border-gray-700 rounded">
-    <code>{{ code }}</code>
+  <div
+    class="p-6 border bg-white dark:bg-black dark:border-gray-700 rounded text-sm"
+  >
+    <button class="px-4" @click="copyText">
+      <code>{{ code }}</code>
+      📋
+    </button>
   </div>
 </template>
 <script>
 export default {
-  data() {
+  data () {
     return {
-      code: "...",
-    };
+      code: '...'
+    }
   },
-  mounted() {
-    this.getCode();
+  mounted () {
+    this.getCode()
   },
   methods: {
-    async getCode() {
-      const { hostname, protocol } = window.location;
+    async getCode () {
+      const { hostname, protocol } = window.location
       try {
         const res = await this.$axios.$get(
           `${protocol}//${hostname}:8813/ssb.json`
-        );
-        if (res && res.pub && res.pub.invite) this.code = res.pub.invite;
+        )
+        if (res && res.pub && res.pub.invite) this.code = res.pub.invite
       } catch (err) {
-        this.code = this.$t("inviteError");
+        this.code = this.$t('inviteError')
       }
     },
-  },
-};
+    copyText () {
+      navigator.clipboard.writeText(this.code)
+    }
+  }
+}
 </script>
