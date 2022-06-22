@@ -25,7 +25,8 @@
     "@nuxtjs/i18n": "^7.2.2",
     "@nuxtjs/svg": "^0.4.0",
     "is-http": "^0.0.2",
-    "nuxt": "^2.15.8"
+    "nuxt": "^2.15.8",
+    "nuxt-clipboard": "^0.0.7"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.18.2",

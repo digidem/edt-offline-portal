@@ -1,10 +1,13 @@
 <template>
-  <div
-    class="py-6"
-  >
-    <code class="mini py-7 border-solid border-green-200 border-width-1px">{{ code }}</code>
-    <button class="rounded-none py-4 px-2 text-xl border-none" @click="copyText">
-      📋
+  <div class="py-6 flex flex-col md:flex-row items-center">
+    <code class="mini py-7 border-solid border-green-200 border-width-1px min-w-100%">{{
+      code
+    }}</code>
+    <button
+      class="rounded-none py-4 px-2 text-xl border-none min-w-100px"
+      @click="copy"
+    >
+      ⧉
     </button>
   </div>
 </template>
@@ -28,14 +31,15 @@ export default {
         if (res && res.pub && res.pub.invite) this.code = res.pub.invite
       } catch (err) {
         this.code = this.$t('inviteError')
+
       }
     },
-    async copyText () {
+    async copy () {
       try {
-        await navigator.clipboard.writeText(this.code)
+        await this.$copyText(this.code)
       } catch (e) {
-        navigator.clipboard = this.code
-        console.log(e)
+        // eslint-disable-next-line no-console
+        console.error(e)
       }
     }
   }

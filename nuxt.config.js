@@ -11,7 +11,7 @@ export default {
     ]
   },
   env: {},
-  modules: ["@nuxt/content", "@nuxtjs/i18n", "@nuxtjs/axios"],
+  modules: ["@nuxt/content", "@nuxtjs/i18n", "@nuxtjs/axios", "nuxt-clipboard"],
   i18n: {
     locales: ["en", "pt", "es"],
     defaultLocale: "en",
@@ -37,7 +37,7 @@ export default {
   ],
   components: true,
   build: {
-    extend(config, ctx) {}, // blah blah
+    extend(config, ctx) { }, // blah blah
   },
   server: {
     host: "0.0.0.0",
