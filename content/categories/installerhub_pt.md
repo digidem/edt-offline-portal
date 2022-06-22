@@ -5,4 +5,4 @@ locale: pt
 order: 1
 ---
 
-O lugar onde aplicativos são descobertos e instalados é o ponto de partida para a maioria d@s usuári@s no mundo digital, que são limitad@s pelo que é apresentado pelas Lojas de Aplicativos corporativas. Aqui apresentamos alternativas para isso.
+Comece installando o f-droid, a alternativa libre à loja da Google. Faça download do arquivo <a href="http://p2p.local:80/assets/fdroid.apk">aqui</a> e abra no seu telefone. Você vai precisar autorizar o celular a instalar software de fontes desconhecidas.

@@ -5,5 +5,4 @@ locale: pt
 order: 4
 ---
 
-O lugar onde aplicativos são descobertos e instalados é o ponto de partida para a maioria d@s usuári@s no mundo digital, que são limitad@s pelo que é apresentado pelas Lojas de Aplicativos corporativas. Aqui apresentamos alternativas para isso.
-
+Você quer guardar e compartilhar arquivos sem ter que distribuir eles por grandes empresas? Confira o  <a href="http://p2p.local:5001/webui">IPFS</a>, um sistema de arquivos compartilhado peer-to-peer. Cada arquivo que você sobe ganha um identificador único que pode ser usado para acessar o arquivo em toda internet.
