@@ -5,14 +5,6 @@
     <div class="content">
       <h2>{{ title }}</h2>
       <NuxtContent :document="document" tag="content" />
-      <ul class="flex flex-col list-none">
-        <li v-for="app in apps" :key="app.slug">
-          <NuxtLink :to="`/apps/${app.slug}`" class="button w-320px">{{
-            app.title
-          }}</NuxtLink>
-          <span>{{ app.description }}</span>
-        </li>
-      </ul>
     </div>
     <div class="image">
       <img :src="require(`~/assets/images/${image}`)" />
@@ -47,10 +39,6 @@ export default {
     },
     // eslint-disable-next-line vue/require-default-prop
     document: Object,
-    apps: {
-      type: Array,
-      default: () => [],
-    },
   },
 };
 </script>
