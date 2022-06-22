@@ -1,9 +1,9 @@
 <template>
   <div
-    class="p-6 border bg-white dark:bg-black dark:border-gray-700 rounded text-sm"
+    class="py-6"
   >
-    <button class="px-4 max-w-auto" @click="copyText">
-      <code>{{ code }}</code>
+    <code class="mini py-7 border-solid border-green-200 border-width-1px">{{ code }}</code>
+    <button class="rounded-none py-4 px-2 text-xl border-none" @click="copyText">
       📋
     </button>
   </div>
@@ -30,9 +30,19 @@ export default {
         this.code = this.$t('inviteError')
       }
     },
-    copyText () {
-      navigator.clipboard.writeText(this.code)
+    async copyText () {
+      try {
+        await navigator.clipboard.writeText(this.code)
+      } catch (e) {
+        navigator.clipboard = this.code
+        console.log(e)
+      }
     }
   }
 }
 </script>
+<style scoped>
+.mini {
+  font-size: 0.4em !important;
+}
+</style>
