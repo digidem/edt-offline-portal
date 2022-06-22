@@ -2,6 +2,14 @@ import messages from "./messages";
 
 export default {
   target: "static", // default is 'server'
+  head: {
+    titleTemplate: 'P2P Hotspot',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: 'Meta description' }
+    ]
+  },
   env: {},
   modules: ["@nuxt/content", "@nuxtjs/i18n", "@nuxtjs/axios"],
   i18n: {

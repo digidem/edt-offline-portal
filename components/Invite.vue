@@ -2,7 +2,7 @@
   <div
     class="p-6 border bg-white dark:bg-black dark:border-gray-700 rounded text-sm"
   >
-    <button class="px-4" @click="copyText">
+    <button class="px-4 max-w-auto" @click="copyText">
       <code>{{ code }}</code>
       📋
     </button>

@@ -22,7 +22,7 @@
           <ul class="actions vertical pt-5vh">
             <li>
               <a href="#first" class="button big wide">{{
-                $t("getStarted")
+                $t('getStarted')
               }}</a>
             </li>
           </ul>
@@ -43,78 +43,83 @@
         :image="category.image"
         :title="category.title"
         :document="category"
-        :apps="localizedApps.filter((a) => category.slug === a.category)"
       />
     </div>
-    <button class="mx-auto" @click="auth">Continue browsing</button>
+    <button :disabled="authenticated" :class="`${authenticated ? 'bg-green-500 top-0 right-0' : 'bg-light-50 top-12 right-12'} mx-auto px-8 fixed `" @click="auth">{{ $t(authenticated ? 'authenticated' : 'continueBrowsing') }}</button>
     <Footer />
   </article>
 </template>
 
 <script>
-import getImage from "@/libs/getImage";
+import getImage from '@/libs/getImage'
 
 export default {
-  async asyncData({ $content }) {
-    const categories = await $content("categories").fetch();
-    const apps = await $content("apps").fetch();
-    const page = await $content("index").fetch();
+  async asyncData ({ $content }) {
+    const categories = await $content('categories').fetch()
+    const page = await $content('index').fetch()
     return {
       page,
-      apps,
-      categories,
-    };
+      categories
+    }
+  },
+  data () {
+    return {
+      authenticated: false,
+      ip: null
+    }
   },
   computed: {
-    localizedCategories() {
+    localizedCategories () {
       return this.categories
-        .filter((c) => c.locale === this.locale)
-        .sort((a, b) => a.order - b.order);
+        .filter(c => c.locale === this.locale)
+        .sort((a, b) => a.order - b.order)
     },
-    localizedApps() {
-      return this.apps.filter((c) => c.locale === this.locale);
-    },
-    locale() {
-      return this.$i18n.getLocaleCookie();
-    },
+    locale () {
+      return this.$i18n.getLocaleCookie()
+    }
   },
-  mounted() {
+  mounted () {
     // eslint-disable-next-line no-console
-    console.log("Browser locale", this.$i18n.getBrowserLocale());
-    this.switchLocalePath(this.locale);
+    console.log('Browser locale', this.$i18n.getBrowserLocale())
+    this.switchLocalePath(this.locale)
   },
   methods: {
-    getBackground(img) {
-      return getImage(img, true);
+    getBackground (img) {
+      return getImage(img, true)
     },
-    async auth() {
-      const { hostname, protocol } = window.location;
-      let auth = {
-        success: false,
-      };
+    async auth () {
+      const { hostname, protocol, port } = window.location
       try {
-        const ip = await this.$axios.$post(`${protocol}//${hostname}/auth`);
-        auth = {
-          success: true,
-          ip,
-        };
+        const ip = await this.$axios.$post(
+          `${protocol}/${hostname}:${port}`,
+          {},
+          {
+            headers: {
+              'Content-Type': 'application/json'
+            }
+          }
+        )
+        this.ip = ip
+        this.authenticated = true
       } catch (err) {
         // eslint-disable-next-line no-console
-        console.error(err);
+        console.error(err)
       }
-      return auth;
-    },
-  },
-};
+    }
+  }
+}
 </script>
 <style>
-@import "~/assets/css/main.css";
+@import '~/assets/css/main.css';
+
 .nuxt-content a {
   color: blue;
 }
+
 .content h2 {
   font-size: 2em;
 }
+
 .content h1 {
   font-size: 3em;
 }
