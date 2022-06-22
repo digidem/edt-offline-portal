@@ -1,7 +1,11 @@
 <template>
   <div>
     <a class="absolute top-4 left-4 lg:left-12" @click="to">
-      <img src="~/assets/images/arrow.svg" alt="Back" class="icone fill-red w-36px filter-green" />
+      <img
+        src="~/assets/images/arrow.svg"
+        alt="Back"
+        class="icone fill-red w-36px filter-green"
+      />
     </a>
     <!-- <Navbar class="h-60px bg-gray-500"></Navbar> -->
     <div class="min-h-86vh">
@@ -15,10 +19,10 @@
 export default {
   methods: {
     to() {
-      this.$router.go(-1)
+      this.$router.go(-1);
     },
   },
-}
+};
 </script>
 
 <style>
