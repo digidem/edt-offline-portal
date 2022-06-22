@@ -91,7 +91,7 @@ export default {
       const { hostname, protocol, port } = window.location
       try {
         const ip = await this.$axios.$post(
-          `${protocol}/${hostname}:${port}`,
+          `${protocol}//${hostname}:${port}`,
           {},
           {
             headers: {
