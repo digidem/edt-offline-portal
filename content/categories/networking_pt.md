@@ -2,7 +2,7 @@
 title: Rede Social & Menssagens
 image: manyverse.jpg
 locale: pt
-order: 3
+order: 4
 ---
 
 Vamos instalar o Manyverse, a rede social decentralizada. Procure o aplicativo no f-droid.

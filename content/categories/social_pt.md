@@ -1,11 +1,11 @@
 ---
 title: Social Network & Messaging
 image: manyverse.jpg
-locale: en
+locale: pt
 order: 3
 ---
 
-We're going to install [Manyverse](https://manyver.se), the decentralized social network.
+Agora vamos instalar o [Manyverse](https://manyver.se), a rede social descentralizada.
 
 <!-- ## Android -->
 

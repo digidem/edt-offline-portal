@@ -5,7 +5,8 @@ locale: en
 order: 3
 ---
 
-Agora vamos instalar o [Manyverse](https://manyver.se), a rede social descentralizada.
+
+We're going to install [Manyverse](https://manyver.se), the decentralized social network.
 
 <!-- ## Android -->
 
