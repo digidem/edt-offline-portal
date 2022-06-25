@@ -9,4 +9,4 @@ Would you like to store and share your files with your neighbors without giving 
 
 An instance of the IPFS server is running on your local server.
 
-<app-button link="http://10.42.0.1:5001/webui" text="Go to IPFS"></app-button>
+<app-button localurl=":5001/webui" text="Go to IPFS"></app-button>

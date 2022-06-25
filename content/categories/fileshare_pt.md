@@ -10,4 +10,4 @@ Você deseja armazenar e compartilhar arquivos com seus vizinhos sem entregá-lo
 Uma instância do IPFS está rodando no seu dispositivo.
 
 
-<app-button link="http://10.42.0.1:5001/webui" text="Go to IPFS"></app-button>
+<app-button localurl=":5001/webui" text="Ver IPFS"></app-button>
