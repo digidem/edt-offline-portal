@@ -13,11 +13,13 @@
             <img
               class="max-h-40px"
               :src="require(`~/assets/images/${page.icon}`)"
-              :alt="page.title"
+              :alt="localizedIndex.title"
             />
-            <h1>{{ page.title }}</h1>
+            <h1>{{ localizedIndex.title }}</h1>
           </div>
-          <NuxtContent :document="page" tag="content" />
+          <div>
+            {{localizedIndex.description}}
+          </div>
           <p class="major"></p>
           <ul class="actions vertical pt-5vh">
             <li>
@@ -69,6 +71,20 @@ export default {
     }
   },
   computed: {
+    localizedIndex () {
+      let title = this.page.title
+      let description = this.page.description
+      if (this.locale !== this.$i18n.defaultLocale) {
+        if (this.page[`title_${this.locale}`])
+          title = this.page[`title_${this.locale}`]
+        if (this.page[`description_${this.locale}`])
+          description = this.page[`description_${this.locale}`]
+      }
+      return {
+        title,
+        description
+      }
+    },
     localizedCategories () {
       return this.categories
         .filter(c => c.locale === this.locale)
