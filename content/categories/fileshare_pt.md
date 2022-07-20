@@ -9,5 +9,4 @@ Você deseja armazenar e compartilhar arquivos com seus vizinhos sem entregá-lo
 
 Uma instância do IPFS está rodando no seu dispositivo.
 
-
 <app-button localurl=":5001/webui" text="Ver IPFS"></app-button>

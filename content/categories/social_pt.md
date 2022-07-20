@@ -7,6 +7,8 @@ order: 3
 
 Agora vamos instalar o [Manyverse](https://manyver.se), a rede social descentralizada.
 
+Busque o aplicativo no F-droid, baixe os instaladores ou instale através de repositórios corporativos.
+
 <!-- ## Android -->
 
 <app-button link="https://f-droid.org/app/se.manyver" text="F-Droid"></app-button>
@@ -26,7 +28,6 @@ Agora vamos instalar o [Manyverse](https://manyver.se), a rede social descentral
 <!-- ## MacOS -->
 
 <app-button link="https://github.com/staltz/manyverse/releases/download/v0.2206.3-beta/Manyverse-0.2206.3-beta.dmg" text="Download dmg"></app-button>
-
 
 <!-- ## Linux -->
 

@@ -1,6 +1,6 @@
 ---
 title: Social Network & Messaging
-image: manyverse.png
+image: manyverse_mobile.png
 locale: en
 order: 4
 ---

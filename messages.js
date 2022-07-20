@@ -5,7 +5,7 @@ export default {
     withSupport: "with support from",
     inviteError: "Error getting invite",
     continueBrowsing: "Continue browsing",
-    authenticated: "Authenticated"
+    authenticated: "Authenticated",
   },
   pt: {
     title: "Ponto de Acesso P2P",

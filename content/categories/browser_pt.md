@@ -4,6 +4,7 @@ image: firefox-phone.jpg
 locale: pt
 order: 2
 ---
+
 Agora busque o aplicativo **Fennec** no F-Droid. É baseado na versão mais recente do Firefox, mas
 tem bits proprietários e telemetria removidos. Também está mais bem preparado para os aplicativos P2P que forneceremos.
 

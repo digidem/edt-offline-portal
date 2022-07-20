@@ -5,8 +5,9 @@ locale: en
 order: 3
 ---
 
-
 We're going to install [Manyverse](https://manyver.se), the decentralized social network.
+
+Search for the app on F-droid, download the installers or install from corporate repositories.
 
 <!-- ## Android -->
 
@@ -27,7 +28,6 @@ We're going to install [Manyverse](https://manyver.se), the decentralized social
 <!-- ## MacOS -->
 
 <app-button link="https://github.com/staltz/manyverse/releases/download/v0.2206.3-beta/Manyverse-0.2206.3-beta.dmg" text="Download dmg"></app-button>
-
 
 <!-- ## Linux -->
 

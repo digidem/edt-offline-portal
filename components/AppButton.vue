@@ -8,30 +8,30 @@ export default {
   props: {
     download: {
       type: Boolean,
-      default: false
+      default: false,
     },
     link: {
       type: String,
-      default: ''
+      default: "",
     },
     text: {
       type: String,
-      default: 'Click here'
+      default: "Click here",
     },
     localurl: {
       type: String || null,
-      default: null
-    }
+      default: null,
+    },
   },
   computed: {
-    hrefUrl () {
+    hrefUrl() {
       if (process.client) {
         if (this.localurl) {
-          const { hostname, protocol } = window.location
-          return `${protocol}//${hostname}${this.localurl}`
-        } else return this.link
-      } else return ''
-    }
-  }
-}
+          const { hostname, protocol } = window.location;
+          return `${protocol}//${hostname}${this.localurl}`;
+        } else return this.link;
+      } else return "";
+    },
+  },
+};
 </script>

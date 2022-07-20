@@ -18,13 +18,13 @@
             <h1>{{ localizedIndex.title }}</h1>
           </div>
           <div>
-            {{localizedIndex.description}}
+            {{ localizedIndex.description }}
           </div>
           <p class="major"></p>
           <ul class="actions vertical pt-5vh">
             <li>
               <a href="#first" class="button big wide">{{
-                $t('getStarted')
+                $t("getStarted")
               }}</a>
             </li>
           </ul>
@@ -47,86 +47,85 @@
         :document="category"
       />
     </div>
-    <button :disabled="authenticated" :class="`${authenticated ? 'bg-green-500 top-0 right-0' : 'bg-light-50 top-12 right-12'} mx-auto px-8 fixed `" @click="auth">{{ $t(authenticated ? 'authenticated' : 'continueBrowsing') }}</button>
-    <Footer />
+    <Footer :authenticated="authenticated" />
   </article>
 </template>
 
 <script>
-import getImage from '@/libs/getImage'
+import getImage from "@/libs/getImage";
 
 export default {
-  async asyncData ({ $content }) {
-    const categories = await $content('categories').fetch()
-    const page = await $content('index').fetch()
+  async asyncData({ $content }) {
+    const categories = await $content("categories").fetch();
+    const page = await $content("index").fetch();
     return {
       page,
-      categories
-    }
+      categories,
+    };
   },
-  data () {
+  data() {
     return {
       authenticated: false,
-      ip: null
-    }
+      ip: null,
+    };
   },
   computed: {
-    localizedIndex () {
-      let title = this.page.title
-      let description = this.page.description
+    localizedIndex() {
+      let title = this.page.title;
+      let description = this.page.description;
       if (this.locale !== this.$i18n.defaultLocale) {
         if (this.page[`title_${this.locale}`])
-          title = this.page[`title_${this.locale}`]
+          title = this.page[`title_${this.locale}`];
         if (this.page[`description_${this.locale}`])
-          description = this.page[`description_${this.locale}`]
+          description = this.page[`description_${this.locale}`];
       }
       return {
         title,
-        description
-      }
+        description,
+      };
     },
-    localizedCategories () {
+    localizedCategories() {
       return this.categories
-        .filter(c => c.locale === this.locale)
-        .sort((a, b) => a.order - b.order)
+        .filter((c) => c.locale === this.locale)
+        .sort((a, b) => a.order - b.order);
     },
-    locale () {
-      return this.$i18n.getLocaleCookie()
-    }
+    locale() {
+      return this.$i18n.getLocaleCookie();
+    },
   },
-  mounted () {
+  mounted() {
     // eslint-disable-next-line no-console
-    console.log('Browser locale', this.$i18n.getBrowserLocale())
-    this.switchLocalePath(this.locale)
+    console.log("Browser locale", this.$i18n.getBrowserLocale());
+    this.switchLocalePath(this.locale);
   },
   methods: {
-    getBackground (img) {
-      return getImage(img, true)
+    getBackground(img) {
+      return getImage(img, true);
     },
-    async auth () {
-      const { hostname, protocol, port } = window.location
+    async auth() {
+      const { hostname, protocol, port } = window.location;
       try {
         const ip = await this.$axios.$post(
           `${protocol}//${hostname}:${port}`,
           {},
           {
             headers: {
-              'Content-Type': 'application/json'
-            }
+              "Content-Type": "application/json",
+            },
           }
-        )
-        this.ip = ip
-        this.authenticated = true
+        );
+        this.ip = ip;
+        this.authenticated = true;
       } catch (err) {
         // eslint-disable-next-line no-console
-        console.error(err)
+        console.error(err);
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
 <style>
-@import '~/assets/css/main.css';
+@import "~/assets/css/main.css";
 
 .nuxt-content a {
   color: blue;
