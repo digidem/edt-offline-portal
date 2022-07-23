@@ -11,11 +11,11 @@ Search for the app on F-droid, download the installers or install from corporate
 
 <!-- ## Android -->
 
-<app-button link="https://f-droid.org/app/se.manyver" text="F-Droid"></app-button>
+<app-button :color="true" link="/apks/manyverse.apk" text="Download apk"></app-button>
+
+<app-button :color="true" link="https://f-droid.org/app/se.manyver" text="F-Droid"></app-button>
 
 <app-button link="https://play.google.com/store/apps/details?id=se.manyver" text="Play Store"></app-button>
-
-<app-button link="/apks/manyverse.apk" text="Download apk"></app-button>
 
 <!-- ## iOS -->
 

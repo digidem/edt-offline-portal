@@ -7,4 +7,4 @@ order: 1
 
 Comece installando o F-Droid, a alternativa libre à loja da Google. Você vai precisar autorizar o celular a instalar software de fontes desconhecidas.
 
-<app-button link="/apks/fdroid.apk" text="Download F-Droid"></app-button>
+<app-button :color="true" link="/apks/fdroid.apk" text="Download F-Droid"></app-button>

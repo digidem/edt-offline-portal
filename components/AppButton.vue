@@ -1,11 +1,25 @@
 <template>
   <a target="_blank" :href="hrefUrl" :download="download">
-    <button class="mt-4 px-6">{{ text }}</button>
+    <button
+      :class="`mt-4 px-6 ${
+        color
+          ? typeof color === 'boolean'
+            ? 'bg-blue-600'
+            : `bg-${color}`
+          : 'bg-none'
+      }`"
+    >
+      {{ text }}
+    </button>
   </a>
 </template>
 <script>
 export default {
   props: {
+    color: {
+      type: [String, Boolean],
+      default: false,
+    },
     download: {
       type: Boolean,
       default: false,
