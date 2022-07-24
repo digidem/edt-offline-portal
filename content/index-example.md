@@ -1,6 +1,6 @@
 ---
 titulo: Intranet Comunitária
-subtitulo: 
+subtitulo:
 sobre: História de la comunidad!
 imagemBanner: baner2.png
 menus:
@@ -15,4 +15,3 @@ menus:
     icone: icone3.png
 mapBoxToken:
 ---
-

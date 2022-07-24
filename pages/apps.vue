@@ -27,23 +27,22 @@
 </template>
 
 <script>
-import getImage from '../libs/getImage'
+import getImage from "../libs/getImage";
 
 export default {
   layout: "pages",
   async asyncData({ $content }) {
     const apps = await $content("apps")
-    .where({ ativo: { $in: ['sim', 'Sim', 'si', 's'] } })
-    .fetch();
+      .where({ ativo: { $in: ["sim", "Sim", "si", "s"] } })
+      .fetch();
     return {
       apps,
     };
   },
   methods: {
     getBackground(img) {
-      return getImage(img, true)
+      return getImage(img, true);
     },
   },
 };
 </script>
-<style></style>

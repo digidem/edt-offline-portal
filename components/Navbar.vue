@@ -28,10 +28,11 @@
 <style>
 .nuxt-link-exact-active {
   box-shadow: none;
-  background-color: rgb(245, 16, 16);
-  opacity: 100%;
+  background-color: rgb(245 16 16);
+  opacity: 1;
   cursor: auto;
 }
+
 .nuxt-link-exact-active img {
   cursor: auto;
 }

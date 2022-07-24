@@ -18,10 +18,22 @@ import getImage from "../libs/getImage";
 
 export default {
   props: {
-    nome: String,
-    ilustra: String,
-    detalhe: String,
-    index: Number,
+    nome: {
+      type: String,
+      default: "",
+    },
+    ilustra: {
+      type: String,
+      default: "",
+    },
+    detalhe: {
+      type: String,
+      default: "",
+    },
+    index: {
+      type: Number,
+      default: 0,
+    },
   },
   data() {
     return {
@@ -33,12 +45,12 @@ export default {
       switch (this.index) {
         case 0:
           return "/sobre";
-        default:
-          return "/";
         case 1:
           return "/apps";
         case 2:
           return "/contato";
+        default:
+          return "/";
       }
     },
   },

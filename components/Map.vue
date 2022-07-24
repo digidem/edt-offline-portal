@@ -2,13 +2,13 @@
   <div id="mapa" class="map" :style="{ height }">
     <client-only>
       <MglMap
-        :mapStyle="mapStyle"
-        :accessToken="accessToken"
+        :map-style="mapStyle"
+        :access-token="accessToken"
         :center="center"
         :zoom="zoom"
-        :minZoom="1"
-        :maxZoom="17"
-        :attributionControl="false"
+        :min-zoom="1"
+        :max-zoom="17"
+        :attribution-control="false"
         @load="onMapLoaded"
       >
         <!-- <MglGeolocateControl
@@ -42,13 +42,13 @@
 
 export default {
   components: {
-    MglGeojsonLayer: () => {
-      if (process.client) {
-        return import("vue-mapbox")
-          .then((m) => m.MglGeojsonLayer)
-          .catch();
-      }
-    },
+    // MglGeojsonLayer: () => {
+    //   if (process.client) {
+    //     return import("vue-mapbox")
+    //       .then((m) => m.MglGeojsonLayer)
+    //       .catch();
+    //   }
+    // },
     MglMarker: () => {
       if (process.client) {
         return import("vue-mapbox")
@@ -65,9 +65,12 @@ export default {
     },
   },
   props: {
-    places: { type: Array, default: [] },
+    places: { type: Array, default: () => [] },
     height: { type: String, default: "500px" },
-    token: String,
+    token: {
+      type: String,
+      default: "",
+    },
   },
   data() {
     return {
@@ -75,16 +78,13 @@ export default {
       map: null,
       hoveredStateId: null,
       territoryInfo: null,
-      //precisamos puxar do ssb -22.895717028291195, -45.838459009922474
+      // precisamos puxar do ssb -22.895717028291195, -45.838459009922474
       defaultCoord: [-45.83, -22.89],
       zoom: 10,
       currentZoom: this.zoom,
       offline: false,
       mapStyle: "mapbox://styles/hiurequeiroz/ckrau98ov3haa19kygrezgvbg",
     };
-  },
-  mounted() {
-    console.log("TOKEN", this.token);
   },
   computed: {
     center() {
@@ -94,11 +94,16 @@ export default {
       return this.token || null;
     },
   },
+  mounted() {
+    // eslint-disable-next-line no-console
+    console.log("TOKEN", this.token);
+  },
   methods: {
     toggleNative() {
       this.nativelands = !this.nativelands;
     },
     onMapLoaded({ map }) {
+      // eslint-disable-next-line no-console
       console.log("MAP LOADED", map);
       map.on("zoomend", (e) => {
         this.currentZoom = e.target.getZoom();
@@ -132,15 +137,15 @@ export default {
       this.hoveredStateId = null;
     },
     layerClick({ mapboxEvent }) {
-      const url = mapboxEvent.features[0].properties.description;
+      // const url = mapboxEvent.features[0].properties.description;
       this.territoryInfo = mapboxEvent.features[0].properties.Name;
       // const win = window.open(url, "_blank");
       // win.focus();
     },
     getRandomColor() {
-      var letters = "0123456789ABCDEF";
-      var color = "#";
-      for (var i = 0; i < 6; i++) {
+      const letters = "0123456789ABCDEF";
+      let color = "#";
+      for (let i = 0; i < 6; i++) {
         color += letters[Math.floor(Math.random() * 16)];
       }
       return color;
@@ -176,9 +181,11 @@ map {
   transform-origin: 0 0;
   transform: rotateZ(-135deg);
 }
+
 .marker span * {
   transform: rotateZ(135deg);
 }
+
 .popup {
   z-index: 999;
 }

@@ -7,19 +7,19 @@ export default {
   i18n: {},
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
+    "@nuxtjs/eslint-module",
     // https://go.nuxtjs.dev/stylelint
-    '@nuxtjs/stylelint-module',
-    'nuxt-windicss',
-    '@nuxtjs/pwa',
-    '@nuxtjs/localforage',
-    '@nuxtjs/svg',
+    "@nuxtjs/stylelint-module",
+    "nuxt-windicss",
+    "@nuxtjs/pwa",
+    "@nuxtjs/localforage",
+    "@nuxtjs/svg",
   ],
   components: true,
   build: {
     extend(config, ctx) {}, // blah blah
   },
   server: {
-    host: '0.0.0.0',
+    host: "0.0.0.0",
   },
-}
+};
