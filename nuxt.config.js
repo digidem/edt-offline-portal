@@ -17,7 +17,8 @@ export default {
   ],
   components: true,
   build: {
-    extend(config, ctx) {}, // blah blah
+    extend(config, ctx) {},
+    postcss: false,
   },
   server: {
     host: "0.0.0.0",
