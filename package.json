@@ -1,5 +1,6 @@
 {
   "name": "p2p-hotspot-portal",
+  "license": "CC0-1.0",
   "scripts": {
     "postinstall": "cp content/index-example.md content/index.md",
     "dev": "nuxt",
