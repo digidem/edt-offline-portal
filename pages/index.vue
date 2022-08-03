@@ -6,32 +6,41 @@
     <div id="wrapper" class="divided">
       <!-- Capa -->
       <section
-        class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right"
+        :style="getBackground(page.background, true)"
+        class="banner bg-cover bg-no-repeat bg-center md:bg-none style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right"
       >
         <div class="content capa">
-          <div class="flex text-center mx-auto">
+          <div class="flex text-left mx-auto">
             <img
-              class="max-h-40px"
-              :src="require(`~/assets/images/${page.icon}`)"
+              :src="require(`~/assets/images/${page.logoDark}`)"
+              :alt="localizedIndex.title"
+              class="hidden md:block"
+            />
+            <img
+              class="block md:hidden"
+              :src="require(`~/assets/images/${page.logoLight}`)"
               :alt="localizedIndex.title"
             />
-            <h1>{{ localizedIndex.title }}</h1>
+            <h1 class="sr-only">{{ localizedIndex.title }}</h1>
           </div>
           <div>
             {{ localizedIndex.description }}
           </div>
           <p class="major"></p>
+          <NuxtContent :document="page" tag="content" />
           <ul class="actions vertical pt-5vh">
             <li>
-              <a href="#first" class="button big wide">{{
-                $t("getStarted")
-              }}</a>
+              <a
+                href="#first"
+                class="button big wide bg-gray-50 md:bg-transparent"
+                >{{ $t("getStarted") }}</a
+              >
             </li>
           </ul>
         </div>
-        <div>
+        <div class="hidden md:block">
           <img
-            class="blur-2rem"
+            class="blur-2rem max-h-100vh"
             :src="require(`~/assets/images/${page.image}`)"
             alt=""
           />
@@ -100,7 +109,9 @@ export default {
   },
   methods: {
     getBackground(img) {
-      return getImage(img, true);
+      if (process.client && window?.innerWidth < 736) {
+        return getImage(img, true);
+      } else return "";
     },
     async auth() {
       const { hostname, protocol, port } = window.location;
@@ -129,6 +140,14 @@ export default {
 
 .nuxt-content a {
   color: blue;
+}
+
+.nuxt-content p {
+  padding: 15px 0;
+}
+
+.nuxt-content hr {
+  padding: 15px 0;
 }
 
 .content h2 {

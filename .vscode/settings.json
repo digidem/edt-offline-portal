@@ -2,5 +2,9 @@
   "[javascript]": {
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true
+  },
+  "[vue]": {
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true
   }
 }

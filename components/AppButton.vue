@@ -1,13 +1,14 @@
 <template>
-  <a target="_blank" :href="hrefUrl" :download="download">
+  <a
+    :target="!scroll && '_blank'"
+    :href="scroll || hrefUrl"
+    :download="download"
+  >
     <button
-      :class="`mt-4 px-6 ${
-        color
-          ? typeof color === 'boolean'
-            ? 'bg-blue-600'
-            : `bg-${color}`
-          : 'bg-none'
-      }`"
+      :style="`background: ${
+        color ? (typeof color === 'boolean' ? '#F67D31' : `${color}`) : 'none'
+      };`"
+      :class="`mt-4 px-6`"
     >
       {{ text }}
     </button>
@@ -33,7 +34,11 @@ export default {
       default: "Click here",
     },
     localurl: {
-      type: String || null,
+      type: [String, null],
+      default: null,
+    },
+    scroll: {
+      type: [String, null],
       default: null,
     },
   },

@@ -7,7 +7,7 @@ export default (img, isBackground) => {
   if (isRemote) {
     imagem = img;
   } else {
-    imagem = require(`~/assets/${img}`);
+    imagem = require(`~/assets/images/${img}`);
   }
   if (isBackground) return `background-image: url("${imagem}");`;
   else return imagem;

@@ -3,7 +3,7 @@ import messages from "./messages";
 export default {
   target: "static", // default is 'server'
   head: {
-    titleTemplate: "P2P Hotspot",
+    titleTemplate: "Earth Defenders Toolkit",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },

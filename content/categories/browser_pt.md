@@ -1,6 +1,6 @@
 ---
 title: Navegador
-image: firefox-phone.jpg
+image: logo.png
 locale: pt
 order: 2
 ---

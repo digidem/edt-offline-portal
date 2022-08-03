@@ -29,5 +29,11 @@ export default {
   props: {
     authenticated: Boolean,
   },
+  methods: {
+    auth() {
+      // eslint-disable-next-line no-console
+      console.log("AUTH");
+    },
+  },
 };
 </script>
