@@ -65,7 +65,7 @@ import getImage from "@/libs/getImage";
 
 export default {
   async asyncData({ $content }) {
-    const categories = await $content("categories").fetch();
+    const categories = await $content("blocks").fetch();
     const page = await $content("index").fetch();
     return {
       page,
