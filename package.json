@@ -1,12 +1,12 @@
 {
-  "name": "p2p-hotspot-portal",
+  "name": "edt-portal",
   "license": "CC0-1.0",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "generate": "nuxt generate",
     "start": "nuxt start",
-    "release": "nuxt build && nuxt generate && zip -r portal.zip dist",
+    "release": "nuxt build && nuxt generate && tar -czf portal.tar.gz dist",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint:style": "stylelint \"**/*.{css,scss,sass,html,vue}\" --ignore-path .gitignore",
     "lint:prettier": "prettier --check .",
