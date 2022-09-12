@@ -1,5 +1,5 @@
 <template>
-  <article class="">
+  <article>
     <a class="absolute top-2 left-2">
       <!-- <nuxt-link :to="switchLocalePath('pt')">Português</nuxt-link> -->
     </a>
@@ -28,7 +28,7 @@
           </div>
           <p class="major"></p>
           <NuxtContent :document="page" tag="content" />
-          <ul class="actions vertical pt-5vh">
+          <ul class="actions pt-5vh">
             <li>
               <a
                 href="#first"
@@ -36,6 +36,13 @@
                 >{{ $t("getStarted") }}</a
               >
             </li>
+            <!-- <li>
+              <a
+                href="/connect"
+                class="button big wide bg-gray-50 md:bg-transparent"
+                >{{ $t("connect") }}</a
+              >
+            </li> -->
           </ul>
         </div>
         <div class="hidden md:block">
@@ -137,6 +144,7 @@ export default {
 </script>
 <style>
 @import "~/assets/css/main.css";
+@import "~/assets/css/icons.css";
 
 .nuxt-content a {
   color: blue;
