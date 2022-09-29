@@ -1,5 +1,12 @@
 <template>
   <article>
+    <div v-if="connecting" class="flex justify-center align-center">
+      <div
+        class="absolute top-0 bg-yellow-100 w-320px md:w-500px px-8 py-8 rounded"
+      >
+        {{ $t("connectingNote") }}
+      </div>
+    </div>
     <div class="w-300px connect-container">
       <img :src="require(`~/assets/images/${page.logoDark}`)" alt="EDT" />
       <div
@@ -9,9 +16,7 @@
         <svg
           class="animate-spin h-15 w-15 mr-3 border-5px border-green-600 boder-solid"
           viewBox="0 0 24 24"
-        >
-          <!-- ... -->
-        </svg>
+        ></svg>
       </div>
       <form
         v-else-if="!error"
