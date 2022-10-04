@@ -10,7 +10,7 @@
       };`"
       :class="`mt-4 px-6`"
     >
-      {{ text }}
+      {{ $t(`${text}`) }}
     </button>
   </a>
 </template>

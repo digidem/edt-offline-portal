@@ -1,18 +1,35 @@
 <template>
-  <div class="border-solid border-t-1 md:mt-150px">
-    <div class="mx-auto my-50px max-w-50vw text-center pt-35px">
-      <p>
+  <div
+    :class="`
+      border-solid border-t-1
+      md:mt-150px
+      bg-dark-100
+      py-50px
+      bottom-0
+      w-full
+      ${!root && 'absolute'}
+    `"
+  >
+    <div class="mx-auto max-w-50vw text-center pt-35px">
+      <div class="mb-25px">
         <a :href="root ? '/connect' : '/'">
-          <button class="mx-auto px-8 mb-12 bg-green-500">
-            {{ $t(root ? "connect" : "back") }}
+          <button class="mx-auto px-8 bg-green-500">
+            {{ $t(root ? "connect" : "portal") }}
           </button>
         </a>
-      </p>
-      <span>
+        <app-button color="#1AA2D4" localurl=":82" text="sync"></app-button>
+        <app-button
+          color="#1D99F3"
+          localurl=":81"
+          text="filebrowser"
+        ></app-button>
+      </div>
+      <br />
+      <span class="text-light-800">
         {{ $t("madeWithLove") }}
         <a href="https://digital-democarcy.org">Digital Democarcy</a>
         {{ $t("withSupport") }}
-        <a href="http://earthdefenderstoolkit.com/">Sponsor</a>
+        <a href="http://earthdefenderstoolkit.com/">Sponsors</a>
         <!-- <img src="~/assets/cc.svg" alt="cc" class="h-20px w-20px" /> -->
         {{ new Date().getFullYear() }}
       </span>

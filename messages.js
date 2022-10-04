@@ -7,6 +7,9 @@ export default {
     continueBrowsing: "Continue browsing",
     authenticated: "Authenticated",
     connect: "Connect",
+    portal: "Portal",
+    filebrowser: "FileBrowser",
+    sync: "Sync",
     scan: "Scan",
     scanning: "Scanning",
     connectingNote:
