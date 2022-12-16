@@ -89,6 +89,7 @@ export default {
 
       try {
         const networks = await this.$axios.$get(`${this.url}/networks`);
+        // Check it's own network isn't included
         this.networks = networks;
         this.error = null;
         this.formNetwork = networks[0].ssid;

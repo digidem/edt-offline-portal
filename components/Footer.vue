@@ -1,15 +1,5 @@
 <template>
-  <div
-    :class="`
-      border-solid border-t-1
-      md:mt-150px
-      bg-dark-100
-      py-50px
-      bottom-0
-      w-full
-      ${!root && 'absolute'}
-    `"
-  >
+  <div class="border-solid border-t-1 md:mt-150px bg-dark-100 py-50px w-full">
     <div class="mx-auto max-w-50vw text-center pt-35px">
       <div class="mb-25px">
         <a :href="root ? '/connect' : '/'">

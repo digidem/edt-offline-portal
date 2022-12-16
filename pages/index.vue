@@ -32,7 +32,7 @@
             <li>
               <a
                 href="#first"
-                class="button big wide bg-gray-50 md:bg-transparent"
+                class="button big wide bg-gray-50 lg:bg-transparent"
                 >{{ $t("getStarted") }}</a
               >
             </li>
