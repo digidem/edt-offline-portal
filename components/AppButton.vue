@@ -42,15 +42,16 @@ export default {
       default: null,
     },
   },
-  computed: {
-    hrefUrl() {
-      if (process.client) {
-        if (this.localurl) {
-          const { hostname, protocol } = window.location;
-          return `${protocol}//${hostname}${this.localurl}`;
-        } else return this.link;
-      } else return "";
-    },
+  data() {
+    return {
+      hrefUrl: "",
+    };
+  },
+  mounted() {
+    if (this.localurl) {
+      const { hostname, protocol } = window.location;
+      this.hrefUrl = `${protocol}//${hostname}${this.localurl}`;
+    } else this.hrefUrl = this.link;
   },
 };
 </script>
