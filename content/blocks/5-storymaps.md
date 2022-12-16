@@ -2,7 +2,6 @@
 title: Land-based storytelling
 image: storymaps.png
 locale: en
-order: 5
 ---
 
 Terrastories is a tool...

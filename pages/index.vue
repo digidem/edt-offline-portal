@@ -53,7 +53,7 @@
           />
         </div>
       </section>
-      <App
+      <Block
         v-for="(category, key) in localizedCategories"
         :id="key === 0 && 'first'"
         :key="category.slug"
@@ -101,9 +101,7 @@ export default {
       };
     },
     localizedCategories() {
-      return this.categories
-        .filter((c) => c.locale === this.locale)
-        .sort((a, b) => a.order - b.order);
+      return this.categories.filter((c) => c.locale === this.locale);
     },
     locale() {
       return this.$i18n.getLocaleCookie();

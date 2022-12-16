@@ -2,7 +2,6 @@
 title: Explore the tools
 image: toolkit.png
 locale: en
-order: 3
 ---
 
 Explore the tools using the [toolfinder]() and download them for your mobile or desktops devices even offline using F-Droid or the installers page.

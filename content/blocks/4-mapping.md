@@ -2,7 +2,6 @@
 title: Mapping with Mapeo
 image: mapping.png
 locale: en
-order: 4
 ---
 
 Mapeo is a tool

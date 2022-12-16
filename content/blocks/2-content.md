@@ -2,7 +2,6 @@
 title: Explore offline content
 image: content.jpg
 locale: en
-order: 2
 ---
 
 Curated websites in the selected language.

@@ -2,7 +2,6 @@
 title: Contributing
 image: contribute.jpg
 locale: en
-order: 6
 ---
 
 How to contribute?
