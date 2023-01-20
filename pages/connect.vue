@@ -128,8 +128,8 @@ export default {
 };
 </script>
 <style scoped>
-@import "~/assets/css/main.css";
-@import "~/assets/css/icons.css";
+@import url("~/assets/css/main.css");
+@import url("~/assets/css/icons.css");
 
 .connect-container {
   margin: 0 auto;

@@ -2,6 +2,7 @@ dist
 *.zip
 *.tar.gz
 node_modules/
+static/installers/
 .nuxt/
 .env
 .eslintcache

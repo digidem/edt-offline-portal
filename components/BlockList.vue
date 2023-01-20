@@ -38,8 +38,8 @@ export default {
 };
 </script>
 <style>
-@import "~/assets/css/main.css";
-@import "~/assets/css/icons.css";
+@import url("~/assets/css/main.css");
+@import url("~/assets/css/icons.css");
 
 .nuxt-content a {
   color: blue;

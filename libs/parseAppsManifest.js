@@ -1,9 +1,8 @@
-export default (installers) => {
+module.exports = (installers) => {
   return installers.map((i) => {
     const extension = i.split(".").pop().toLowerCase();
     let platform;
     if (extension === "zip" || extension === "gz") {
-      console.log("Oh its a zip!");
       if (RegExp("\\b" + "linux" + "\\b").test(i)) platform = "linux";
       if (RegExp("\\b" + "macos" + "\\b").test(i)) platform = "mac";
       if (RegExp("\\b" + "windows" + "\\b").test(i)) platform = "windows";

@@ -3731,6 +3731,13 @@ cli-cursor@^3.1.0:
   dependencies:
     restore-cursor "^3.1.0"
 
+cli-progress@^3.11.2:
+  version "3.11.2"
+  resolved "https://registry.yarnpkg.com/cli-progress/-/cli-progress-3.11.2.tgz#f8c89bd157e74f3f2c43bcfb3505670b4d48fc77"
+  integrity sha512-lCPoS6ncgX4+rJu5bS3F/iCz17kZ9MPZ6dpuTtI0KXKABkhyXIdYB3Inby1OpaGti3YlI3EeEkM9AuWpelJrVA==
+  dependencies:
+    string-width "^4.2.3"
+
 cli-truncate@^2.1.0:
   version "2.1.0"
   resolved "https://registry.npmjs.org/cli-truncate/-/cli-truncate-2.1.0.tgz"
@@ -3864,6 +3871,11 @@ colorette@^2.0.19:
   version "2.0.19"
   resolved "https://registry.yarnpkg.com/colorette/-/colorette-2.0.19.tgz#cdf044f47ad41a0f4b56b3a0d5b4e6e1a2d5a798"
   integrity sha512-3tlv/dIP7FWvj3BsbHrGLJ6l/oKh1O3TcgBqMn+yyCagOxc23fyzDS6HypQbgxWbkpDnf52p1LuR4eWDQ/K9WQ==
+
+colors@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/colors/-/colors-1.4.0.tgz#c50491479d4c1bdaed2c9ced32cf7c7dc2360f78"
+  integrity sha512-a+UqTh4kgZg/SlGvfbzDHpgRu7AAQOmmqRHJnxhRZICKFUT91brVhNNt58CMWU9PsBbv3PDCZUHbVxuDiH2mtA==
 
 comma-separated-tokens@^1.0.0:
   version "1.0.8"
@@ -8126,7 +8138,7 @@ minimist-options@4.1.0:
     is-plain-obj "^1.1.0"
     kind-of "^6.0.3"
 
-minimist@^1.2.0, minimist@^1.2.5, minimist@^1.2.6:
+minimist@1.2.6, minimist@^1.2.0, minimist@^1.2.5, minimist@^1.2.6:
   version "1.2.6"
   resolved "https://registry.npmjs.org/minimist/-/minimist-1.2.6.tgz"
   integrity sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==
@@ -11799,6 +11811,11 @@ tty-browserify@0.0.0:
   resolved "https://registry.npmjs.org/tty-browserify/-/tty-browserify-0.0.0.tgz"
   integrity sha1-oVe6QC2iTpv5V/mqadUk7tQpAaY=
 
+tunnel@0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/tunnel/-/tunnel-0.0.6.tgz#72f1314b34a5b192db012324df2cc587ca47f92c"
+  integrity sha512-1h/Lnq9yajKY2PEbBadPXj3VxsDDu844OnaAo52UVmIzIvwwtBPIuNvkjuzBlTWpfJyUbG3ez0KSBibQkj4ojg==
+
 type-check@^0.4.0, type-check@~0.4.0:
   version "0.4.0"
   resolved "https://registry.npmjs.org/type-check/-/type-check-0.4.0.tgz"
@@ -12559,6 +12576,14 @@ webpackbar@^4.0.0:
     std-env "^2.2.1"
     text-table "^0.2.0"
     wrap-ansi "^6.0.0"
+
+wget-improved@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/wget-improved/-/wget-improved-3.3.1.tgz#4ca99dc80db0ae388e99f4137f8deadd358630bc"
+  integrity sha512-OF22MM9ImbOcuB5ZV3ye0q1udaYeTP/V6LOfjNyGCNNC7bGB219ljZv6Wk5mPogeigJJ6CqheLScv17AFbsdGA==
+  dependencies:
+    minimist "1.2.6"
+    tunnel "0.0.6"
 
 whatwg-url@^5.0.0:
   version "5.0.0"
