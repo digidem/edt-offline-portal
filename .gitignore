@@ -1,0 +1,7 @@
+dist
+*.zip
+*.tar.gz
+node_modules/
+.nuxt/
+.env
+.eslintcache
