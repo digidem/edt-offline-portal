@@ -89,7 +89,8 @@ export default {
   mounted() {
     // eslint-disable-next-line no-console
     console.log("Browser locale", this.$i18n.getBrowserLocale());
-    this.switchLocalePath(this.locale);
+    // TODO: add locales
+    // this.switchLocalePath(this.locale);
     // TODO: add endpoint
     // this.auth();
   },
