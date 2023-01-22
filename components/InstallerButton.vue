@@ -42,7 +42,7 @@ export default {
     },
     platform: {
       type: String,
-      default: "non",
+      default: "android",
     },
     extension: {
       type: String,
