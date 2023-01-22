@@ -1,6 +1,7 @@
-import messages from "./messages";
+import messages from "./src/messages";
 
 export default {
+  srcDir: "src/",
   target: "static", // default is 'server'
   head: {
     titleTemplate: "Earth Defenders Toolkit",

@@ -1,0 +1,63 @@
+[
+  {
+    "name": "EDT Apps",
+    "slug": "edt-apps",
+    "icon": "https://github.com/luandro/fdroidclient/raw/master/app/src/basic/res/drawable-hdpi/ic_launcher.png",
+    "description": "Android application distribution platform for Earth Defenders Toolkit.",
+    "version": "v0.0.1",
+    "installers": [
+      "https://github.com/luandro/fdroidclient/releases/download/v0.0.1/edt-apps.apk"
+    ]
+  },
+  {
+    "name": "Mapeo",
+    "slug": "mapeo",
+    "icon": "https://github.com/digidem/mapeo-mobile/raw/develop/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png",
+    "description": "Mapeo is a free digital toolset for documenting, monitoring, and mapping many types of data.",
+    "version": "v5.6.0",
+    "installers": [
+      "https://github.com/digidem/mapeo-mobile/releases/download/v5.4.7/mapeo-v5.4.7.apk",
+      "https://github.com/digidem/mapeo-desktop/releases/download/v5.6.0/Install_Mapeo_v5.6.0_linux.AppImage",
+      "https://github.com/digidem/mapeo-desktop/releases/download/v5.6.0/Install_Mapeo_v5.6.0_linux.deb",
+      "https://github.com/digidem/mapeo-desktop/releases/download/v5.6.0/Install_Mapeo_v5.6.0_mac.dmg",
+      "https://github.com/digidem/mapeo-desktop/releases/download/v5.6.0/Install_Mapeo_v5.6.0_win-x64.exe"
+    ]
+  },
+  {
+    "name": "Āhau",
+    "slug": "ahau",
+    "icon": "https://gitlab.com/ahau/ahau/-/raw/master/ui/src/assets/Animated_Logo.svg",
+    "description": "Āhau is a Whānau (Māori-language word for extended family) Data Platform that helps whānau-based communities capture, preserve, and share important information and histories into secure, whānau managed databases and servers.",
+    "version": "v2.17.0",
+    "installers": [
+      "https://github.com/Ahau-NZ/Ahau/releases/download/v2.17.0/Ahau_Linux-x86_64.AppImage",
+      "https://github.com/digidem/mapeo-desktop/releases/download/v5.6.0/Install_Mapeo_v5.6.0_linux.deb",
+      "https://github.com/Ahau-NZ/Ahau/releases/download/v2.17.0/Ahau_Mac.dmg",
+      "https://github.com/Ahau-NZ/Ahau/releases/download/v2.17.0/Ahau_Windows.exe"
+    ]
+  },
+  {
+    "name": "QGIS",
+    "slug": "qgis",
+    "icon": "https://github.com/qgis/QGIS/raw/master/images/README-md/main_logo.png",
+    "version": "v3.28.2-1",
+    "description": "QGIS is a free and open-source cross-platform desktop geographic information system (GIS) application that supports viewing, editing, and analysis of geospatial data.",
+    "installers": [
+      "https://qgis.org/downloads/macos/qgis-macos-pr.dmg",
+      "https://qgis.org/downloads/QGIS-OSGeo4W-3.28.2-1.msi"
+    ]
+  },
+  {
+    "name": "Syncthing",
+    "slug": "syncthing",
+    "icon": "https://github.com/syncthing/syncthing/raw/main/assets/logo-text-128.png",
+    "version": "v1.23.0",
+    "description": "Syncthing is a continuous file synchronization application. It synchronizes files between two or more computers or mobiles devices.",
+    "installers": [
+      "https://github.com/syncthing/syncthing/releases/download/v1.23.0/syncthing-linux-amd64-v1.23.0.tar.gz",
+      "https://github.com/syncthing/syncthing-android/releases/download/1.23.0/app-release.apk",
+      "https://github.com/syncthing/syncthing/releases/download/v1.23.0/syncthing-windows-amd64-v1.23.0.zip",
+      "https://github.com/syncthing/syncthing/releases/download/v1.23.0/syncthing-macos-universal-v1.23.0.zip"
+    ]
+  }
+]
