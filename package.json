@@ -3,6 +3,7 @@
   "license": "CC0-1.0",
   "scripts": {
     "dev": "nuxt",
+    "build:offline": "npm run downloadInstallers && nuxt build",
     "build": "nuxt build",
     "generate": "nuxt generate",
     "start": "nuxt start",

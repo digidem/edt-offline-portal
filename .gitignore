@@ -1,8 +1,14 @@
 dist
-*.zip
-*.tar.gz
+**/*.zip
+**/*.gz
+**/*.exe
+**/*.msi
+**/*.dmg
+**/*.apk
+**/*.appimage
+**/*.deb
 node_modules/
-static/installers/
+static/localAppManifest.json
 .nuxt/
 .env
 .eslintcache

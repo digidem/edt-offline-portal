@@ -1,5 +1,15 @@
 module.exports = (installers) => {
+  let localAppManifest = [];
+  try {
+    localAppManifest = require("../static/localAppManifest.json");
+  } catch (err) {
+    /* eslint-disable no-console */
+    console.log("Cannot find local app manifest", err);
+  }
   return installers.map((i) => {
+    const localInstallerDir = localAppManifest.filter(
+      (localApp) => localApp.src === i
+    )[0]?.dir;
     const extension = i.split(".").pop().toLowerCase();
     let platform;
     if (extension === "zip" || extension === "gz") {
@@ -16,6 +26,8 @@ module.exports = (installers) => {
       link: i,
       platform,
       extension,
+      dir: localInstallerDir || null,
+      filename: localInstallerDir ? localInstallerDir.split("/")[1] : null,
     };
   });
 };

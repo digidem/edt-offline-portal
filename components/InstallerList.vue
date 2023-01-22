@@ -12,10 +12,11 @@
     >
       <div v-for="installer in installers" :key="installer" class="mx-2">
         <installer-button
-          :link="installer.link"
+          :link="installer.dir || installer.link"
           :color="true"
           :platform="installer.platform"
           :extension="installer.extension"
+          :download="installer.filename || installer.link"
         />
       </div>
     </div>
