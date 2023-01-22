@@ -1,5 +1,5 @@
 import messages from "./src/messages";
-
+const routerBase = process.env.ROUTER_BASE || "/";
 export default {
   srcDir: "src/",
   target: "static", // default is 'server'
@@ -39,6 +39,9 @@ export default {
   components: true,
   build: {
     extend(config, ctx) {}, // blah blah
+  },
+  router: {
+    base: routerBase,
   },
   server: {
     host: "0.0.0.0",
