@@ -8,7 +8,8 @@ dist
 **/*.appimage
 **/*.deb
 node_modules/
-static/localAppManifest.json
+src/static/localAppManifest.json
+src/static/sw.js
 .nuxt/
 .env
 .eslintcache
