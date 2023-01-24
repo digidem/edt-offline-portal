@@ -20,13 +20,6 @@
               <NuxtContent :document="index" tag="content" />
             </p>
           </div>
-          <ul class="actions pt-5vh">
-            <li>
-              <a href="#first" class="button big wide bg-gray-50">{{
-                $t("getStarted")
-              }}</a>
-            </li>
-          </ul>
         </div>
       </section>
       <BlockList :blocks="blocks" />
