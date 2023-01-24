@@ -1,0 +1,63 @@
+name: "Generate Nuxt app"
+description: "Generates the Nuxt app and uploads it as an artifact"
+inputs:
+  router-base:
+    description: "The base url for the app, use / if none"
+    default: "/"
+  github-pages:
+    description: "Should app be uploaded to Github pages"
+runs:
+  using: "composite"
+  steps:
+    - name: Detect package manager
+      shell: bash
+      id: detect-package-manager
+      run: |
+        if [ -f "${{ github.workspace }}/yarn.lock" ]; then
+          echo "manager=yarn" >> $GITHUB_OUTPUT
+          echo "command=install" >> $GITHUB_OUTPUT
+          exit 0
+        elif [ -f "${{ github.workspace }}/package.json" ]; then
+          echo "manager=npm" >> $GITHUB_OUTPUT
+          echo "command=ci" >> $GITHUB_OUTPUT
+          exit 0
+        else
+          echo "Unable to determine packager manager"
+          exit 1
+        fi
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: "16"
+        cache: ${{ steps.detect-package-manager.outputs.manager }}
+    - name: Setup Pages
+      uses: actions/configure-pages@v2
+      with:
+        # Automatically inject router.base in your Nuxt configuration file and set
+        # target to static (https://nuxtjs.org/docs/configuration-glossary/configuration-target/).
+        #
+        # You may remove this line if you want to manage the configuration yourself.
+        static_site_generator: nuxt
+    - name: Restore cache
+      uses: actions/cache@v3
+      with:
+        path: |
+          dist
+          .nuxt
+        key: ${{ runner.os }}-nuxt-build-${{ hashFiles('dist') }}
+        restore-keys: |
+          ${{ runner.os }}-nuxt-build-
+    - name: Install dependencies
+      shell: bash
+      run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+    - name: Static HTML export with Nuxt
+      shell: bash
+      env:
+        ROUTER_BASE: ${{ inputs.router-base }}
+      run: ${{ steps.detect-package-manager.outputs.manager }} run generate
+    - name: Upload file
+      uses: actions/upload-artifact@v3
+      with:
+        name: nuxt-app
+        path: ./dist
+        retention-days: 1

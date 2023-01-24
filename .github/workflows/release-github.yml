@@ -1,0 +1,26 @@
+name: Pre-Release
+on:
+  push:
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+"
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Generate Nuxt
+        id: generate-nuxt
+        uses: ./.github/actions/generate-nuxt
+  github-release:
+    runs-on: ubuntu-latest
+    needs: [build]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Create Github pre-release
+        uses: ./.github/actions/release-github
+        with:
+          repo_token: "${{ secrets.PAT }}"
