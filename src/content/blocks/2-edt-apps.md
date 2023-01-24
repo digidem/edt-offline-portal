@@ -8,4 +8,4 @@ Explore the tools using the "Toolfinder" and download them for your mobile or de
 
 <app-button :color="true" localUrl=":8086/earthdefenderstoolkit/https://earthdefenderstoolkit.com/toolfinder?lang=es" text="Toolfinder"></app-button>
 
-<app-button link="/apps" target="_self" text="Install apps"></app-button>
+<app-button link="apps" target="_self" text="Install apps"></app-button>
