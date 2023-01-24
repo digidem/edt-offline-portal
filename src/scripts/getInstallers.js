@@ -79,7 +79,7 @@ function downloadFile(app, installer, bar, workFolder) {
 console.log(
   "\n Starting download of installers for all applications in the appManifest.json \n"
 );
-const workFolder = path.join(process.cwd(), "static");
+const workFolder = path.join(process.cwd(), "src", "static");
 const appManifest = readFileSync(path.join(workFolder, "/appManifest.json"), {
   encoding: "utf8",
   flag: "r",
