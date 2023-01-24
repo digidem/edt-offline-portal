@@ -23,7 +23,7 @@
         :key="app.slug"
         class="md:w-30vw bg-light-400 shadow-lg mx-4 my-4 px-6 py-8 rounded-lg"
       >
-        <a class="no-underline" :href="`/apps/${app.slug}`">
+        <a class="no-underline" :href="`apps/${app.slug}`">
           <div class="md:h-385px text-center">
             <img class="h-90px mx-auto mb-4" :src="app.icon" />
             <h3>{{ app.name }}</h3>
