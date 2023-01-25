@@ -1,7 +1,7 @@
 name: "Generate Nuxt app"
 description: "Generates the Nuxt app and uploads it as an artifact"
 inputs:
-  github-pages:
+  github-page:
     description: "Should app be uploaded to Github pages"
 runs:
   using: "composite"
@@ -29,7 +29,7 @@ runs:
         cache: ${{ steps.detect-package-manager.outputs.manager }}
     - name: Setup Pages
       uses: actions/configure-pages@v2
-      if: inputs.github-pages
+      if: inputs.github-page
       with:
         # Automatically inject router.base in your Nuxt configuration file and set
         # target to static (https://nuxtjs.org/docs/configuration-glossary/configuration-target/).
