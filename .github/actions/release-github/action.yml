@@ -16,7 +16,7 @@ runs:
       uses: thedoctor0/zip-release@0.7.0
       with:
         type: "tar"
-        filename: "release.tar.gz"
+        filename: "portal.tar.gz"
         path: "nuxt-app/*"
     - name: "✏️ Upload imgs and release"
       uses: "marvinpinto/action-automatic-releases@latest"
