@@ -34,7 +34,14 @@ export default {
   layout: "items",
   async asyncData({ $content, params, redirect }) {
     if (params?.pathMatch) {
-      const pages = await $content(`pages/${params?.pathMatch}`).fetch();
+      const folderName = "pages";
+      const allPages = await $content(folderName, {
+        deep: true,
+      }).fetch();
+      const pages = allPages.filter((page) => {
+        const term = page.dir.split(folderName)[1].split("/")[1];
+        return term === params.pathMatch.split("/")[0];
+      });
       if (pages) {
         let index = null;
         const blocks = [];
