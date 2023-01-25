@@ -33,7 +33,7 @@ jobs:
       - name: Generate Nuxt
         uses: ./.github/actions/generate-nuxt
         with:
-          router-base: ${{ github.event.repository.name }}
+          github-page: true
   # Deployment job
   deploy:
     environment:
