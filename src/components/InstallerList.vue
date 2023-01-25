@@ -10,7 +10,11 @@
     <div
       class="mx-auto py-10px flex flex-col md:flex-row justify-round items-center flex-wrap"
     >
-      <div v-for="installer in installers" :key="installer" class="mx-2">
+      <div
+        v-for="installer in installers"
+        :key="installer.filename"
+        class="mx-2"
+      >
         <installer-button
           :link="installer.dir || installer.link"
           :color="true"
