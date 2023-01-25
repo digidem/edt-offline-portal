@@ -2,7 +2,6 @@ name: "Create release on Github"
 description: "Downloads all artifacts, generates readme and publishes a release to Github"
 inputs:
   pre-release:
-    required: false
     description: "Is this a pre-release: true or false"
   repo_token:
     required: true
@@ -16,7 +15,7 @@ runs:
       uses: thedoctor0/zip-release@0.7.0
       with:
         type: "tar"
-        filename: "release.tar.gz"
+        filename: "portal.tar.gz"
         path: "nuxt-app/*"
     - name: "✏️ Upload imgs and release"
       uses: "marvinpinto/action-automatic-releases@latest"
