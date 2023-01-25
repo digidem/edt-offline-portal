@@ -2,7 +2,6 @@ name: "Create release on Github"
 description: "Downloads all artifacts, generates readme and publishes a release to Github"
 inputs:
   pre-release:
-    required: false
     description: "Is this a pre-release: true or false"
   repo_token:
     required: true
