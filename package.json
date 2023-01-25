@@ -1,5 +1,5 @@
 {
-  "name": "edt-portal",
+  "name": "edt-offline-portal",
   "license": "CC0-1.0",
   "scripts": {
     "dev": "nuxt",

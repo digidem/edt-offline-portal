@@ -10,4 +10,4 @@ User data is open to be viwed and edited by every other user, so be sure to foll
 
 <app-button :color="true" localUrl=":8081" text="Signup or Login"></app-button>
 
-<app-button link="guide-lines" text="Guide-lines"></app-button>
+<app-button link="guide-lines" target="_self" text="Guide-lines"></app-button>
