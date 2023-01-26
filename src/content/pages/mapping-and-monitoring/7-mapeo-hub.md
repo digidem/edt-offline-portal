@@ -8,4 +8,4 @@ We provide a Mapeo instance on the device running Earth Defenders Toolkit Offlin
 
 If you changed your Mapeo configuration, you might need to change the `MAPEO_PROJECT_KEY` variable for your Earth Defenders Toolkit Offline instance. Check our documentation to learn more.
 
-<app-button :color="true" localUrl=":8086/earthdefenderstoolkit/https://docs.earthdefenderstoolkit.com" text="Read the documentation"></app-button>
+<app-button :color="true" localUrl=":8086" text="Read the documentation"></app-button>

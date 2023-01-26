@@ -8,6 +8,6 @@ Like Terrastories, [Mapeo](/mapping-and-monitoring) is another powerful mapping 
 
 For that reason the [Mapeo Data Hub](/mapping-and-monitoring#mapeo-data-hub) automatically exports the observations of type `Terrastories` as a zip file, which can be imported into Terrastories as Places for stories. Check the **Terrastories documentation** to learn more about importing.
 
-<app-button :color="true" localUrl=":8082/" text="Terrastories places file"></app-button>
+<app-button :color="true" localUrl=":8081/files" text="Terrastories places file"></app-button>
 
 <app-button localUrl=":8086/earthdefenderstoolkit/https://docs.terrastories.app/using-terrastories/using-the-terrastories-member-dashboard/importing-data/" text="Importing data"></app-button>
