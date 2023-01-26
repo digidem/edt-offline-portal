@@ -7,10 +7,10 @@
             {{ $t(root ? "connect" : "portal") }}
           </button>
         </a>
-        <app-button color="#1AA2D4" localurl=":82" text="sync"></app-button>
+        <app-button color="#1AA2D4" localurl=":8082" text="sync"></app-button>
         <app-button
           color="#1D99F3"
-          localurl=":81"
+          localurl=":8081"
           text="filebrowser"
         ></app-button>
       </div>
