@@ -12360,6 +12360,11 @@ vue-i18n@^8.27.2:
   resolved "https://registry.yarnpkg.com/vue-i18n/-/vue-i18n-8.28.2.tgz#913558066e274395c0a9f40b2f3393d5c2636840"
   integrity sha512-C5GZjs1tYlAqjwymaaCPDjCyGo10ajUphiwA922jKt9n7KPpqR7oM1PCwYzhB/E7+nT3wfdG3oRre5raIT1rKA==
 
+vue-knob-control@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/vue-knob-control/-/vue-knob-control-1.7.0.tgz#f26ac85cb72b62e38eb5721da6ac0e46e936553b"
+  integrity sha512-/x/Hwn4sJaymgabRStkM6ogekZD8qlGBl2lkQRt7WOtHbe5bb47ERVlGUE4z2nIU58h0U1ZPtovp+Y4zKz3HfQ==
+
 vue-loader@^15.9.7:
   version "15.9.8"
   resolved "https://registry.npmjs.org/vue-loader/-/vue-loader-15.9.8.tgz"
