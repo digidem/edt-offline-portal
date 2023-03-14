@@ -23,7 +23,9 @@ export default {
       { hid: "description", name: "description", content: "Meta description" },
     ],
   },
-  env: {},
+  env: {
+    edtHost: process.env.EDT_HOST,
+  },
   modules: ["@nuxt/content", "@nuxtjs/i18n", "@nuxtjs/axios", "nuxt-clipboard"],
   i18n: {
     locales: ["en", "pt", "es"],
