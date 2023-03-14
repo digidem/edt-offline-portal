@@ -19,24 +19,21 @@
         ></svg>
       </div>
       <form
-        v-else-if="!error"
-        class="flex justify-between justify-items-center items-center flex-col h-200px"
+        v-else
+        class="flex justify-between justify-items-center items-center flex-col gap-4"
         @submit="connectToNetwork"
       >
-        <select v-model="formNetwork" class="w-full pt-15px">
-          <option
-            v-for="network in networks"
-            :key="network.id"
-            :value="network.ssid"
-          >
-            <span>
-              {{ network.ssid }}
-            </span>
-            <i v-if="network.security" class="gg-lock"></i>
-          </option>
-        </select>
-        <span class="flex flex-row w-full pt-15px">
-          <input v-model="formPassword" :type="visible ? 'text' : 'password'" />
+        <NetworkDropDown
+          :selected="selected"
+          :networks="networks"
+          @selectNetwork="selectNetwork"
+        />
+        <span class="flex flex-row w-full pt-15px w-300px md:w-400px">
+          <input
+            v-model="formPassword"
+            :disabled="selected && selected.conn_type === 'NONE'"
+            :type="visible ? 'text' : 'password'"
+          />
           <button class="rounded-none" @click="toggleVisibility">
             <i class="gg-eye"></i>
           </button>
@@ -44,13 +41,13 @@
         <button class="py-15px w-full connect-button" type="submit">
           {{ $t("connect") }}
         </button>
+        <div v-if="error" class="text-center text-red-500 pt-4">
+          {{ error }}
+        </div>
       </form>
       <button :disabled="scanning" class="py-15px w-full" @click="getNetworks">
         {{ $t(scanning ? "scanning" : "scan") }}
       </button>
-      <div v-if="error" class="text-center text-red-500 pt-4">
-        {{ error }}
-      </div>
     </div>
     <Footer />
   </article>
@@ -74,25 +71,41 @@ export default {
       formNetwork: null,
       formPassword: "",
       url: "",
+      selected: null,
     };
   },
-  computed: {},
+  watch: {
+    networks: {
+      // the callback will be called immediately after the start of the observation
+      immediate: true,
+      handler(val) {
+        // do your stuff
+        if (!this.selected) this.selected = val[0];
+      },
+    },
+  },
   mounted() {
-    // const { hostname, protocol } = window.location;
-    // this.url = `${protocol}//${hostname}`;
-    this.url = "http://192.168.42.1";
+    const { hostname, protocol } = window.location;
+    this.url = process.env.edtHost
+      ? `${protocol}//${process.env.edtHost}:9090`
+      : `${protocol}//${hostname}:9090`;
     this.getNetworks();
   },
   methods: {
+    selectNetwork(network) {
+      this.selected = network;
+    },
     async getNetworks() {
       this.scanning = true;
 
       try {
-        const networks = await this.$axios.$get(`${this.url}/networks`);
+        const networks = await this.$axios.$get(
+          `${this.url}/v1/list_access_points`
+        );
         // Check it's own network isn't included
-        this.networks = networks;
+        this.networks = networks.ssids;
         this.error = null;
-        this.formNetwork = networks[0].ssid;
+        this.formNetwork = networks.ssids[0].ssid;
       } catch (err) {
         // eslint-disable-next-line no-console
         console.error(err);
@@ -102,22 +115,37 @@ export default {
     },
     async connectToNetwork(e) {
       e.preventDefault();
-      try {
-        this.connecting = true;
-        await this.$axios.$post(`${this.url}/connect`, {
-          ssid: this.formNetwork,
-          identity: "",
-          passphrase: this.formPassword,
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-        this.connecting = false;
-        this.error = null;
-      } catch (err) {
-        // eslint-disable-next-line no-console
-        console.error(err);
-        this.error = err;
+      if (
+        this.selected &&
+        this.selected.conn_type !== "NONE" &&
+        this.formPassword.length < 8
+      ) {
+        this.error = "8 char min";
+      } else {
+        try {
+          this.connecting = true;
+          const connectBody = {
+            ssid: this.selected?.ssid,
+            conn_type: this.selected?.conn_type,
+            headers: {
+              "Content-Type": "application/json",
+            },
+          };
+          if (this.selected.conn_type !== "NONE") {
+            connectBody.password = this.formPassword;
+          }
+          const connection = await this.$axios.$post(
+            `${this.url}/v1/connect`,
+            connectBody
+          );
+          console.log("connection", connection);
+          this.connecting = false;
+          this.error = null;
+        } catch (err) {
+          // eslint-disable-next-line no-console
+          console.error(err);
+          this.error = err;
+        }
       }
     },
     toggleVisibility(e) {
