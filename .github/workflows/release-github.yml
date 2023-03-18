@@ -16,13 +16,26 @@ jobs:
         uses: ./.github/actions/generate-nuxt
         with:
           router-base: "/"
+  release-docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Release Docker
+        id: release-docker
+        uses: ./.github/actions/release-docker
+        with:
+          docker-repository: communityfirst/edt-offline-portal
+          docker-username: ${{ secrets.DOCKERHUB_USERNAME }}
+          docker-token: ${{ secrets.DOCKERHUB_TOKEN }}
+          short-description: "The portal to the EDT Offline experience"
   github-release:
     runs-on: ubuntu-latest
     needs: [build]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Create Github pre-release
+      - name: Create Github release
         uses: ./.github/actions/release-github
         with:
           repo_token: "${{ secrets.PAT }}"

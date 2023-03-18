@@ -4,6 +4,9 @@ inputs:
   docker-repository:
     required: true
     description: "Docker Hub repository in the format <namespace>/<name>"
+  image-tag:
+    description: "Docker Hub image tag, defaults to latest"
+    default: "latest"
   docker-username:
     required: true
     description: "Docker Hub username"
@@ -29,7 +32,7 @@ runs:
       with:
         push: true
         platforms: linux/amd64,linux/arm64,linux/arm/v7
-        tags: ${{inputs.docker-repository}}:nightly
+        tags: ${{inputs.docker-repository}}:${{inputs.image-tag}}
     - name: Docker Hub Description
       uses: peter-evans/dockerhub-description@v3
       with:
