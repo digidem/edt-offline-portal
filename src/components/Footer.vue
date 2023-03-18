@@ -2,11 +2,13 @@
   <div class="border-solid border-t-1 bg-dark-100 py-50px w-full">
     <div class="mx-auto max-w-50vw text-center pt-35px">
       <div class="mb-25px">
-        <a :href="root ? '/connect' : '/'">
-          <button class="mx-auto px-8 bg-green-500">
-            {{ $t(root ? "connect" : "portal") }}
-          </button>
-        </a>
+        <app-button
+          target="_self"
+          color="#2A506F"
+          localurl=":8079#/connect"
+          :text="$t(root ? 'connect' : 'portal')"
+        ></app-button>
+        <app-button color="#2A506F" localurl=":8079" text="Admin"></app-button>
         <app-button color="#1AA2D4" localurl=":8082" text="sync"></app-button>
         <app-button
           color="#1D99F3"

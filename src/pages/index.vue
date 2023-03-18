@@ -14,12 +14,6 @@
             <img
               :src="require(`~/assets/images/${page.logoDark}`)"
               :alt="localizedIndex.title"
-              class="hidden md:block"
-            />
-            <img
-              class="block md:hidden"
-              :src="require(`~/assets/images/${page.logoLight}`)"
-              :alt="localizedIndex.title"
             />
             <h1 class="sr-only">{{ localizedIndex.title }}</h1>
           </div>
@@ -97,7 +91,7 @@ export default {
   methods: {
     getBackground(img) {
       if (process.client && window?.innerWidth < 736) {
-        return getImage(img, true);
+        return getImage(img, true, 0.7);
       } else return "";
     },
     async auth() {
