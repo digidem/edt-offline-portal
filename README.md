@@ -5,14 +5,16 @@ Using nuxt framework as a base of the community portal
 ## Install
 
 `yarn`
-ou
+or
 `npm i`
 
 ## Dev mode
 
-`yarn dev`
-ou
-`npm run dev`
+To get access to a running EDT Offline's API pass the `EDT_HOST` variable, for example:
+
+`EDT_HOST=10.92.138.74 yarn dev`
+or
+`EDT_HOST=10.92.138.74 npm run dev`
 
 ## Usage
 
