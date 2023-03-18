@@ -67,8 +67,13 @@ export default {
   },
   mounted() {
     if (this.localurl) {
-      const { hostname, protocol } = window.location;
-      this.hrefUrl = `${protocol}//${hostname}${this.localurl}`;
+      const { edtHost } = process.env;
+      if (edtHost) {
+        this.hrefUrl = `http://${edtHost}${this.localurl}`;
+      } else {
+        const { hostname, protocol } = window.location;
+        this.hrefUrl = `${protocol}//${hostname}${this.localurl}`;
+      }
     } else this.hrefUrl = this.link;
   },
 };
