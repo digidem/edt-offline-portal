@@ -28,7 +28,7 @@
     "@nuxtjs/i18n": "^7.3.1",
     "@nuxtjs/svg": "^0.4.0",
     "is-http": "^0.0.2",
-    "nuxt": "^2.16.2",
+    "nuxt": "^2.16.3",
     "nuxt-clipboard": "^0.0.7"
   },
   "devDependencies": {
@@ -51,10 +51,11 @@
     "nuxt-windicss": "^2.6.0",
     "postcss-html": "^1.5.0",
     "prettier": "^2.8.4",
-    "stylelint": "^15.2.0",
+    "stylelint": "^15.3.0",
     "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-recommended-vue": "^1.4.0",
     "stylelint-config-standard": "^30.0.1",
+    "vue-template-compiler": "^2.7.14",
     "wget-improved": "^3.3.1"
   }
 }
