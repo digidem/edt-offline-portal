@@ -13,7 +13,7 @@ COPY . /usr/src/nuxt-app/
 RUN yarn
 # build necessary, even if no static files are needed,
 # since it builds the server as well
-RUN yarn build
+RUN yarn generate
 
 # expose 3000 on container
 EXPOSE 3000
