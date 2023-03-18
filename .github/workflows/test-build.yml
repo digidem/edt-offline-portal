@@ -1,0 +1,17 @@
+name: Test Nuxt Build
+on:
+  pull_request:
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Generate Nuxt
+        id: generate-nuxt
+        uses: ./.github/actions/generate-nuxt
+        with:
+          router-base: "/"
+          upload: "false"

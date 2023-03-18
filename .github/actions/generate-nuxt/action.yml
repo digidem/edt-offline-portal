@@ -1,6 +1,9 @@
 name: "Generate Nuxt app"
 description: "Generates the Nuxt app and uploads it as an artifact"
 inputs:
+  upload:
+    description: "Should artifact be uploaded"
+    default: "true"
   github-page:
     description: "Should app be uploaded to Github pages"
 runs:
@@ -52,6 +55,7 @@ runs:
       shell: bash
       run: ${{ steps.detect-package-manager.outputs.manager }} run generate
     - name: Upload file
+      if: ${{ inputs.upload }}
       uses: actions/upload-artifact@v3
       with:
         name: nuxt-app
