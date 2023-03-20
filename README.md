@@ -1,5 +1,8 @@
 # Portal Nuxt
 
+![pre-release](https://github.com/digidem/edt-offline-portal/actions/workflows/pre-release.yml/badge.svg)
+![release](https://github.com/digidem/edt-offline-portal/actions/workflows/release.yml/badge.svg)
+
 Using nuxt framework as a base of the community portal
 
 ## Install
@@ -22,7 +25,10 @@ In the index.md frontmetter you can set your homepage.
 
 ## Docker
 
-`docker run -d communityfirst/portal`
+Run:
+`docker run -p 3000:3000 -d communityfirst/edt-offline-portal`
+
+The application should be running on: [http://localhost:3000](http://localhost:3000)
 
 ## About the stack
 
