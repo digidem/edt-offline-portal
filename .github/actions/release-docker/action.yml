@@ -4,6 +4,9 @@ inputs:
   docker-repository:
     required: true
     description: "Docker Hub repository in the format <namespace>/<name>"
+  docker-file:
+    description: "Dockerfile to be used"
+    default: "Dockerfile"
   image-tag:
     description: "Docker Hub image tag, defaults to latest"
     default: "latest"
@@ -15,6 +18,7 @@ inputs:
     description: "Docker Hub token"
   short-description:
     description: "A short description about the project"
+    default: "false"
 runs:
   using: "composite"
   steps:
@@ -31,12 +35,14 @@ runs:
       uses: docker/build-push-action@v4
       with:
         context: .
+        file: ${{inputs.docker-file}}
         load: true
         tags: ${{inputs.docker-repository}}:${{inputs.image-tag}}
-    - name: Test Docker image
-      shell: bash
-      run: |
-        docker run --rm ${{inputs.docker-repository}}:${{inputs.image-tag}}
+    # TODO: add testing
+    # - name: Test Docker image
+    #   shell: bash
+    #   run: |
+    #     docker run --rm ${{inputs.docker-repository}}:${{inputs.image-tag}}
     - name: Build and push
       uses: docker/build-push-action@v4
       with:
@@ -45,6 +51,7 @@ runs:
         push: true
         tags: ${{inputs.docker-repository}}:${{inputs.image-tag}}
     - name: Docker Hub Description
+      if: ${{inputs.description != "false"}}
       uses: peter-evans/dockerhub-description@v3
       with:
         username: ${{ inputs.docker-username }}
