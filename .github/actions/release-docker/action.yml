@@ -51,7 +51,7 @@ runs:
         push: true
         tags: ${{inputs.docker-repository}}:${{inputs.image-tag}}
     - name: Docker Hub Description
-      if: ${{inputs.short-description != "false"}}
+      if: ${{inputs.short-description}}
       uses: peter-evans/dockerhub-description@v3
       with:
         username: ${{ inputs.docker-username }}
