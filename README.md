@@ -30,6 +30,12 @@ Run:
 
 The application should be running on: [http://localhost:3000](http://localhost:3000)
 
+Use the `full` tag to get the portal with all the applications pre-downloaded. Ex.:
+
+```
+docker run -p 3000:3000 -d communityfirst/edt-offline-portal:full
+```
+
 ## About the stack
 
 ### Nuxt framework
