@@ -29,6 +29,20 @@ jobs:
           docker-token: ${{ secrets.DOCKERHUB_TOKEN }}
           short-description: "The portal to the EDT Offline experience"
           image-tag: nightly
+  release-docker-full:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Release Docker
+        id: release-docker
+        uses: ./.github/actions/release-docker
+        with:
+          docker-repository: communityfirst/edt-offline-portal
+          docker-username: ${{ secrets.DOCKERHUB_USERNAME }}
+          docker-token: ${{ secrets.DOCKERHUB_TOKEN }}
+          image-tag: nightly-full
+          docker-file: Dockerfile.full
   release-github:
     runs-on: ubuntu-latest
     needs: [generate-app]
