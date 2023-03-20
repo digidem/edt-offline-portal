@@ -27,7 +27,6 @@ jobs:
           docker-repository: communityfirst/edt-offline-portal
           docker-username: ${{ secrets.DOCKERHUB_USERNAME }}
           docker-token: ${{ secrets.DOCKERHUB_TOKEN }}
-          short-description: "The portal to the EDT Offline experience"
           image-tag: nightly
   release-docker-full:
     runs-on: ubuntu-latest
