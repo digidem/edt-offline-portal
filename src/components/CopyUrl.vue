@@ -12,7 +12,9 @@
       @click="copy"
     >
       <span class="font-mono">{{ `http://${hostname}.local` }}</span>
-      <i v-if="hostname" class="mx-4 gg-copy"></i>
+      <div v-if="hostname" class="ml-4">
+        <i class="gg-copy"></i>
+      </div>
     </div>
   </div>
 </template>
