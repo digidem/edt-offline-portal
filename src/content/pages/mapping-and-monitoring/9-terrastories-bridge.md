@@ -10,4 +10,4 @@ For that reason the [Mapeo Data Hub](#mapeo-data-hub) automatically exports the 
 
 <app-button :color="true" localUrl=":8081/files" text="Terrastories places file"></app-button>
 
-<app-button localUrl=":8086/earthdefenderstoolkit/https://docs.terrastories.app/using-terrastories/using-the-terrastories-member-dashboard/importing-data" text="Terrastories documentation"></app-button>
+<app-button localUrl=":8086/all/https://docs.terrastories.app/using-terrastories/using-the-terrastories-member-dashboard/importing-data" text="Terrastories documentation"></app-button>

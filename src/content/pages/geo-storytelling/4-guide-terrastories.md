@@ -10,4 +10,4 @@ To get started with Terrastories we recommend reading the **Terrastories: a tool
 
 <app-button :color="true" localUrl=":8083" text="Use Terrastories"></app-button>
 
-<app-button localUrl=":8086/earthdefenderstoolkit/https://www.earthdefenderstoolkit.com/toolkit/terrastories-a-tool-for-place-based-storytelling/" text="Read the guide"></app-button>
+<app-button localUrl=":8086/all/https://www.earthdefenderstoolkit.com/toolkit/terrastories-a-tool-for-place-based-storytelling/" text="Read the guide"></app-button>

@@ -11,4 +11,4 @@ To get started with Mapeo we recommend reading the **Mapeo: Monitor and document
 
 <app-button :color="true" target="_self" link="apps/mapeo" text="Download Mapeo"></app-button>
 
-<app-button localUrl=":8086/earthdefenderstoolkit/https://www.earthdefenderstoolkit.com/toolkit/mapeo-monitor-and-document-the-world-around-you/" text="Read the guide"></app-button>
+<app-button localUrl=":8086/all/https://www.earthdefenderstoolkit.com/toolkit/mapeo-monitor-and-document-the-world-around-you/" text="Read the guide"></app-button>
