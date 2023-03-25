@@ -4,10 +4,10 @@
   "version": "v1.0.0-beta.7",
   "scripts": {
     "dev": "nuxt",
-    "build:offline": "npm run downloadInstallers && nuxt build",
+    "build:offline": "nuxt build && yarn downloadInstallers",
     "build": "nuxt build",
     "generate": "nuxt generate",
-    "generate:offline": "yarn downloadInstallers && nuxt generate",
+    "generate:offline": "nuxt generate && yarn downloadInstallers",
     "start": "nuxt start",
     "release": "nuxt build && nuxt generate && tar -czf portal_`date +%Y%m%d_%H%M`.tar.gz dist",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
