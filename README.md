@@ -1,7 +1,10 @@
 # Portal Nuxt
 
 ![pre-release](https://github.com/digidem/edt-offline-portal/actions/workflows/pre-release.yml/badge.svg)
+
 ![release](https://github.com/digidem/edt-offline-portal/actions/workflows/release.yml/badge.svg)
+
+[![Crowdin](https://badges.crowdin.net/edt-offline-portal/localized.svg)](https://crowdin.com/project/edt-offline-portal)
 
 Using nuxt framework as a base of the community portal
 
