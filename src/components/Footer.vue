@@ -4,17 +4,18 @@
       <div class="mb-25px">
         <app-button
           target="_self"
-          color="#2A506F"
+          color="#145DA0"
           localurl=":8079#/connect"
           :text="$t(root ? 'connect' : 'portal')"
         ></app-button>
-        <app-button color="#2A506F" localurl=":8079" text="Admin"></app-button>
-        <app-button color="#1AA2D4" localurl=":8082" text="sync"></app-button>
+        <app-button color="#0C2D48" localurl=":8079" text="Admin"></app-button>
+        <app-button color="#2E8BC0" localurl=":8082" text="sync"></app-button>
         <app-button
-          color="#1D99F3"
+          color="#0C2D48"
           localurl=":8081"
           text="filebrowser"
         ></app-button>
+        <app-button color="#145DA0" :href="mapUrl" text="Map"></app-button>
       </div>
       <br />
       <span class="text-light-800">
@@ -29,16 +30,39 @@
   </div>
 </template>
 <script>
+import getLocalUrl from "@/libs/getLocalUrl";
+
 export default {
   data() {
     return {
       root: true,
+      defaultStyle: null,
     };
+  },
+  computed: {
+    mapUrl() {
+      const res = process.env.OFFLINE_MAP_STYLE || this.defaultStyle;
+      console.log("RES", res);
+      return res;
+    },
   },
   mounted() {
     if (window?.location.pathname !== "/") {
       this.root = false;
     }
+    this.getStyles();
+  },
+  methods: {
+    async getStyles() {
+      try {
+        const url = getLocalUrl();
+        const res = await this.$axios.$get(`${url}:8085/styles.json`);
+        this.defaultStyle = `${url}:8085/styles/${res[0].id}/`;
+      } catch (err) {
+        // eslint-disable-next-line no-console
+        console.error(err);
+      }
+    },
   },
 };
 </script>
