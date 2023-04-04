@@ -11,16 +11,17 @@
       class="mx-auto py-10px flex flex-col md:flex-row justify-round items-center flex-wrap"
     >
       <div
-        v-for="installer in installers"
+        v-for="installer in app?.localInstallers"
         :key="installer.filename"
         class="mx-2"
       >
         <installer-button
-          :link="installer.dir || installer.link"
+          :localurl="localurl"
+          :link="installer.file || installer.link"
           :color="true"
           :platform="installer.platform"
           :extension="installer.extension"
-          :download="installer.filename || installer.link"
+          :download="installer.file || installer.src"
         />
       </div>
     </div>
@@ -28,12 +29,13 @@
 </template>
 
 <script>
-import apps from "~/static/appManifest.json";
-import parseApps from "~/libs/parseAppsManifest";
-
 export default {
   layout: "pages",
   props: {
+    localurl: {
+      type: String,
+      default: "",
+    },
     background: {
       type: String,
       default: "bg-light-700",
@@ -50,20 +52,9 @@ export default {
       type: Boolean,
       default: false,
     },
-  },
-  data() {
-    return {
-      apps,
-    };
-  },
-  computed: {
-    app() {
-      let toFilter = this.slug;
-      if (this.$route?.params?.slug) toFilter = this.$route.params.slug;
-      return this.apps.filter((i) => i.slug === toFilter)[0];
-    },
-    installers() {
-      return parseApps(this.app?.installers);
+    app: {
+      type: Object,
+      default: () => {},
     },
   },
 };

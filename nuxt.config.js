@@ -1,7 +1,5 @@
 import messages from "./src/messages";
-import apps from "./src/static/appManifest.json";
 
-const appRoutes = apps.map((app) => `/apps/${app.slug}`);
 /* TODO: get from content/pages directory */
 const pages = ["/geo-storytelling", "/mapping-and-monitoring"];
 const routerBase = process.env.ROUTER_BASE || "/";
@@ -12,7 +10,7 @@ export default {
   generate: {
     fallback: true,
     routes: () => {
-      return [...pages, ...appRoutes];
+      return [...pages];
     },
   },
   head: {

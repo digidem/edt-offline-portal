@@ -8,10 +8,11 @@
           <installer-button
             v-if="storeApk"
             :color="true"
-            :download="storeApk.filename || storeApk.link"
-            :link="storeApk.dir || storeApk.link"
-            :platform="storeApk.platform"
-            :extension="storeApk.extension"
+            :download="storeApk.localInstallers[0]?.file || storeApk.src"
+            :link="storeApk.localInstallers[0]?.file || storeApk.src"
+            :platform="storeApk.localInstallers[0]?.platform"
+            :extension="storeApk.localInstallers[0]?.extension"
+            :localurl="localurl"
             text="Download"
           />
         </div>
@@ -36,11 +37,10 @@
 </template>
 
 <script>
-import apps from "~/static/appManifest.json";
-import parseApps from "~/libs/parseAppsManifest";
-
+import getLocalUrl from "@/libs/getLocalUrl";
 export default {
   layout: "items",
+  // TODO: move getLocaAppManifest to here
   async asyncData({ $content }) {
     const page = await $content("apps").fetch();
 
@@ -50,16 +50,31 @@ export default {
   },
   data() {
     return {
-      apps,
+      apps: [],
+      localurl: ":8087/installers",
     };
   },
   computed: {
     storeApk() {
-      const app = this.apps.filter((app) => app.slug === "edt-apps")[0];
-      if (app) {
-        const installers = parseApps(app.installers);
-        return installers[0];
-      } else return null;
+      const app = this.apps?.filter((app) => app?.slug === "edt-apps")[0];
+      return app;
+    },
+  },
+  async mounted() {
+    this.apps = await this.getLocaAppManifest();
+  },
+  methods: {
+    async getLocaAppManifest() {
+      const url = getLocalUrl();
+      try {
+        const res = await this.$axios(
+          `${url}${this.localurl}/localAppManifest.json`
+        );
+        return res.data;
+      } catch (err) {
+        // eslint-disable-next-line no-console
+        console.error(err);
+      }
     },
   },
 };

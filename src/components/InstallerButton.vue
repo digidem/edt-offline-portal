@@ -1,8 +1,7 @@
 <template>
   <a
     :target="target || '_blank'"
-    :href="hrefUrl"
-    :download="download"
+    :href="download ? `${hrefUrl}${download}` : hrefUrl"
     class="no-underline"
   >
     <button
@@ -26,6 +25,8 @@
   </a>
 </template>
 <script>
+import getLocalUrl from "@/libs/getLocalUrl";
+
 export default {
   props: {
     color: {
@@ -67,9 +68,10 @@ export default {
     };
   },
   mounted() {
+    console.log("DOWNLOAD", this.download);
     if (this.localurl) {
-      const { hostname, protocol } = window.location;
-      this.hrefUrl = `${protocol}//${hostname}${this.localurl}`;
+      const url = getLocalUrl();
+      this.hrefUrl = `${url}${this.localurl}`;
     } else this.hrefUrl = this.link;
   },
 };
