@@ -5,6 +5,13 @@ const pages = ["/geo-storytelling", "/mapping-and-monitoring"];
 const routerBase = process.env.ROUTER_BASE || "/";
 
 export default {
+  link: [
+    {
+      rel: "stylesheet",
+      href: "/mapbox.css",
+    },
+    { rel: "icon", type: "image/x-icon", href: "/favicon.png" },
+  ],
   srcDir: "src/",
   target: "static", // default is 'server'
   generate: {
@@ -24,6 +31,7 @@ export default {
   env: {
     edtHost: process.env.EDT_HOST,
   },
+  plugins: [{ src: "~/plugins/mapbox.client" }],
   modules: ["@nuxt/content", "@nuxtjs/i18n", "@nuxtjs/axios", "nuxt-clipboard"],
   i18n: {
     locales: ["en", "pt", "es"],
