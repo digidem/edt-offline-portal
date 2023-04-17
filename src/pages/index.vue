@@ -20,8 +20,9 @@
           <div>
             {{ localizedIndex.description }}
           </div>
-          <p class="major"></p>
-          <NuxtContent :document="page" tag="content" />
+          <div class="major bg-white md:bg-none px-4">
+            <NuxtContent :document="page" tag="content" />
+          </div>
           <ul class="actions pt-5vh">
             <li>
               <a

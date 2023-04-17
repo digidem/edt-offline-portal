@@ -1,14 +1,20 @@
 <template>
   <div class="border-solid border-t-1 bg-dark-100 py-50px w-full">
     <div class="mx-auto max-w-50vw text-center pt-35px">
+      <app-button
+        color="#145DA0"
+        target="_self"
+        href="/apps"
+        text="Applications"
+      ></app-button>
+      <app-button
+        color="#2E8BC0"
+        localurl=":8079#/connect"
+        text="connect"
+      ></app-button>
       <div class="mb-25px">
-        <app-button
-          color="#145DA0"
-          localurl=":8079#/connect"
-          text="connect"
-        ></app-button>
         <app-button color="#0C2D48" localurl=":8079" text="Admin"></app-button>
-        <app-button color="#2E8BC0" localurl=":8082" text="sync"></app-button>
+        <app-button color="#145DA0" localurl=":8082" text="sync"></app-button>
         <app-button
           color="#0C2D48"
           localurl=":8081"
