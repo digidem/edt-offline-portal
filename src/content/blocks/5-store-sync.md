@@ -1,5 +1,5 @@
 ---
-title: Store Local Files
+title: Store and Sync Local Files
 image: filebrowser.webp
 locale: en
 ---
@@ -8,6 +8,4 @@ EDT Offline provides a file managing interface that can be used to upload, delet
 
 User data is open to be viwed and edited by every other user, so be sure to follow some basic guide-lines on using a shared digital space.
 
-<app-button :color="true" localUrl=":8081" text="Signup or Login"></app-button>
-
-<app-button link="guide-lines" target="_self" text="Guide-lines"></app-button>
+<app-button :color="true" link="/storing-sharing" target="_self" text="Get started"></app-button>

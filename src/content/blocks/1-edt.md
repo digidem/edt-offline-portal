@@ -4,8 +4,10 @@ image: oca.jpg
 locale: en
 ---
 
-The "Introductory guide" is a great place to start learning about the content of Earth Defenders Toolkit. All content is available offline, so you can explore the whole platform.
+This is the Earth Defenders Toolkit Offline. Read the documentation to learn about all the functionalities of this device:
 
-<app-button :color="true" localUrl=":8086/all/https://www.earthdefenderstoolkit.com/toolkit/how-to-get-started/" text="Introductory guide"></app-button>
+<app-button localUrl=":8086/all/https://docs.earthdefenderstoolkit.com/" text="Read documentation"></app-button>
 
-<app-button localUrl=":8086/all/https://www.earthdefenderstoolkit.com/home/" text="Explore the Toolkit"></app-button>
+Bellow are the various featured toolkits we provide: **[Mapping and Monitoring
+](/mapping-and-monitoring)**, **[Land Based Storytelling
+](/geo-storytelling)** and **[Storing and Sharing files locally]()**. Choose one to start using and diving deep into the toolkit.

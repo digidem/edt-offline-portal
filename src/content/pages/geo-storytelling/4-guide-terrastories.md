@@ -2,6 +2,7 @@
 title: Terrastories
 image: terrastories.webp
 locale: en
+category: documentation
 ---
 
 Terrastories is an application for communities to map, protect, and share stories about their land. It can be used by individuals or communities who want to connect audio or video content to places on a map. It is designed to be user-friendly and fun to interact with, allowing community members to freely explore without needing any technical background.

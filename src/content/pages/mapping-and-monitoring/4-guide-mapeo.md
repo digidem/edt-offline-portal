@@ -2,6 +2,7 @@
 title: A Digital Toolset
 image: mapeo.png
 locale: en
+category: documentation
 ---
 
 Mapeo is a free digital toolset for documenting, monitoring, and mapping many types of data.
