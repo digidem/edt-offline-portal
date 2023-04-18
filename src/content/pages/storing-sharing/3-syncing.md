@@ -1,5 +1,5 @@
 ---
-title: Syncing and sharing files
+title: Syncing files across devices
 image: syncthing.png
 locale: en
 ---

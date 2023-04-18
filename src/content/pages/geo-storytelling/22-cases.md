@@ -1,6 +1,6 @@
 ---
 title: Community Story
-image: storymaps.png
+image: canoo.webp
 locale: en
 category: documentation
 ---

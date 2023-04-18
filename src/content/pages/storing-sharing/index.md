@@ -6,4 +6,4 @@ locale: en
 
 Storing local files.
 
-<app-button :color="true" localUrl=":8081" text="Signup or Login"></app-button>
+<app-button localUrl=":8081/login" text="Login or Signup"></app-button>
