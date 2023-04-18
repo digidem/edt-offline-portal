@@ -1,6 +1,6 @@
 ---
-title: Store and Sync Local Files
-image: filebrowser.webp
+title: Local Community Cloud
+image: edt-offline.jpg
 locale: en
 ---
 
