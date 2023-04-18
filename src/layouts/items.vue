@@ -22,7 +22,8 @@
 export default {
   methods: {
     to() {
-      this.$router.go(-1);
+      if (this.$route.hash) this.$router.push("/");
+      else this.$router.back();
     },
   },
 };

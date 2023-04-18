@@ -23,6 +23,16 @@
         </div>
       </section>
       <BlockList :blocks="blocks" />
+      <div
+        v-if="documentation.length > 0"
+        id="Documentation"
+        class="text-center bg-light-400"
+      >
+        <h1 class="text-2xl py-18 uppercase font-thing">
+          {{ $t("documentation") }}
+        </h1>
+        <BlockList :blocks="documentation" />
+      </div>
     </div>
   </article>
 </template>
@@ -44,15 +54,18 @@ export default {
       });
       if (pages) {
         let index = null;
+        const documentation = [];
         const blocks = [];
         pages.forEach((p) => {
-          if (p.slug === "index") index = p;
+          if (p.category === "documentation") documentation.push(p);
+          else if (p.slug === "index") index = p;
           else blocks.push(p);
         });
         if (index) {
           return {
             index,
             blocks,
+            documentation,
           };
         }
       }
