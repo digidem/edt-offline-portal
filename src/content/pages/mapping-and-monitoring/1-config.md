@@ -10,4 +10,6 @@ The configuration can be customized, so we provide a few customized configuratio
 
 The default configuration files come ready to be used to sync with the [Mapeo Data Hub](/mapping-and-monitoring#mapeo-data-hub).
 
-<app-button localUrl=":8081/files/mapeo/" text="Mapeo Configuration"></app-button>
+<app-button :color="true" localUrl=":8081/files/mapeo/" text="Download files  "></app-button>
+
+<app-button localUrl=":8086/all/https://docs.mapeo.app/complete-reference-guide/mapeo-mobile-installation-setup/importing-configurations" text="Read documentation"></app-button>
