@@ -6,11 +6,11 @@ locale: en
 
 ### Disclaimer
 
-This is still **alpha** software, and we're currently collecting early feedback on the usability of the Earth Defenders Toolkit Offline.
+This is still **alpha** software, and we're currently collecting early feedback on the usability of the Earth Defenders Offline Toolkit .
 
 ### Technical support
 
-For help with common technical issues, see the section of the <app-button :inline="true" localUrl=":8086">Earth Defenders Toolkit Offline guide</app-button>. For additional support, please check out the community of active users and maintainers of EDT on our public Discord, Telegram group and online forum.
+For help with common technical issues, see the section of the <app-button :inline="true" localUrl=":8086">Earth Defenders Offline Toolkit guide</app-button>. For additional support, please check out the community of active users and maintainers of EDT on our public Discord, Telegram group and online forum.
 
 <app-button :color="true" link="https://forum.earthdefenderstoolkit.com/" text="EDT Forum"></app-button>
 
