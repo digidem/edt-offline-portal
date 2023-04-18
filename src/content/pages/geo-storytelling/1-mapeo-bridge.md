@@ -1,5 +1,5 @@
 ---
-title: Mapeo observations in Terrastories
+title: Collect local stories
 image: mapeo.png
 locale: en
 ---
