@@ -4,7 +4,7 @@ image: storymaps.png
 locale: en
 ---
 
-Terrastories was built to accommodate that need, which the team also heard about from other communities across the globe.
+Using Terrastories, community members can add places and stories through a user-friendly interface, and make decisions about designating certain stories as private or restricted. Terrastories works both online and offline, so that remote communities can access the application entirely without needing internet connectivity.
 
 The application has an interactive map, with offline map tiles and story place markers.
 
