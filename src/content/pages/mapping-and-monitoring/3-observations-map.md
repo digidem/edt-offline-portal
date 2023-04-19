@@ -10,4 +10,4 @@ If you changed your Mapeo configuration, you might need to change the `MAPEO_PRO
 
 <app-button :color="true" localUrl=":3000" text="Explore Observations"></app-button>.
 
-<app-button localUrl=":8086/all/https://docs.earthdefenderstoolkit.com/" text="Read the documentation"></app-button>.
+<app-button localUrl=":8086/all/https://docs.earthdefenderstoolkit.com/device-usage/bundled-applications/mapeo-data-hub/observations-map" text="Read documentation"></app-button>.

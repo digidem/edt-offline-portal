@@ -4,9 +4,7 @@ image: contribute.jpg
 locale: en
 ---
 
-Telling stories to preserve culture...
-
-Terrastories is built so you can control who has access to your data.
+Terrastories was born for telling stories to preserve culture using digital technology. It was built so communities can control access to their cultural informaiton.
 
 This device comes with Terrastories pre-installed and running.
 

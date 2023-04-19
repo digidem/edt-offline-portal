@@ -8,4 +8,4 @@ We provide a Mapeo instance with the Offline Toolkit . You can sync with it when
 
 If you changed your Mapeo configuration, you might need to change the `MAPEO_PROJECT_KEY` variable for your Offline Toolkit instance on the <app-button :inline="true" localUrl=":8079/#/configuration">admin panel</app-button>. Check our documentation to learn more.
 
-<app-button :color="true" localUrl=":8086/all/docs.earthdefenderstoolkit.com" text="Read the documentation"></app-button>
+<app-button :color="true" localUrl=":8086/all/docs.earthdefenderstoolkit.com/device-usage/bundled-applications/mapeo-data-hub/syncing-with-hub" text="Read documentation"></app-button>

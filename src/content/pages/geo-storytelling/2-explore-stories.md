@@ -8,6 +8,6 @@ Terrastories was built to accommodate that need, which the team also heard about
 
 The application has an interactive map, with offline map tiles and story place markers.
 
-<app-button :color="true" localUrl=":8083" text="Explore stories"></app-button>
+<app-button :color="true" localUrl=":8083/en/home" text="Explore storymap"></app-button>
 
-<app-button :color="true" localUrl=":8086/all/https://docs.terrastories.app/using-terrastories/exploring-the-terrastories-main-interface"></app-button>
+<app-button localUrl=":8086/all/https://docs.terrastories.app/using-terrastories/exploring-the-terrastories-main-interface" text="Read documentation"></app-button>
