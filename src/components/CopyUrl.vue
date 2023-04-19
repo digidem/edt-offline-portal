@@ -5,14 +5,12 @@
       message="copiedToClipboard"
       position="bottom-32px right-0.5 left-0.5"
     />
-    <div v-if="!hostname">{{ $t("loading") }}</div>
     <div
-      v-if="hostname"
-      class="mt-4 flex items-center cursor-pointer"
+      :class="`mt-4 flex items-center ${hostname && 'cursor-pointer'}`"
       @click="copy"
     >
-      <span class="font-mono">{{ `http://${hostname}.local` }}</span>
-      <div v-if="hostname" class="ml-4">
+      <span class="font-mono">{{ `http://${hostname || "edt"}.local` }}</span>
+      <div class="ml-4">
         <i class="gg-copy"></i>
       </div>
     </div>
@@ -56,15 +54,17 @@ export default {
       }
     },
     async copy() {
-      try {
-        await this.$copyText(`http://${this.hostname}.local`);
-        this.showNotification = true;
-        setTimeout(() => {
-          this.showNotification = false;
-        }, "1500");
-      } catch (e) {
-        // eslint-disable-next-line no-console
-        console.error(e);
+      if (this.hostname) {
+        try {
+          await this.$copyText(`http://${this.hostname}.local`);
+          this.showNotification = true;
+          setTimeout(() => {
+            this.showNotification = false;
+          }, "1500");
+        } catch (e) {
+          // eslint-disable-next-line no-console
+          console.error(e);
+        }
       }
     },
   },

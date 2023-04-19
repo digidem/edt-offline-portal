@@ -14,7 +14,7 @@
         font !== 'inherit' ? font : color ? 'white' : 'black'
       } !important;
       `"
-      class="mx-2 px-6"
+      class="mt-4 md:mx-4 px-6"
     >
       {{ $t(`${text}`) }}
     </button>
