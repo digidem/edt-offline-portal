@@ -1,14 +1,14 @@
 ---
-title: Customizing Mapeo
+title: Personalizar Mapeo
 image: mapeo-create.png
-locale: en
+locale: es
 ---
 
-Much of Mapeo is customizable in terms of language, maps and information you collect. When you download it, it comes with a default configuration which you can use immediately to collect information about threats to land or rights.
+Gran parte de Mapeo es personalizable en términos de idioma, mapas e información que usted recopila. Cuando lo descarga, viene con una configuración por defecto que puede utilizar inmediatamente para recopilar información sobre amenazas a la tierra o a los derechos.
 
-The configuration can be customized, so we provide a few customized configuration files that might better serve the needs of your community mapping project or at least serve as inspiration for further customization. Read the <app-button :inline="true" :color="true" localUrl=":8086/all/docs.mapeo.app">Mapeo documentation</app-button> to learn how to load the configuration files.
+La configuración puede ser personalizada, para que proporcionemos algunos archivos de configuración personalizados que podrían servir mejor a las necesidades de su proyecto de mapeo comunitario o, al menos, servir de inspiración para una mayor personalización. Lea la <app-button :inline="true" :color="true" localUrl=":8086/all/docs.mapeo.app">Documentación de Mapeo</app-button> para aprender cómo cargar los archivos de configuración.
 
-The default configuration files come ready to be used to sync with the [Mapeo Data Hub](/mapping-and-monitoring#mapeo-data-hub).
+Los archivos de configuración predeterminados están listos para ser usados para sincronizar con el [Mapeo Data Hub](/mapping-and-monitoring#mapeo-data-hub).
 
 <app-button :color="true" localUrl=":8081/files/mapeo/" text="Download files  "></app-button>
 
