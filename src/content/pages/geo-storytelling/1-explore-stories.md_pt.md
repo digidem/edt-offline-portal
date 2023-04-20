@@ -1,12 +1,12 @@
 ---
-title: Explore stories
+title: Explore histórias
 image: storymaps.png
-locale: en
+locale: pt
 ---
 
-Using Terrastories, community members can add places and stories through a user-friendly interface, and make decisions about designating certain stories as private or restricted. Terrastories works both online and offline, so that remote communities can access the application entirely without needing internet connectivity.
+Usando o Terrastories, membros da comunidade podem adicionar lugares e histórias através de uma interface fácil de usar, e tomar decisões sobre designar certas histórias como privadas ou restritas. O aplicativo funciona tanto online quanto offline, para que as comunidades remotas possam acessar o aplicativo inteiramente sem precisar de estar conectado com a internet.
 
-The application has an interactive map, with offline map tiles and story place markers.
+O aplicativo tem um mapa interativo, com blocos de mapa offline e marcadores de história.
 
 <app-button :color="true" localUrl=":8083/en/home" text="Explore storymap"></app-button>
 
