@@ -1,7 +1,6 @@
 ---
 title: Earth Defenders Offline Toolkit
 image: oca.jpg
-locale: en
 ---
 
 This is the Earth Defenders Offline Toolkit. Read the documentation to learn about all the functionalities of this device:
