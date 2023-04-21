@@ -1,7 +1,6 @@
 ---
 title: Land-based storytelling
 image: storymaps.png
-locale: en
 ---
 
 Storytelling is essential for maintaining communities’ cultural identity and
