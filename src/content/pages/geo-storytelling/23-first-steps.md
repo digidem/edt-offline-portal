@@ -2,7 +2,6 @@
 title: Starting a Project
 image: participation.webp
 background: toolkit.png
-locale: en
 category: documentation
 ---
 
