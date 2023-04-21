@@ -24,7 +24,6 @@ export default {
     if (apps && this.$route?.params?.slug) {
       const toFilter = this.$route.params.slug;
       this.app = apps.filter((i) => i.slug === toFilter)[0];
-      console.log("APP", this.app);
     } else {
       window.location = "/apps";
     }

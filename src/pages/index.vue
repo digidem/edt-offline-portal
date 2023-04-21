@@ -1,8 +1,8 @@
 <template>
   <article>
-    <a class="absolute top-2 left-2">
-      <!-- <nuxt-link :to="switchLocalePath('pt')">Português</nuxt-link> -->
-    </a>
+    <div class="fixed top-2 right-2 z-10">
+      <Dropdown :selected="currentLocale" :options="availableLocales" />
+    </div>
     <div id="wrapper" class="divided">
       <!-- Capa -->
       <section
@@ -49,7 +49,7 @@
 
 <script>
 import getImage from "@/libs/getImage";
-
+import localizeIndex from "@/libs/localizeIndex";
 export default {
   async asyncData({ $content }) {
     const categories = await $content("blocks").fetch();
@@ -67,25 +67,31 @@ export default {
   },
   computed: {
     localizedIndex() {
-      let title = this.page.title;
-      let description = this.page.description;
-      if (this.locale !== this.$i18n.defaultLocale) {
-        if (this.page[`title_${this.locale}`])
-          title = this.page[`title_${this.locale}`];
-        if (this.page[`description_${this.locale}`])
-          description = this.page[`description_${this.locale}`];
-      }
-      return {
-        title,
-        description,
-      };
+      return localizeIndex(this.page, this.$i18n.defaultLocale, this.locale);
+    },
+    locale() {
+      const cookieLocale = this.$i18n.getLocaleCookie();
+      if (!cookieLocale) this.switchLocalePath(this.$i18n.getBrowserLocale());
+      return this.$i18n.getLocaleCookie();
+    },
+    currentLocale() {
+      const current = this.$i18n.locales.filter(
+        (i) => i.code === this.$i18n.locale
+      )[0];
+      return current?.name;
+    },
+    availableLocales() {
+      return this.$i18n.locales.filter((i) => i.code !== this.$i18n.locale);
     },
   },
   mounted() {
     // eslint-disable-next-line no-console
-    console.log("Browser locale", this.$i18n.getBrowserLocale());
-    // TODO: add locales
-    // this.switchLocalePath(this.locale);
+    console.log(
+      "Browser locale",
+      this.$i18n.getBrowserLocale(),
+      " Saved locale",
+      this.locale
+    );
     // TODO: add endpoint
     // this.auth();
   },

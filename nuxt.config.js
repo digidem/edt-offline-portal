@@ -1,7 +1,13 @@
 import messages from "./src/messages";
 
 /* TODO: get from content/pages directory */
-const pages = ["/geo-storytelling", "/mapping-and-monitoring"];
+const pages = [
+  "/geo-storytelling",
+  "/mapping-and-monitoring",
+  "/storing-sharing",
+  "/guide-lines",
+  "/apps",
+];
 const routerBase = process.env.ROUTER_BASE || "/";
 
 export default {
@@ -26,16 +32,34 @@ export default {
   },
   modules: ["@nuxt/content", "@nuxtjs/i18n", "@nuxtjs/axios", "nuxt-clipboard"],
   i18n: {
-    locales: ["en", "pt", "es"],
-    defaultLocale: "en",
+    locales: [
+      {
+        code: "en",
+        name: "English",
+      },
+      {
+        code: "es",
+        name: "Español",
+      },
+      {
+        code: "pt",
+        name: "Português",
+      },
+    ],
+    // defaultLocale: "en",
     vueI18n: {
-      fallbackLocale: "en",
+      fallbackLocale: {
+        es: ["pt"],
+        pt: ["es"],
+        default: ["en"],
+      },
       messages,
     },
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: "i18n_redirected",
       redirectOn: "root", // recommended
+      // alwaysRedirect: true,
     },
   },
   buildModules: [

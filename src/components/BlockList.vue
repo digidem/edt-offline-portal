@@ -23,17 +23,19 @@ export default {
   computed: {
     localizedBlocks() {
       return this.blocks
-        .filter((c) => c.locale === this.locale)
+        .filter((c) => {
+          const fileName = c.path.split("/")[c.path.split("/").length - 1];
+          const fileLocale = fileName.split("_")[1];
+          if (!fileLocale && this.locale === "en") {
+            return true;
+          }
+          return fileLocale === this.locale;
+        })
         .sort((a, b) => a.slug.localeCompare(b.slug));
     },
     locale() {
       return this.$i18n.getLocaleCookie();
     },
-  },
-  mounted() {
-    // eslint-disable-next-line no-console
-    console.log("Browser locale", this.$i18n.getBrowserLocale());
-    this.switchLocalePath(this.locale);
   },
 };
 </script>
