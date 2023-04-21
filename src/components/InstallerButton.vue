@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-v-html -->
 <template>
   <a
     :target="target || '_blank'"
@@ -68,7 +69,6 @@ export default {
     };
   },
   mounted() {
-    console.log("DOWNLOAD", this.download);
     if (this.localurl) {
       const url = getLocalUrl();
       this.hrefUrl = `${url}${this.localurl}`;

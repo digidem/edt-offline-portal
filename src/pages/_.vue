@@ -42,7 +42,7 @@ import getImage from "@/libs/getImage";
 
 export default {
   layout: "items",
-  async asyncData({ $content, params, redirect }) {
+  async asyncData({ $content, params, redirect, i18n }) {
     if (params?.pathMatch) {
       const folderName = "pages";
       const allPages = await $content(folderName, {
@@ -54,11 +54,14 @@ export default {
       });
       if (pages) {
         let index = null;
+        let indexSlug = "index";
         const documentation = [];
         const blocks = [];
+        const locale = i18n.getLocaleCookie();
         pages.forEach((p) => {
+          if (locale !== "en") indexSlug = `index_${locale}`;
           if (p.category === "documentation") documentation.push(p);
-          else if (p.slug === "index") index = p;
+          else if (p.slug === indexSlug) index = p;
           else blocks.push(p);
         });
         if (index) {
