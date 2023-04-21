@@ -1,7 +1,6 @@
 ---
 title: Customizing Mapeo
 image: mapeo-create.png
-locale: en
 ---
 
 Much of Mapeo is customizable in terms of language, maps and information you collect. When you download it, it comes with a default configuration which you can use immediately to collect information about threats to land or rights.

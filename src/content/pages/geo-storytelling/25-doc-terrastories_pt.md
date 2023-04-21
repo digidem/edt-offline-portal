@@ -1,7 +1,6 @@
 ---
 title: Terrastories Documentation
 image: hands-notebook.png
-locale: en
 category: documentation
 ---
 

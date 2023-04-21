@@ -1,7 +1,6 @@
 ---
 title: Support & Contributing
 image: oca.jpg
-locale: en
 category: documentation
 ---
 

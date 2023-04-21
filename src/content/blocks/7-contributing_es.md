@@ -1,7 +1,6 @@
 ---
 title: Support and Contributing
 image: contribute.jpg
-locale: en
 ---
 
 ### Disclaimer

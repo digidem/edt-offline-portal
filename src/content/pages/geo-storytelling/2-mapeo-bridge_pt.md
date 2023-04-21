@@ -1,7 +1,6 @@
 ---
 title: Collect local stories
 image: mapeo.png
-locale: en
 ---
 
 Like Terrastories, [Mapeo](/mapping-and-monitoring) is another powerful mapping tool stewarded by Digital Democracy. The easiest way to start collecting geolocations and referencing them to stories is by using Mapeo and the [Mapeo Data Hub](/mapping-and-monitoring#mapeo-data-hub).

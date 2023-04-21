@@ -1,7 +1,6 @@
 ---
 title: Mapeo observations in Terrastories
 image: terrastories.webp
-locale: en
 ---
 
 Like Mapeo, [Terrastories](/geo-storytelling) is another powerful mapping tool stewarded by Digital Democracy. Both tools are being used by some of our partners, but there's no easy way to get data from Mapeo on a mobile device to Terrastories.

@@ -1,7 +1,6 @@
 ---
 title: Syncing files across devices
 image: syncthing.png
-locale: en
 ---
 
 The Earth Defenders Toolkit device also comes bundled with an application to synchronize files between two or more computers and mobile devices.

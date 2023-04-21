@@ -1,7 +1,6 @@
 ---
 title: Learn more
 image: terrastories.webp
-locale: en
 category: documentation
 ---
 

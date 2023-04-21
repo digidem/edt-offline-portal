@@ -1,7 +1,6 @@
 ---
 title: Local Community Cloud
 image: edt-offline.jpg
-locale: en
 ---
 
 This Offline Toolkit provides a file managing interface that can be used to upload, delete, preview, rename and edit files. It allows the creation of multiple users and every user can create directories on a digital community space.

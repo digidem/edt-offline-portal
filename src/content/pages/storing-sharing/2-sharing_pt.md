@@ -1,7 +1,6 @@
 ---
 title: Sharing files locally
 image: file_share.jpg
-locale: en
 ---
 
 To share within the local network, select the files or folders you'd like to share, and selecet the share icon at the top-right:

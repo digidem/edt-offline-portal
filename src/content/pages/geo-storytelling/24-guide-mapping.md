@@ -1,7 +1,6 @@
 ---
 title: Community Mapping Project
 image: Mapping-for-earth-defenders-1-922x1024.webp
-locale: en
 category: documentation
 ---
 

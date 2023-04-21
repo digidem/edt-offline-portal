@@ -1,7 +1,6 @@
 ---
 title: Mapeo Data Hub
 image: phone-sync.png
-locale: en
 ---
 
 We provide a Mapeo instance with the Offline Toolkit . You can sync with it when connected to it's WiFi hotspot, and use it as an additional storage for mapping data, or as a central hub for gathering mapping data for the monitoring team.

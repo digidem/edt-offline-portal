@@ -1,7 +1,6 @@
 ---
 title: Land-based storytelling
 image: storymaps.png
-locale: en
 ---
 
 Storytelling is essential for maintaining communities’ cultural identity and their relationship to ancestral landscapes. In many cases these histories are passed down from generation to generation through the spoken word.
