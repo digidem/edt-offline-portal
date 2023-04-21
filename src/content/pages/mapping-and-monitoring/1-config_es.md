@@ -1,7 +1,6 @@
 ---
 title: Personalizar Mapeo
 image: mapeo-create.png
-locale: es
 ---
 
 Gran parte de Mapeo es personalizable en términos de idioma, mapas e información que usted recopila. Cuando lo descarga, viene con una configuración por defecto que puede utilizar inmediatamente para recopilar información sobre amenazas a la tierra o a los derechos.
