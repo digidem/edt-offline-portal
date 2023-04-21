@@ -1,7 +1,6 @@
 ---
 title: Earth Defender Stories
 image: mapping.png
-locale: en
 category: documentation
 ---
 
