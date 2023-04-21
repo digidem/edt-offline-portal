@@ -1,7 +1,6 @@
 ---
 title: A Digital Toolset
 image: mapeo.png
-locale: en
 category: documentation
 ---
 
