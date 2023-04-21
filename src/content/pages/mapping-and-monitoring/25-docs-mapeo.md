@@ -1,7 +1,6 @@
 ---
 title: Mapeo Documentation
 image: hands-notebook.png
-locale: en
 category: documentation
 ---
 
