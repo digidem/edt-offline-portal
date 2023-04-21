@@ -1,7 +1,6 @@
 ---
-title: Community Story
+title: "Community Story: Matawai"
 image: canoo.webp
-locale: en
 category: documentation
 ---
 
