@@ -1,7 +1,6 @@
 ---
 title: Learn more
 image: filebrowser.webp
-locale: en
 category: documentation
 ---
 
