@@ -1,8 +1,8 @@
 ---
-title: Application Installers
+title: Instalador de Aplicativos
 ---
 
 Explore os aplicativos selecionados pelo <app-button :inline="true" localurl=":8086/all/https://www.earthdefenderstoolkit.com/toolfinder?lang=es">Diretório de Ferramentas</app-button>
-Toolbuilder</app-button> and here for your downloading glory.
+</app-button> e aqui para sua serem baixados e instalados.
 
-We also provide a "App Store" for Android similar to the Google PlayStore, but which will also work offline. Click below to download the EDT application for your Android device.
+Também fornecemos uma "App Store" para Android, semelhante ao Google PlayStore, mas que também funcionará offline. Clique abaixo para baixar o aplicativo EDT para o seu dispositivo Android.
