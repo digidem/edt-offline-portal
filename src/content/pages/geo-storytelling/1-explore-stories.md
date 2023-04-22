@@ -7,4 +7,4 @@ Using Terrastories, community members can add places and stories through a user-
 
 The application has an interactive map, with offline map tiles and story place markers.
 
-<app-button localUrl=":8086/all/https://docs.terrastories.app/using-terrastories/exploring-the-terrastories-main-interface" text="Read documentation"></app-button>
+<app-button localurl=":8086/all/https://docs.terrastories.app/using-terrastories/exploring-the-terrastories-main-interface" text="Read documentation"></app-button>

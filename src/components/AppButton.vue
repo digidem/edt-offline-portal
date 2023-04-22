@@ -2,7 +2,7 @@
   <a
     :target="target || (!scroll && '_blank')"
     :href="scroll || hrefUrl"
-    :download="download"
+    :download="downloadUrl"
   >
     <span v-if="inline"><slot></slot></span>
     <button
@@ -60,21 +60,26 @@ export default {
       default: "inherit",
     },
   },
-  data() {
-    return {
-      hrefUrl: "",
-    };
-  },
-  mounted() {
-    if (this.localurl) {
-      const { edtHost } = process.env;
-      if (edtHost) {
-        this.hrefUrl = `http://${edtHost}${this.localurl}`;
-      } else {
-        const { hostname, protocol } = window.location;
-        this.hrefUrl = `${protocol}//${hostname}${this.localurl}`;
+  computed: {
+    downloadUrl() {
+      if (this.download && this.localurl) {
+        return `${this.localurl}${this.download}`;
+      } else return this.download;
+    },
+    hrefUrl() {
+      if (this.download && this.localurl) {
+        return `${this.localurl}${this.download}`;
       }
-    } else this.hrefUrl = this.link;
+      if (this.localurl && process.client) {
+        const { edtHost } = process.env;
+        if (edtHost) {
+          return `http://${edtHost}${this.localurl}`;
+        } else {
+          const { hostname, protocol } = window.location;
+          return `${protocol}//${hostname}${this.localurl}`;
+        }
+      } else return this.link;
+    },
   },
 };
 </script>

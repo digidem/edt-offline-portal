@@ -1,7 +1,7 @@
 <template>
   <div>
     <Block
-      v-for="(block, key) in localizedBlocks"
+      v-for="(block, key) in blocks"
       :id="key === 0 && 'first'"
       :key="block.slug"
       :orientation="key % 2 == 0 ? 'right' : 'left'"
@@ -18,23 +18,6 @@ export default {
     blocks: {
       type: Array,
       default: () => [],
-    },
-  },
-  computed: {
-    localizedBlocks() {
-      return this.blocks
-        .filter((c) => {
-          const fileName = c.path.split("/")[c.path.split("/").length - 1];
-          const fileLocale = fileName.split("_")[1];
-          if (!fileLocale && this.locale === "en") {
-            return true;
-          }
-          return fileLocale === this.locale;
-        })
-        .sort((a, b) => a.slug.localeCompare(b.slug));
-    },
-    locale() {
-      return this.$i18n.getLocaleCookie();
     },
   },
 };

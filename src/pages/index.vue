@@ -6,22 +6,22 @@
     <div id="wrapper" class="divided">
       <!-- Capa -->
       <section
-        :style="getBackground(page.background, true)"
+        :style="getBackground(index.background, true)"
         class="banner bg-cover bg-no-repeat bg-center md:bg-none style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right"
       >
         <div class="content capa">
           <div class="flex text-left mx-auto">
             <img
-              :src="require(`~/assets/images/${page.logoDark}`)"
-              :alt="localizedIndex.title"
+              :src="require(`~/assets/images/${index.logoDark}`)"
+              :alt="index.title"
             />
-            <h1 class="sr-only">{{ localizedIndex.title }}</h1>
+            <h1 class="sr-only">{{ index.title }}</h1>
           </div>
           <div>
-            {{ localizedIndex.description }}
+            {{ index.description }}
           </div>
           <div class="major bg-white md:bg-none px-4">
-            <NuxtContent :document="page" tag="content" />
+            <NuxtContent :document="index" tag="content" />
           </div>
           <ul class="actions pt-5vh">
             <li>
@@ -36,12 +36,12 @@
         <div class="hidden md:block">
           <img
             class="blur-2rem max-h-100vh"
-            :src="require(`~/assets/images/${page.image}`)"
+            :src="require(`~/assets/images/${index.image}`)"
             alt=""
           />
         </div>
       </section>
-      <BlockList :blocks="categories" />
+      <BlockList :blocks="blocks" />
     </div>
     <Footer :authenticated="authenticated" />
   </article>
@@ -49,14 +49,18 @@
 
 <script>
 import getImage from "@/libs/getImage";
-import localizeIndex from "@/libs/localizeIndex";
+import getLocalizedIndex from "@/libs/getLocalizedIndex";
+import getParsedBlocks from "@/libs/getParsedBlocks";
+
 export default {
-  async asyncData({ $content }) {
+  async asyncData({ $content, i18n }) {
+    const locale = i18n.getLocaleCookie();
+    const index = await getLocalizedIndex($content, locale);
     const categories = await $content("blocks").fetch();
-    const page = await $content("index").fetch();
+    const blocks = getParsedBlocks(categories, locale, true);
     return {
-      page,
-      categories,
+      index,
+      blocks,
     };
   },
   data() {
@@ -66,12 +70,7 @@ export default {
     };
   },
   computed: {
-    localizedIndex() {
-      return localizeIndex(this.page, this.$i18n.defaultLocale, this.locale);
-    },
     locale() {
-      const cookieLocale = this.$i18n.getLocaleCookie();
-      if (!cookieLocale) this.switchLocalePath(this.$i18n.getBrowserLocale());
       return this.$i18n.getLocaleCookie();
     },
     currentLocale() {

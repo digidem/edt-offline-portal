@@ -16,7 +16,14 @@ export default {
   generate: {
     fallback: true,
     routes: () => {
-      return [...pages];
+      const localizedPages = [];
+      pages.forEach((p) => {
+        localizedPages.push(p);
+        localizedPages.push(`${p}_pt`);
+        localizedPages.push(`${p}_es`);
+        return [...localizedPages];
+      });
+      return [...localizedPages];
     },
   },
   head: {
@@ -32,21 +39,25 @@ export default {
   },
   modules: ["@nuxt/content", "@nuxtjs/i18n", "@nuxtjs/axios", "nuxt-clipboard"],
   i18n: {
+    strategy: "prefix",
     locales: [
       {
         code: "en",
         name: "English",
+        iso: "en-US",
       },
       {
         code: "es",
         name: "Español",
+        iso: "es-AR",
       },
       {
         code: "pt",
         name: "Português",
+        iso: "pt-BR",
       },
     ],
-    // defaultLocale: "en",
+    defaultLocale: process.env.LOCALE || "en",
     vueI18n: {
       fallbackLocale: {
         es: ["pt"],
@@ -58,8 +69,7 @@ export default {
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: "i18n_redirected",
-      redirectOn: "root", // recommended
-      // alwaysRedirect: true,
+      redirectOn: "all", // not recommended
     },
   },
   buildModules: [

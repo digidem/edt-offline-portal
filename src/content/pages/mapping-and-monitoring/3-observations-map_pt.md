@@ -7,6 +7,6 @@ The **Mapeo Observation Map** will show all the data that has been synced with t
 
 If you changed your Mapeo configuration, you might need to change the `MAPEO_PROJECT_KEY` variable for your Earth Defenders Toolkit Offline instance.
 
-<app-button :color="true" localUrl=":8084" text="Explore Observations"></app-button>.
+<app-button :color="true" localurl=":8084" text="Explore Observations"></app-button>.
 
-<app-button localUrl=":8086/all/https://docs.earthdefenderstoolkit.com/device-usage/bundled-applications/mapeo-data-hub/observations-map" text="Read documentation"></app-button>.
+<app-button localurl=":8086/all/https://docs.earthdefenderstoolkit.com/device-usage/bundled-applications/mapeo-data-hub/observations-map" text="Read documentation"></app-button>.
