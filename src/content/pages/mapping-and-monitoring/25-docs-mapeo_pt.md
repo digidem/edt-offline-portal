@@ -1,9 +1,9 @@
 ---
-title: Mapeo Documentation
+title: Documentação do Mapeo
 image: hands-notebook.png
 category: documentation
 ---
 
-Despite it's simplicity, to reach the full potential of Mapeo might require diving deeper into customizing the app, in order to tailor to your community needs and cultural identity. So we provide an introduction to the Mapeo tools and a collection of training & technical resources to support Mapeo users.
+Apesar de sua simplicidade, alcançar todo o potencial do Mapeo pode exigir mergulhar mais fundo na personalização do aplicativo, para adequar as necessidades da sua comunidade e identidade cultural. Por isso oferecemos uma introdução às ferramentas do Mapeo e uma coleção de treinamentos & recursos técnicos para apoiar os usuários da Mapeo.
 
 <app-button :color="true" localurl=":8086/all/docs.mapeo.app" text="Read documentation"></app-button>
