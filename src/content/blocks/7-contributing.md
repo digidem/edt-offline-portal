@@ -9,7 +9,7 @@ This is still **alpha** software, and we're currently collecting early feedback 
 
 ### Technical support
 
-For help with common technical issues, see the section of the <app-button :inline="true" localUrl=":8086">Earth Defenders Offline Toolkit guide</app-button>. For additional support, please check out the community of active users and maintainers of EDT on our public Discord, Telegram group and online forum.
+For help with common technical issues, see the section of the <app-button :inline="true" localurl=":8086">Earth Defenders Offline Toolkit guide</app-button>. For additional support, please check out the community of active users and maintainers of EDT on our public Discord, Telegram group and online forum.
 
 <app-button :color="true" link="https://forum.earthdefenderstoolkit.com/" text="EDT Forum"></app-button>
 
