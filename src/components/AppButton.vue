@@ -14,7 +14,8 @@
         font !== 'inherit' ? font : color ? 'white' : 'black'
       } !important;
       `"
-      class="mt-4 md:mt-0 md:mx-2 px-6"
+      :class="!noMargin && 'mt-4 md:mt-4 md:mx-2'"
+      class="px-6"
     >
       {{ $t(`${text}`) }}
     </button>
@@ -59,25 +60,33 @@ export default {
       type: String,
       default: "inherit",
     },
+    noMargin: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
+    isRemoteDownload() {
+      return this.download && this.localurl;
+    },
     downloadUrl() {
-      if (this.download && this.localurl) {
+      if (this.isRemoteDownload) {
         return `${this.localurl}${this.download}`;
       } else return this.download;
     },
     hrefUrl() {
-      if (this.download && this.localurl) {
-        return `${this.localurl}${this.download}`;
-      }
       if (this.localurl && process.client) {
         const { edtHost } = process.env;
+        let url;
         if (edtHost) {
-          return `http://${edtHost}${this.localurl}`;
+          url = `http://${edtHost}${this.localurl}`;
         } else {
           const { hostname, protocol } = window.location;
-          return `${protocol}//${hostname}${this.localurl}`;
+          url = `${protocol}//${hostname}${this.localurl}`;
         }
+        if (this.isRemoteDownload) {
+          return `${url}${this.download}`;
+        } else return url;
       } else return this.link;
     },
   },
