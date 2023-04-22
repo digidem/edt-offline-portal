@@ -3,6 +3,6 @@ title: Mapeamento e monitoramento
 image: mapping.png
 ---
 
-Mapping tools are among the most powerful technologies for earth defenders. For that reason we provide several tools, guides and case studies for how to get started with a community mapping project, how to choose the right tools, and how have other earth defender communities used them to protect their territory.
+As ferramentas de mapeamento estão entre as tecnologias mais poderosas para os defensores da Terra. Por essa razão, fornecemos várias ferramentas, guias e estudos de caso sobre como começar com um projeto de mapeamento comunitário, como escolher as ferramentas certas, e como outras comunidades defensoras da terra as usaram para proteger o seu território.
 
 <app-button :color="true" target="_self" link="mapping-and-monitoring" text="Get started"></app-button>
