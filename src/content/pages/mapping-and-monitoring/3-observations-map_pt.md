@@ -3,9 +3,9 @@ title: Mapeo Observations Map
 image: notebook-mapeo.png
 ---
 
-The **Mapeo Observation Map** will show all the data that has been synced with the Earth Defenders Toolkit Offline device in an offline map.
+The **Mapeo Observation Map** will show all the data that has been synced with this device in an offline map. Within the local network, even without installing Mapeo, people can explore Mapeo observations.
 
-If you changed your Mapeo configuration, you might need to change the `MAPEO_PROJECT_KEY` variable for your Earth Defenders Toolkit Offline instance.
+There might be security concerns with exposing Mapeo observations publicly on a Wifi network, so it's possible to <app-button :inline="true" localurl=":8086/all/docs.earthdefenderstoolkit.com/device-usage/customizing-experience">add a WiFi password</app-button> to protect the local network.
 
 <app-button :color="true" localurl=":8084" text="Explore Observations"></app-button>.
 
