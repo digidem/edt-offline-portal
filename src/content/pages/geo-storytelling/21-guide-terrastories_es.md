@@ -8,4 +8,4 @@ Terrastories is an application for communities to map, protect, and share storie
 
 To get started with Terrastories we recommend reading the **Terrastories: a tool for place-based storytelling** guide written for the Earth Defenders Toolkit platform.
 
-<app-button localUrl=":8086/all/https://www.earthdefenderstoolkit.com/toolkit/terrastories-a-tool-for-place-based-storytelling/" text="Read the guide"></app-button>
+<app-button localurl=":8086/all/https://www.earthdefenderstoolkit.com/toolkit/terrastories-a-tool-for-place-based-storytelling/" text="Read the guide"></app-button>
