@@ -1,15 +1,15 @@
 ---
-title: Mapeo observations in Terrastories
+title: Observações do Mapeo no Terrastories
 image: terrastories.webp
 ---
 
-Like Mapeo, [Terrastories](/geo-storytelling) is another powerful mapping tool stewarded by Digital Democracy. There was no easy way to get data from Mapeo on a mobile device to Terrastories, but by syncing Mapeo with this device, a file is automatically generated from the observations of type `Terrastories`.
+Como o Mapeo, [Terrastories](/pt/geo-storytelling) é outra poderosa ferramenta de mapeamento mantida pela Democracia Digital. Não havia uma maneira fácil de transferir dados do Mapeo para o Terrastories, mas sincronizando o Mapeo com este dispositivo um arquivo é gerado automaticamente a partir das observações do tipo `Terrastories`.
 
 <app-button :color="true" localurl=":8083/home" text="Use Terrastories"></app-button>
 
 <app-button :noMargin="true" localurl=":8086/all/https://docs.earthdefenderstoolkit.com/device-usage/bundled-applications/mapeo-data-hub/mapeo-observations-as-terrastories-places" text="Toolkit documentation"></app-button>
 
-Extract the zip file, and the `csv` within it can be imported into Terrastories as Places for stories. Check the **Terrastories documentation** to learn more about importing.
+Extraia o arquivo zip e o `csv` dentro dele podem ser importados para o Terrastories como Lugares para histórias. Confira a **documentação de Terrastories** para saber mais sobre importação.
 
 <app-button :color="true" localurl=":8081/files/terrastories/import/" text="Download Places"></app-button>
 
