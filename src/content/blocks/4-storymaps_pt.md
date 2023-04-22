@@ -1,10 +1,10 @@
 ---
-title: Land-based storytelling
+title: Narrativas Territoriais
 image: storymaps.png
 ---
 
-Storytelling is essential for maintaining communities’ cultural identity and their relationship to ancestral landscapes. In many cases these histories are passed down from generation to generation through the spoken word.
+Histórias são essenciais para manter a identidade cultural das comunidades e sua relação com o território ancestral. Em muitos casos, histórias são transmitidas de geração em geração através da palavra falada.
 
-Terrastories is a geostorytelling application built to enable communities to locate and map their own oral storytelling traditions about places of significant meaning or value to them.
+O Terrastories é um aplicativo de narrativas terrotoriais, construído para permitir que comunidades indígenas e outras comunidades locais localizem e mapeiem suas próprias tradições orais sobre lugares significativos ou importantes para elas.
 
 <app-button :color="true" target="_self" link="geo-storytelling" text="Get started"></app-button>
