@@ -1,15 +1,15 @@
 ---
-title: Support and Contributing
+title: Suporte e Contribuições
 image: contribute.jpg
 ---
 
-### Disclaimer
+### Aviso
 
-This is still **alpha** software, and we're currently collecting early feedback on the usability of the Earth Defenders Offline Toolkit .
+Esse software ainda está em **fase de teste**, e estamos coletando comentários na usabilidade do Kit de Ferramentas Offline para Defensores da Terra.
 
-### Technical support
+### Suporte Técnico
 
-For help with common technical issues, see the section of the <app-button :inline="true" localurl=":8086">Earth Defenders Offline Toolkit guide</app-button>. For additional support, please check out the community of active users and maintainers of EDT on our public Discord, Telegram group and online forum.
+Para ajuda com problemas técnicos comuns, veja a seção do <app-button :inline="true" localurl=":8086">guia do Kit de Ferramentas Offline para Defensores da Terra</app-button>. For additional support, please check out the community of active users and maintainers of EDT on our public Discord, Telegram group and online forum.
 
 <app-button :color="true" link="https://forum.earthdefenderstoolkit.com/" text="EDT Forum"></app-button>
 
