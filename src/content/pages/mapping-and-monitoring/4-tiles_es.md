@@ -1,6 +1,6 @@
 ---
 title: Offline Map Tiles
-image: mapeo-map.png
+image: mapeo-create.png
 ---
 
 The offline map can also be customized on Mapeo. We provide a map tile, or `mbtile`, that can be loaded into the application.
