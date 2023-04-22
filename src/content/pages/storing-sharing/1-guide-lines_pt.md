@@ -1,11 +1,11 @@
 ---
-title: Community Cloud
+title: Nuvem Comunitária
 image: edt-offline.jpg
 ---
 
-The shared digital space is communal, like any public space in a community. So be mindful that, besides administrative data, all other content **IS PUBLIC**. Everyone is reponsible for keeping the space safe for everyone to make use of.
+O espaço digital compartilhado é comum, como qualquer espaço público de uma comunidade. Então, tenha em mente que, além de dados administrativos, todo o outro conteúdo **É PÚBLICO**. Todos são responsáveis para manter o espaço seguro para todos utilizarem.
 
-Read some guidelines for using the community cloud and learn more by reading the documentation.
+Leia algumas diretrizes para usar a nuvem da comunidade e saiba mais lendo a documentação.
 
 <app-button :color="true" target="_self" link="/guide-lines" text="Read guide-lines"></app-button>
 
