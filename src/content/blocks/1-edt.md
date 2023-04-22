@@ -5,7 +5,7 @@ image: oca.jpg
 
 This is the Earth Defenders Offline Toolkit. Read the documentation to learn about all the functionalities of this device:
 
-<app-button localUrl=":8086/all/https://docs.earthdefenderstoolkit.com/device-usage/first-steps" text="Read documentation"></app-button>
+<app-button localurl=":8086/all/https://docs.earthdefenderstoolkit.com/device-usage/first-steps" text="Read documentation"></app-button>
 
 Bellow are the various featured toolkits we provide: **[Mapping and Monitoring
 ](/mapping-and-monitoring)**, **[Land Based Storytelling
