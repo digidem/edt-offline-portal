@@ -1,8 +1,9 @@
 name: Test Nuxt Build
 on:
   push:
-    branches-ignore:
-      - l10n_main
+    branches:
+      - "**"
+      - "!l10n_main"
 jobs:
   # Build job
   build:
