@@ -9,7 +9,7 @@ Esse software ainda está em **fase de teste**, e estamos coletando comentários
 
 ### Suporte Técnico
 
-Para ajuda com problemas técnicos comuns, veja a seção do <app-button :inline="true" localurl=":8086">guia do Kit de Ferramentas Offline para Defensores da Terra</app-button>. For additional support, please check out the community of active users and maintainers of EDT on our public Discord, Telegram group and online forum.
+Para ajuda com problemas técnicos comuns, veja a seção do <app-button :inline="true" localurl=":8086">guia do Kit de Ferramentas Offline para Defensores da Terra</app-button>. Para suporte adicional, por favor, confira a comunidade de usuários ativos e mantenedores do Kit de Defensores da Terra em nosso canal público do Discord.
 
 <app-button :color="true" link="https://forum.earthdefenderstoolkit.com/" text="EDT Forum"></app-button>
 
@@ -17,8 +17,8 @@ Para ajuda com problemas técnicos comuns, veja a seção do <app-button :inline
 
 <app-button font="white" color="#0088CC" link="https://t.me/+3t9fPkrkg4oxNjU5" text="Telegram"></app-button>
 
-### Support starting a project
+### Suporte para iniciar um projeto
 
-Digital Democracy's core team is very small and we have limited capacity to provide direct accompaniment for implementing Earth Defenders Toolkit Offline outside of our existing partnerships. In some cases we are able to offer support. To read more about the way we work with partners and different levels of support, read our **partner protocol**.
+A equipe do Digital Democracy é muito pequena e temos uma capacidade limitada de acompanhar diretamente a implementação do Kit de Ferramentas Offline para Defensores da Terra fora das nossas parcerias existentes. Em alguns casos, podemos dar o nosso apoio. Para ler mais sobre a forma como trabalhamos com parceiros e diferentes níveis de suporte, leia nosso **protocolo de parcerias**.
 
 <app-button color="rgb(26, 162, 212)" link="https://drive.google.com/file/d/1c9C1-6v1EHKnfrYDsBn3VNu5qS_pUNMC/view" text="Partner protocol"></app-button>
