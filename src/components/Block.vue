@@ -31,7 +31,7 @@ export default {
     },
     image: {
       type: String,
-      default: "fdroid.jpg",
+      default: "EDT-asset-dark-logo.png",
     },
     title: {
       type: String,

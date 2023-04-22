@@ -7,5 +7,5 @@ By having control over data, communities can decide which data gets disseminated
 
 To start exploring and contributing to the local cloud **signup for an account** or check the **documentation** to learn more.
 
-<app-button :color="true" localUrl=":8081/login" text="Login or Signup"></app-button>
+<app-button :color="true" localurl=":8081/login" text="Login or Signup"></app-button>
 <app-button target="_self" link="storing-sharing#Documentation" text="Read documentation"></app-button>

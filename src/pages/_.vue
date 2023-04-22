@@ -1,8 +1,5 @@
 <template>
   <article>
-    <!-- <a class="absolute top-2 right-2 z-20">
-      <nuxt-link :to="switchLocalePath('pt')">Português</nuxt-link>
-    </a> -->
     <div id="wrapper" class="divided">
       <!-- Capa -->
       <section
@@ -10,11 +7,11 @@
       >
         <div
           class="content min-w-screen bg-cover bg-no-repeat bg-center"
-          :style="getBackground(index.image, true)"
+          :style="getBackground(index?.image, true)"
         >
           <div class="bg-light-50 py-2 px-4 w-auto">
             <div class="flex text-left mx-auto">
-              <h1>{{ index.title }}</h1>
+              <h1>{{ index?.title }}</h1>
             </div>
             <p class="major">
               <NuxtContent :document="index" tag="content" />
@@ -24,7 +21,7 @@
       </section>
       <BlockList :blocks="blocks" />
       <div
-        v-if="documentation.length > 0"
+        v-if="documentation?.length > 0"
         id="Documentation"
         class="text-center bg-light-400"
       >
@@ -39,10 +36,13 @@
 
 <script>
 import getImage from "@/libs/getImage";
+import getParsedBlocks from "@/libs/getParsedBlocks";
+import getLocalizedIndex from "@/libs/getLocalizedIndex";
 
 export default {
   layout: "items",
   async asyncData({ $content, params, redirect, i18n }) {
+    const locale = i18n.getLocaleCookie();
     if (params?.pathMatch) {
       const folderName = "pages";
       const allPages = await $content(folderName, {
@@ -53,17 +53,8 @@ export default {
         return term === params.pathMatch.split("/")[0];
       });
       if (pages) {
-        let index = null;
-        let indexSlug = "index";
-        const documentation = [];
-        const blocks = [];
-        const locale = i18n.getLocaleCookie();
-        pages.forEach((p) => {
-          if (locale !== "en") indexSlug = `index_${locale}`;
-          if (p.category === "documentation") documentation.push(p);
-          else if (p.slug === indexSlug) index = p;
-          else blocks.push(p);
-        });
+        const index = await getLocalizedIndex(pages, locale);
+        const { blocks, documentation } = getParsedBlocks(pages, locale);
         if (index) {
           return {
             index,
