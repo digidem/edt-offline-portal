@@ -3,7 +3,7 @@ title: Nuvem Comunitária
 image: edt-offline.jpg
 ---
 
-O espaço digital compartilhado é comum, como qualquer espaço público de uma comunidade. Então, tenha em mente que, além de dados administrativos, todo o outro conteúdo **É PÚBLICO**. Todos são responsáveis para manter o espaço seguro para todos utilizarem.
+O espaço digital compartilhado é comum, como qualquer espaço público de uma comunidade. Então, tenha em mente que, além de dados administrativos, todo o outro conteúdo **É PÚBLICO**. Everyone is responsible for keeping the space safe for everyone to make use of.
 
 Leia algumas diretrizes para usar a nuvem da comunidade e saiba mais lendo a documentação.
 
