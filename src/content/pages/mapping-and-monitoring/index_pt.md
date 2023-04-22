@@ -3,9 +3,9 @@ title: Mapeamento e Monitoramento
 image: toolkit.png
 ---
 
-Mapeo is an application built with and for earth defenders to easily document environmental and human rights information and to collect data about their land. This device comes with a running instance of Mapeo that can be synced with, an offline map showing observations and assets to assist on your mapping project.
+Mapeo foi construído por e para defensores da terra, para que pudessem divulgar facilmente informações ambientais e de direitos humanos e também para recolher dados sobre seus territórios. Este dispositivo vem com uma instância do Mapeo com a qual se pode sincronizar dados, um mapa offline mostrando observações e recursos para ajudar no seu projeto de mapeamento.
 
-Start by downloading the Mapeo app for desktop or mobile on **Download Mapeo**. Take a deeper dive into Mapeo usage, stories and functionalities on the **Documentation section**.
+Comece baixando o aplicativo Mapeo para computador ou celular em **Download Mapeo**. Se aprofunde no uso do Mapeo, suas histórias e funcionalidades na **seção de documentação**.
 
 <app-button :color="true" target="_self" link="apps/mapeo" text="Download Mapeo"></app-button>
 <app-button target="_self" link="mapping-and-monitoring#Documentation" text="Read documentation"></app-button>
