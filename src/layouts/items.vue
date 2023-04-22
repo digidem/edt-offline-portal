@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav
-      class="w-full h-60px px-4 bg-orange-500 text-black flex align-middle items-center fixed z-10"
+      class="w-full h-72px px-4 bg-orange-500 text-black flex justify-between align-middle items-center fixed z-10"
     >
       <a @click="to">
         <img
@@ -10,6 +10,7 @@
           class="icone fill-red w-36px filter-green"
         />
       </a>
+      <Dropdown :selected="currentLocale" :options="availableLocales" />
     </nav>
     <div class="min-h-86vh">
       <Nuxt />
@@ -20,6 +21,20 @@
 
 <script>
 export default {
+  computed: {
+    locale() {
+      return this.$i18n.getLocaleCookie();
+    },
+    currentLocale() {
+      const current = this.$i18n.locales.filter(
+        (i) => i.code === this.$i18n.locale
+      )[0];
+      return current?.name;
+    },
+    availableLocales() {
+      return this.$i18n.locales.filter((i) => i.code !== this.$i18n.locale);
+    },
+  },
   methods: {
     to() {
       if (this.$route.hash) this.$router.push("/");
