@@ -7,4 +7,4 @@ Usando o Terrastories, membros da comunidade podem adicionar lugares e história
 
 O aplicativo tem um mapa interativo, com blocos de mapa offline e marcadores de história.
 
-<app-button localUrl=":8086/all/https://docs.terrastories.app/using-terrastories/exploring-the-terrastories-main-interface" text="Read documentation"></app-button>
+<app-button localurl=":8086/all/https://docs.terrastories.app/using-terrastories/exploring-the-terrastories-main-interface" text="Read documentation"></app-button>
