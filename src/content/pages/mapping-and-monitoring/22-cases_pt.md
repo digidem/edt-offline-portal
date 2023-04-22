@@ -1,12 +1,12 @@
 ---
-title: Earth Defender Stories
+title: Histórias de Defensores da Terra
 image: mapping.png
 category: documentation
 ---
 
-We invite you to read the story of two communities who have used digital mapping tools to defend their territories: The Waorani people in Ecuador, and in Peru the indigenous organization defending the ECA-Amarakaeri. Through their journey you'll learn about **Mapeo** and how it can be used for community mapping projects.
+Lhes convidamos a ler a história de duas comunidades que usaram ferramentas de mapeamento digital para defender seus territórios: O povo Waorani no Equador, e a organização indígena que defende o ECA-Amarakaeri no Peru. Através de suas jornadas, você aprenderá sobre o **Mapeo** e como ela pode ser usada para mapeamento de projetos da comunidade.
 
-Be inspired and better understand how to make use of this tool.
+Seja inspirado e entenda melhor como fazer uso desta ferramenta.
 
 <app-button :color="true" localurl=":8086/all/https://www.earthdefenderstoolkit.com/community/mapping-waorani-ancestral-lands-in-ecuador/" text="Waorani story"></app-button>
 
