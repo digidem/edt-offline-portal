@@ -1,17 +1,17 @@
 ---
-title: Syncing files across devices
+title: Sincronizando arquivos entre dispositivos
 image: syncthing.png
 ---
 
-The Earth Defenders Toolkit device also comes bundled with an application to synchronize files between two or more computers and mobile devices.
+Esse dispositivo também está rodando um aplicativo para sincronizar arquivos entre dois ou mais computadores e dispositivos móveis.
 
 <app-button :color="true" target="_self" link="apps/syncthing" text="Download Syncthing"></app-button>
 
 <app-button localurl=":8082" text="Use Syncthing"></app-button>
 
-You can use it to backup important data from your computer or phone to the Offline Toolkit device, or sync the latest content from the <app-button :inline="true" localurl=":8086/all/docs.earthdefenderstoolkit.com/support-team/online-cloud">Earth Defenders Toolkit Online Cloud
-</app-button> to your device, whenever Internet is available.
+Você pode usá-lo para fazer backup de dados importantes do seu computador ou telefone para o dispositivo do Kit de Ferramentas Offline, ou sincronizar o conteúdo mais recente a partir da <app-button :inline="true" localurl=":8086/all/docs.earthdefenderstoolkit.com/support-team/online-cloud">Nuvem Online do Kit de Ferramentas de Defensores da Terra
+</app-button> para o seu dispositivo, sempre que a Internet estiver disponível.
 
-This application is protected and to be used only by project coordinators.
+Esta aplicação é protegida e apenas para ser utilizada pelos coordenadores do projeto.
 
 <app-button localurl=":8086/all/https://docs.earthdefenderstoolkit.com/device-usage/bundled-applications/content-syncronization" text="Read documentation"></app-button>
