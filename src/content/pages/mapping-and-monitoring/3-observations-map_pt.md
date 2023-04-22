@@ -1,11 +1,11 @@
 ---
-title: Mapeo Observations Map
+title: Mapa de Observações do Mapeo
 image: notebook-mapeo.png
 ---
 
-The **Mapeo Observation Map** will show all the data that has been synced with this device in an offline map. Within the local network, even without installing Mapeo, people can explore Mapeo observations.
+O ** Mapa de Observações do Mapeo** mostra todos os dados que foram sincronizados com este dispositivo em um mapa offline. Na rede local, mesmo sem instalar o Mapeo, as pessoas podem explorar as observações do Mapeo.
 
-There might be security concerns with exposing Mapeo observations publicly on a Wifi network, so it's possible to <app-button :inline="true" localurl=":8086/all/docs.earthdefenderstoolkit.com/device-usage/customizing-experience">add a WiFi password</app-button> to protect the local network.
+Pode haver preocupações de segurança ao expor observações Mapeo publicamente em uma rede Wi-Fi, então é possível <app-button :inline="true" localurl=":8086/all/docs.earthdefenderstoolkit.com/device-usage/customizing-experience">adicionar uma senha parar o Wi-Fi</app-button> para proteger a rede local.
 
 <app-button :color="true" localurl=":8084" text="Explore Observations"></app-button>.
 
