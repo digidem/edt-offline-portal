@@ -4,7 +4,7 @@ image: oca.jpg
 category: documentation
 ---
 
-### Technical support
+### Suporte Técnico
 
 For help with common technical issues, see the section of this guide. For additional support, please check out the community of active users and maintainers of Terrastories on our public #terrastories channel on the [Ruby for Good Slack](https://rubyforgood.slack.com/join/shared_invite/zt-1kfeimohe-KL~~~6Lkof7G94_7Ojd_Hw#/shared-invite/email).
 
