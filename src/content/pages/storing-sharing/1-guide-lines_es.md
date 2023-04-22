@@ -3,7 +3,7 @@ title: Community Cloud
 image: edt-offline.jpg
 ---
 
-The shared digital space is communal, like any public space in a community. So be mindful that, besides administrative data, all other content **IS PUBLIC**. Everyone is responsible for keeping the space safe for everyone to make use of.
+The shared digital space is communal, like any public space in a community. So be mindful that, besides administrative data, all other content **IS PUBLIC**. Everyone is reponsible for keeping the space safe for everyone to make use of.
 
 Read some guidelines for using the community cloud and learn more by reading the documentation.
 
