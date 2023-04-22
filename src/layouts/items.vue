@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav
-      class="w-full h-72px px-4 bg-orange-500 text-black flex justify-between align-middle items-center fixed z-10"
+      class="w-full h-72px px-4 bg-orange-500 text-black flex !justify-between align-middle items-center fixed z-10"
     >
       <a @click="to">
         <img
