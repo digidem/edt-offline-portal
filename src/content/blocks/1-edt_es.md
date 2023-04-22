@@ -1,9 +1,9 @@
 ---
-title: Earth Defenders Offline Toolkit
+title: Kit de Herramienta Offline para Defensores de la Tierra
 image: oca.jpg
 ---
 
-This is the Earth Defenders Offline Toolkit. Read the documentation to learn about all the functionalities of this device:
+Este es el Kit de Herramienta Offline para Defensores de la Tierra. Lea la documentación para aprender sobre todas las funcionalidades de este dispositivo:
 
 <app-button :noMargin="true" localurl=":8086/all/https://docs.earthdefenderstoolkit.com/device-usage/first-steps" text="Read documentation"></app-button>
 
