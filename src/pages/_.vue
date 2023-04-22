@@ -44,10 +44,12 @@ export default {
   async asyncData({ $content, params, redirect, i18n }) {
     const locale = i18n.getLocaleCookie();
     if (params?.pathMatch) {
+      /* Get folder pages */
       const folderName = "pages";
       const allPages = await $content(folderName, {
         deep: true,
       }).fetch();
+      /* Get folder based on url params */
       const pages = allPages.filter((page) => {
         const term = page.dir.split(folderName)[1].split("/")[1];
         return term === params.pathMatch.split("/")[0];
