@@ -1,15 +1,15 @@
 ---
-title: Support and Contributing
+title: Soporte y Contribución
 image: contribute.jpg
 ---
 
-### Disclaimer
+### Aviso
 
-This is still **alpha** software, and we're currently collecting early feedback on the usability of the Earth Defenders Offline Toolkit .
+Este está todavía **bajo prueba**, y actualmente estamos recopilando comentarios sobre la usabilidad del Kit de Herramientas Offline para Defenders de la Tierra.
 
-### Technical support
+### Soporte técnico
 
-For help with common technical issues, see the section of the <app-button :inline="true" localurl=":8086">Earth Defenders Offline Toolkit guide</app-button>. For additional support, please check out the community of active users and maintainers of EDT on our public Discord, Telegram group and online forum.
+Para obtener ayuda con problemas técnicos comunes, consulte la sección del <app-button :inline="true" localurl=":8086">guía del Kit de Herramienta Offline para Defensores de la Tierra</app-button>. Para ayuda adicional, por favor visitar a la comunidad de usuarios activos y mantenedores del EDT en nuestro grupo público de Discord, Telegram y foro online.
 
 <app-button :color="true" link="https://forum.earthdefenderstoolkit.com/" text="EDT Forum"></app-button>
 
@@ -17,8 +17,8 @@ For help with common technical issues, see the section of the <app-button :inlin
 
 <app-button font="white" color="#0088CC" link="https://t.me/+3t9fPkrkg4oxNjU5" text="Telegram"></app-button>
 
-### Support starting a project
+### Soporte para iniciar un proyecto
 
-Digital Democracy's core team is very small and we have limited capacity to provide direct accompaniment for implementing Earth Defenders Toolkit Offline outside of our existing partnerships. In some cases we are able to offer support. To read more about the way we work with partners and different levels of support, read our **partner protocol**.
+El equipo central de Digital Democracy es muy pequeño y tenemos una capacidad limitada para proporcionar acompañamiento directo para implementar el Kit de Herramienta Offline fuera de nuestras asociaciones existentes. En algunos casos podemos ofrecer ayuda. Para leer más sobre la forma en que trabajamos con socios y diferentes niveles de apoyo, lea nuestro **protocolo de socios**.
 
 <app-button color="rgb(26, 162, 212)" link="https://drive.google.com/file/d/1c9C1-6v1EHKnfrYDsBn3VNu5qS_pUNMC/view" text="Partner protocol"></app-button>
