@@ -1,10 +1,10 @@
 ---
-title: Mapeo Data Hub
+title: Central de Datos de Mapeo
 image: phone-sync.png
 ---
 
-A Mapeo instance is running on this device. You can sync with it when connected to it's WiFi hotspot. It can be used as an additional storage for mapping data, or as a central hub for gathering mapping data for the monitoring team.
+En este dispositivo se está ejecutando una instancia de Mapeo. Puedes sincronizar con el cuando estés conectado a su WiFi. Se puede utilizar como almacenamiento adicional para datos de mapeo o como central para recolectar datos de mapeo para el equipo de vigilancia.
 
-If you're using configuration that isn't the one providede above, you'll need to change the `MAPEO_PROJECT_KEY` variable for your Offline Toolkit instance on the <app-button :inline="true" localurl=":8079/#/configuration">admin panel</app-button>. Check our documentation to learn more.
+Si está utilizando una configuración que no es la que se proporciona arriba, necesitarás cambiar la variable `MAPEO_PROJECT_KEY` para tu instancia del Kit Offline en el <app-button :inline="true" localurl=":8079/#/configuration">panel de administrador</app-button>. Consulte nuestra documentación para obtener más información.
 
 <app-button :color="true" localurl=":8086/all/docs.earthdefenderstoolkit.com/device-usage/bundled-applications/mapeo-data-hub/syncing-with-hub" text="Read documentation"></app-button>
