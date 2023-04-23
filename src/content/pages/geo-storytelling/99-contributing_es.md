@@ -16,12 +16,12 @@ Digital Democracy mantiene un servidor Terrastories online en https://our.terras
 
 ### Apoyar el inicio de un proyecto Terrastories
 
-In addition to all of the resources compiled on the guides, there is a community of active users and maintainers of Terrastories that participate in our public chat channel on Discord and on our Earth Defenders Toolkit Forum. We encourage you to consult these spaces for additional tips and ideas on how people are using Terrastories.
+Además de todos los recursos compilados en las guías, hay una comunidad de usuarios activos y mantenedores de Terrastories que participan en nuestro canal de chat público en Discord y en nuestro Foro de Defensores de la Tierra. Le animamos a consultar estos espacios para obtener consejos e ideas adicionales sobre cómo la gente está usando Terrastories.
 
 <app-button :color="true" link="https://forum.earthdefenderstoolkit.com/" text="EDT Forum"></app-button>
 
 <app-button font="white" color="#7289DA" link="https://discord.gg/KWRFDh3v73" text="Discord"></app-button>
 
-Digital Democracy's core team is very small and we have limited capacity to provide direct accompaniment for implementing Terrastories outside of our existing partnerships. En algunos casos podemos ofrecer ayuda. Para leer más sobre la forma en que trabajamos con socios y diferentes niveles de apoyo, lea nuestro **protocolo de socios**.
+El equipo central de Digital Democracy es muy pequeño y tenemos una capacidad limitada para proporcionar acompañamiento directo para implementar el Terrastories fuera de nuestras asociaciones existentes. En algunos casos podemos ofrecer ayuda. Para leer más sobre la forma en que trabajamos con socios y diferentes niveles de apoyo, lea nuestro **protocolo de socios**.
 
 <app-button color="rgb(26, 162, 212)" link="https://drive.google.com/file/d/1c9C1-6v1EHKnfrYDsBn3VNu5qS_pUNMC/view" text="Partner protocol"></app-button>
