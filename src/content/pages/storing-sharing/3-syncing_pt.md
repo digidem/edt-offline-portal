@@ -5,7 +5,7 @@ image: syncthing.png
 
 Esse dispositivo também está rodando um aplicativo para sincronizar arquivos entre dois ou mais computadores e dispositivos móveis.
 
-<app-button :color="true" target="_self" link="apps/syncthing" text="Baixar Syncthing"></app-button>
+<app-button :color="true" target="_self" link="apps/syncthing" text="Download Syncthing"></app-button>
 
 <app-button localurl=":8082" text="Use Syncthing"></app-button>
 
@@ -14,4 +14,4 @@ Você pode usá-lo para fazer backup de dados importantes do seu computador ou t
 
 Esta aplicação é protegida e apenas para ser utilizada pelos coordenadores do projeto.
 
-<app-button localurl=":8086/all/https://docs.earthdefenderstoolkit.com/device-usage/bundled-applications/content-syncronization" text="Leia documentação"></app-button>
+<app-button localurl=":8086/all/https://docs.earthdefenderstoolkit.com/device-usage/bundled-applications/content-syncronization" text="Read documentation"></app-button>

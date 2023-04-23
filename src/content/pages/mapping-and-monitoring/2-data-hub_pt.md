@@ -7,4 +7,4 @@ Uma instância do Mapeo está rodando neste dispositivo. Você pode sincronizar 
 
 Se você estiver usando uma configuração que não seja a fornecida acima, você precisará alterar a variável `MAPEO_PROJECT_KEY` para sua instância do Kit de Ferramentas Offline <app-button :inline="true" localurl=":8079/#/configuration">no painel de administração</app-button>. Confira nossa documentação para saber mais.
 
-<app-button :color="true" localurl=":8086/all/https://docs.earthdefenderstoolkit.com/device-usage/bundled-applications/mapeo-data-hub/syncing-with-hub" text="Leia documentação"></app-button>
+<app-button :color="true" localurl=":8086/all/https://docs.earthdefenderstoolkit.com/device-usage/bundled-applications/mapeo-data-hub/syncing-with-hub" text="Read documentation"></app-button>

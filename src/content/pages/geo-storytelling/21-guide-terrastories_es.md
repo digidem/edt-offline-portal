@@ -8,4 +8,4 @@ Terrastories es una aplicación para que las comunidades puedan mapear, proteger
 
 Para empezar con Terrastories recomendamos leer la **Terrastories: una herramienta para la narración basada en lugares** guía escrita para la plataforma Earth Defenders Toolkit.
 
-<app-button localurl=":8086/all/https://www.earthdefenderstoolkit.com/community/matawai-narracion-de-historias-basadas-en-lugares-concretos-en-surinam/?lang=es" text="Lea el guía"></app-button>
+<app-button localurl=":8086/all/https://www.earthdefenderstoolkit.com/toolkit/terrastories-a-tool-for-place-based-storytelling/" text="Read the guide"></app-button>

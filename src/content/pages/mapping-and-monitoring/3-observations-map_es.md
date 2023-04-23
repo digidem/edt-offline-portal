@@ -9,4 +9,4 @@ Puede haber problemas de seguridad al exponer las observaciones de Mapeo públic
 
 <app-button :color="true" localurl=":8084" text="Explore Observations"></app-button>.
 
-<app-button localurl=":8086/all/https://docs.earthdefenderstoolkit.com/device-usage/bundled-applications/mapeo-data-hub/observations-map" text="Lea documentación"></app-button>.
+<app-button localurl=":8086/all/https://docs.earthdefenderstoolkit.com/device-usage/bundled-applications/mapeo-data-hub/observations-map" text="Read documentation"></app-button>.

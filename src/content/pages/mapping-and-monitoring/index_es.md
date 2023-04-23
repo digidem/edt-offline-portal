@@ -7,5 +7,5 @@ Mapeo fue construido con y para los defensores de la tierra para documentar fác
 
 Comience descargando la aplicación Mapeo para computadora o móvil en **Descargar Mapeo**. Dedica un poco más profundo en el uso de Mapeo, historias y funcionalidades en la sección **Documentación**.
 
-<app-button :color="true" target="_self" link="apps/mapeo" text="Descargar Mapeo"></app-button>
-<app-button target="_self" link="mapping-and-monitoring#Documentation" text="Lea documentación"></app-button>
+<app-button :color="true" target="_self" link="apps/mapeo" text="Download Mapeo"></app-button>
+<app-button target="_self" link="mapping-and-monitoring#Documentation" text="Read documentation"></app-button>

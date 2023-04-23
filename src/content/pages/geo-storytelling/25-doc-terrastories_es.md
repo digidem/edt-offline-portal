@@ -6,4 +6,4 @@ category: documentation
 
 Terrastories es muy simple e intuitivo, y proporcionamos una colección de capacitación y recursos técnicos para apoyar a los usuarios de los proyectos de aplicación y narración comunitaria. Aprender más acerca de las posibilidades de la aplicación.
 
-<app-button :color="true" localurl=":8086/all/https://docs.terrastories.app" text="Lea documentación"></app-button>
+<app-button :color="true" localurl=":8086/all/https://docs.terrastories.app" text="Read documentation"></app-button>
