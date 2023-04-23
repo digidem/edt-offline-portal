@@ -1,7 +1,7 @@
 <template>
   <a
     :target="target || (!scroll && '_blank')"
-    :href="scroll || hrefUrl"
+    :href="hrefUrl"
     :download="downloadUrl"
   >
     <span v-if="inline"><slot></slot></span>
@@ -80,6 +80,8 @@ export default {
         let url;
         if (edtHost) {
           url = `http://${edtHost}${this.localurl}`;
+        } else if (this.scroll) {
+          url = scroll;
         } else {
           const { hostname, protocol } = window.location;
           url = `${protocol}//${hostname}${this.localurl}`;
