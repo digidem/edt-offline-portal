@@ -1,5 +1,5 @@
 ---
-title: Mapping and Monitoring
+title: Mapeo y Monitoreo
 image: toolkit.png
 ---
 
