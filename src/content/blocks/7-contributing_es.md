@@ -21,4 +21,4 @@ Para obtener ayuda con problemas técnicos comunes, consulte la sección del <ap
 
 El equipo central de Digital Democracy es muy pequeño y tenemos una capacidad limitada para proporcionar acompañamiento directo para implementar el Kit de Herramienta Offline fuera de nuestras asociaciones existentes. En algunos casos podemos ofrecer ayuda. Para leer más sobre la forma en que trabajamos con socios y diferentes niveles de apoyo, lea nuestro **protocolo de socios**.
 
-<app-button color="rgb(26, 162, 212)" link="https://drive.google.com/file/d/1c9C1-6v1EHKnfrYDsBn3VNu5qS_pUNMC/view" text="Protocolo de socios"></app-button>
+<app-button color="rgb(26, 162, 212)" link="https://drive.google.com/file/d/1c9C1-6v1EHKnfrYDsBn3VNu5qS_pUNMC/view" text="Partner protocol"></app-button>
