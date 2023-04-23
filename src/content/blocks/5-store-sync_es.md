@@ -1,10 +1,10 @@
 ---
-title: Local Community Cloud
+title: Nube Comunitaria Local
 image: edt-offline.jpg
 ---
 
-This Offline Toolkit provides a file management interface that can be used to upload, delete, preview, rename and edit files. It allows the creation of multiple users and every user can create directories on a digital community space.
+Este Kit de Herramientas Offline proporciona una interfaz de gestión de archivos que puede ser usada para subir, eliminar, previsualizar, renombrar y editar archivos. Él permite la creación de múltiples usuarios y cada usuario puede crear directorios en un espacio comunitario digital.
 
-All user data is open to be viewed and edited by every other user, so be sure to follow some basic guide-lines on using a shared digital space.
+Todos los datos de usuario están abiertos para ser vistos y editados por cualquier otro usuario, así que asegúrese de seguir algunas líneas básicas de guía sobre el uso de un espacio digital compartido.
 
 <app-button :color="true" link="/storing-sharing" target="_self" text="Get started"></app-button>
