@@ -1,7 +1,10 @@
 <template>
   <div :class="`py-4 px-12 ${background} ${full && 'min-h-screen pt-1/6'}`">
     <div v-if="!mini" class="flex items-center justify-center">
-      <img class="h-47px mr-2" :src="app.icon" />
+      <img
+        class="h-47px mr-2"
+        :src="`${installerurl}/${app.localInstallers[0].icon}`"
+      />
       <h2 class="text-3xl py-2">{{ app.name }}</h2>
     </div>
     <div v-if="full" class="pt-8 text-lg text-center">
@@ -33,6 +36,10 @@ export default {
   layout: "pages",
   props: {
     localurl: {
+      type: String,
+      default: "",
+    },
+    installerurl: {
       type: String,
       default: "",
     },

@@ -26,7 +26,10 @@
       >
         <a class="no-underline" :href="`apps/${app.slug}`">
           <div class="md:h-385px text-center">
-            <img class="h-90px mx-auto mb-4" :src="app.icon" />
+            <img
+              class="h-90px mx-auto mb-4"
+              :src="`${installerUrl}/${app.localInstallers[0].icon}`"
+            />
             <h3>{{ app.name }}</h3>
             <p>{{ app.description }}</p>
           </div>
@@ -59,16 +62,19 @@ export default {
       const app = this.apps?.filter((app) => app?.slug === "edt-apps")[0];
       return app;
     },
+    installerUrl() {
+      const url = getLocalUrl();
+      return `${url}${this.localurl}`;
+    },
   },
   async mounted() {
     this.apps = await this.getLocaAppManifest();
   },
   methods: {
     async getLocaAppManifest() {
-      const url = getLocalUrl();
       try {
         const res = await this.$axios(
-          `${url}${this.localurl}/localAppManifest.json`
+          `${this.installerUrl}/localAppManifest.json`
         );
         return res.data;
       } catch (err) {

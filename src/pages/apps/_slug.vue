@@ -1,7 +1,13 @@
 <template>
   <article>
     <div class="pt-60px md:pt-0">
-      <installer-list v-if="app" full :app="app" :localurl="localurl" />
+      <installer-list
+        v-if="app"
+        full
+        :app="app"
+        :localurl="localurl"
+        :installerurl="installerUrl"
+      />
     </div>
   </article>
 </template>
@@ -19,6 +25,12 @@ export default {
       localurl: ":8087/installers",
     };
   },
+  computed: {
+    installerUrl() {
+      const url = getLocalUrl();
+      return `${url}${this.localurl}`;
+    },
+  },
   async mounted() {
     const apps = await this.getLocaAppManifest();
     if (apps && this.$route?.params?.slug) {
@@ -30,10 +42,9 @@ export default {
   },
   methods: {
     async getLocaAppManifest() {
-      const url = getLocalUrl();
       try {
         const res = await this.$axios(
-          `${url}${this.localurl}/localAppManifest.json`
+          `${this.installerUrl}/localAppManifest.json`
         );
         return res.data;
       } catch (err) {
