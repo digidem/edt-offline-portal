@@ -39,3 +39,4 @@ jobs:
         uses: ./.github/actions/release-github
         with:
           repo_token: "${{ secrets.PAT }}"
+          pre-release: false
