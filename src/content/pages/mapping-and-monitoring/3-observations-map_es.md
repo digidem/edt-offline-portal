@@ -1,5 +1,5 @@
 ---
-title: Mapeo Observations Map
+title: Mapa de Observaciones de Mapeo
 image: notebook-mapeo.png
 ---
 
