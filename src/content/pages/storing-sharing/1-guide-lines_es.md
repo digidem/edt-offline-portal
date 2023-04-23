@@ -9,4 +9,4 @@ Lea algunas pautas para usar la nube comunitaria y aprenda más leyendo la docum
 
 <app-button :color="true" target="_self" link="/guide-lines" text="Read guide-lines"></app-button>
 
-<app-button localurl=":8086/all/https://docs.earthdefenderstoolkit.com/device-usage/bundled-applications/file-management/storing-locally" text="Lea documentación"></app-button>
+<app-button localurl=":8086/all/https://docs.earthdefenderstoolkit.com/device-usage/bundled-applications/file-management/storing-locally" text="Read documentation"></app-button>
