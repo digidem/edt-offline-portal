@@ -7,6 +7,6 @@ Este es el Kit de Herramienta Offline para Defensores de la Tierra. Lea la docum
 
 <app-button :noMargin="true" localurl=":8086/all/https://docs.earthdefenderstoolkit.com/device-usage/first-steps" text="Read documentation"></app-button>
 
-Bellow are the various featured toolkits we provide: **[Mapping and Monitoring ](/mapping-and-monitoring)**, **[Land Based Storytelling ](/geo-storytelling)** and **[Storing and Sharing files locally](/storing-sharing)**. Choose one to start using and diving deep into the toolkit.
+Abajo estan los diversos kits de herramientas destacados que proporcionamos: **[Mapeo y Monitorización ](/mapping-and-monitoring)**, **[Narración Basada en Lugares ](/geo-storytelling)** y **[Almacenar y Compartir archivos localmente](/storing-sharing)**. Elige uno para empezar a usar y profundizar en el kit de herramientas.
 
-We have [many channels to offer support](#support-and-contributing), make sure to get in touch with us.
+Tenemos [muchos canales para ofrecer soporte](#support-and-contributing), asegúrate de ponerte en contacto con nosotros.
