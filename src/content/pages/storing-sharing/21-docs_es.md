@@ -1,5 +1,5 @@
 ---
-title: Learn more
+title: Aprende más
 image: filebrowser.webp
 category: documentation
 ---
