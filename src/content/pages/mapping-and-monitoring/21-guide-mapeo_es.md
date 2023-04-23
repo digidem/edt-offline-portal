@@ -8,4 +8,4 @@ Mapeo es un conjunto gratuito de herramientas digitales para documentar, monitor
 
 Para empezar con Mapeo recomendamos leer la **Mapeo: Monitorea y documenta el mundo que te rodea** guía escrita para la plataforma Earth Defenders Toolkit.
 
-<app-button :color="true" localurl=":8086/all/https://www.earthdefenderstoolkit.com/toolkit/mapeo-map-and-monitor-the-world-around-you?lang=es" text="Lea el guía"></app-button>
+<app-button :color="true" localurl=":8086/all/https://www.earthdefenderstoolkit.com/toolkit/mapeo-monitor-and-document-the-world-around-you/" text="Read the guide"></app-button>
