@@ -8,6 +8,6 @@ Lhes convidamos a ler a história de duas comunidades que usaram ferramentas de 
 
 Seja inspirado e entenda melhor como fazer uso desta ferramenta.
 
-<app-button :color="true" localurl=":8086/all/https://www.earthdefenderstoolkit.com/community/mapping-waorani-ancestral-lands-in-ecuador/?lang=pt-br" text="História Waorani"></app-button>
+<app-button :color="true" localurl=":8086/all/https://www.earthdefenderstoolkit.com/community/mapping-waorani-ancestral-lands-in-ecuador/" text="Waorani story"></app-button>
 
-<app-button localurl=":8086/all/https://www.earthdefenderstoolkit.com/community/monitoring-the-amarakaeri-communal-reserve-in-peru/?lang=pt-br" text="História ECA-Amarakaeri"></app-button>
+<app-button localurl=":8086/all/https://www.earthdefenderstoolkit.com/community/monitoring-the-amarakaeri-communal-reserve-in-peru/" text="ECA-Amarakaeri story"></app-button>
