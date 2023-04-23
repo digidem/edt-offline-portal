@@ -1,9 +1,9 @@
 ---
-title: Sharing files locally
+title: Compartir archivos localmente
 image: file_share.jpg
 ---
 
-To share within the local network, select the files or folders you'd like to share, and selecet the share icon at the top-right:
+Para compartir dentro de la red local, selecciona los archivos o carpetas que quieras compartir y selecciona el icono de compartir en la parte superior derecha:
 
 ![share icon](/share.png)
 
