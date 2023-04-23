@@ -1,10 +1,10 @@
 ---
-title: Collect local stories
+title: Colectar historias locales
 image: mapeo.png
 ---
 
-Like Terrastories, [Mapeo](/mapping-and-monitoring) is another powerful mapping tool stewarded by Digital Democracy. The easiest way to start collecting geolocations and referencing them to stories is by using Mapeo and the [Mapeo Data Hub](/mapping-and-monitoring#mapeo-data-hub).
+Como Terrastories, [Mapeo](/mapping-and-monitoring) es otra poderosa herramienta de mapeo administrada por Digital Democracy. La forma más fácil de empezar a recolectar geolocalizaciones y referenciarlas a historias es usando Mapeo y el [Centro de Datos de Mapeo](/mapping-and-monitoring#mapeo-data-hub).
 
-After syncing with the Hub, it automatically exports the observations of type `Terrastories` as a zip file, which can be imported into Terrastories as Places for stories.
+Después de sincronizar con el Centro, las observaciones de tipo `Terrastories` son exportadas automáticamente como un archivo zip, que pueden ser importados a Terrastories como Lugares para las historias.
 
 <app-button :color="true" target="_self" href="/mapping-and-monitoring#mapeo-observations-in-terrastories" text="Get started"></app-button>
