@@ -5,7 +5,7 @@ image: syncthing.png
 
 El dispositivo Kit de Hierramentas Offline también incluye una aplicación para sincronizar archivos entre dos o más computadoras y dispositivos móviles.
 
-<app-button :color="true" target="_self" link="apps/syncthing" text="Descargar Syncthing"></app-button>
+<app-button :color="true" target="_self" link="apps/syncthing" text="Download Syncthing"></app-button>
 
 <app-button localurl=":8082" text="Use Syncthing"></app-button>
 
@@ -14,4 +14,4 @@ Puede usarlo para respaldar datos importantes desde su computadora o teléfono a
 
 Esta aplicación está protegida y debe ser utilizada únicamente por los coordinadores del proyecto.
 
-<app-button localurl=":8086/all/https://docs.earthdefenderstoolkit.com/device-usage/bundled-applications/content-syncronization" text="Lea documentación"></app-button>
+<app-button localurl=":8086/all/https://docs.earthdefenderstoolkit.com/device-usage/bundled-applications/content-syncronization" text="Read documentation"></app-button>
