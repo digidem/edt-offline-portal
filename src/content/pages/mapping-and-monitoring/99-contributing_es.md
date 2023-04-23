@@ -4,7 +4,7 @@ image: oca.jpg
 category: documentation
 ---
 
-### Technical support
+### Soporte técnico
 
 For help with common technical issues, see the section of the Mapeo guide. For additional support, please check out the community of active users and maintainers of Mapeo on our [public Discord channel](https://discord.gg/KWRFDh3v73).
 
@@ -18,6 +18,6 @@ In addition to all of the resources compiled on the guides, there is a community
 
 <app-button font="white" color="#7289DA" link="https://discord.gg/KWRFDh3v73" text="Discord"></app-button>
 
-Digital Democracy's core team is very small and we have limited capacity to provide direct accompaniment for implementing Mapeo outside of our existing partnerships. In some cases we are able to offer support. To read more about the way we work with partners and different levels of support, read our **partner protocol**.
+Digital Democracy's core team is very small and we have limited capacity to provide direct accompaniment for implementing Mapeo outside of our existing partnerships. En algunos casos podemos ofrecer ayuda. Para leer más sobre la forma en que trabajamos con socios y diferentes niveles de apoyo, lea nuestro **protocolo de socios**.
 
 <app-button color="rgb(26, 162, 212)" link="https://drive.google.com/file/d/1c9C1-6v1EHKnfrYDsBn3VNu5qS_pUNMC/view" text="Partner protocol"></app-button>
