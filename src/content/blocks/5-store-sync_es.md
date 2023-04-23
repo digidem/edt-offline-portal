@@ -7,4 +7,4 @@ Este Kit de Herramientas Offline proporciona una interfaz de gestión de archivo
 
 Todos los datos de usuario están abiertos para ser vistos y editados por cualquier otro usuario, así que asegúrese de seguir algunas líneas básicas de guía sobre el uso de un espacio digital compartido.
 
-<app-button :color="true" link="/storing-sharing" target="_self" text="Empezar"></app-button>
+<app-button :color="true" link="/storing-sharing" target="_self" text="Get started"></app-button>
