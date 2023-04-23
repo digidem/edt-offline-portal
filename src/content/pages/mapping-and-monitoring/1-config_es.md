@@ -1,5 +1,5 @@
 ---
-title: Personalizar Mapeo
+title: Personalizando Mapeo
 image: mapeo-create.png
 ---
 
