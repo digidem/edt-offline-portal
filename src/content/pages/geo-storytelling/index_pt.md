@@ -8,4 +8,4 @@ O Terrastories é um aplicativo de narrativas terrotoriais, construído para per
 Este dispositivo vem com Terrastories pré-instalado e rodando.
 
 <app-button :color="true" localurl=":8083" text="Use Terrastories"></app-button>
-<app-button target="_self" link="geo-storytelling#Documentation" text="Read documentation"></app-button>
+<app-button target="_self" link="geo-storytelling#Documentation" text="Leia documentação"></app-button>

@@ -7,4 +7,4 @@ Como o Terrastories, o [Mapeo](/mapping-and-monitoring) é outra poderosa ferram
 
 Após sincronizar com a Central, ele automaticamente exporta as observações do tipo `Terrastories` como um arquivo zip, que podem ser importados para Terrastories como Lugares para histórias.
 
-<app-button :color="true" target="_self" href="/mapping-and-monitoring#mapeo-observations-in-terrastories" text="Get started"></app-button>
+<app-button :color="true" target="_self" href="/mapping-and-monitoring#mapeo-observations-in-terrastories" text="Começar"></app-button>

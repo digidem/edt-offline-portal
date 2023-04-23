@@ -24,4 +24,4 @@ Além de todos os recursos compilados nos guias, existe uma comunidade de usuár
 
 A equipa do Digital Democracy é muito pequena e temos uma capacidade limitada de acompanhar diretamente a implementação do Terrastories fora das nossas parcerias existentes. Em alguns casos, podemos dar o nosso apoio. Para ler mais sobre a forma como trabalhamos com parceiros e diferentes níveis de suporte, leia nosso **protocolo de parcerias**.
 
-<app-button color="rgb(26, 162, 212)" link="https://drive.google.com/file/d/1c9C1-6v1EHKnfrYDsBn3VNu5qS_pUNMC/view" text="Partner protocol"></app-button>
+<app-button color="rgb(26, 162, 212)" link="https://drive.google.com/file/d/1c9C1-6v1EHKnfrYDsBn3VNu5qS_pUNMC/view" text="Protocolo de parceria"></app-button>

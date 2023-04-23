@@ -8,4 +8,4 @@ Terrastories es una aplicación de narración basada en lugares creada para perm
 Este dispositivo viene con Terrastories preinstalado y en funcionamiento.
 
 <app-button :color="true" localurl=":8083" text="Use Terrastories"></app-button>
-<app-button target="_self" link="geo-storytelling#Documentation" text="Read documentation"></app-button>
+<app-button target="_self" link="geo-storytelling#Documentation" text="Lea documentación"></app-button>

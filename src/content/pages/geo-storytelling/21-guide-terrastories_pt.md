@@ -8,4 +8,4 @@ category: documentation
 
 Para começar com Terrastories recomendamos ler o guia **Terrastories: uma ferramenta para narrativas territoriais** escrito para a plataforma do Kit de Ferramentas para Defensores da Terra.
 
-<app-button localurl=":8086/all/https://www.earthdefenderstoolkit.com/toolkit/terrastories-a-tool-for-place-based-storytelling/" text="Read the guide"></app-button>
+<app-button localurl=":8086/all/https://www.earthdefenderstoolkit.com/comunidade/matawai-narrativas-territoriais-no-suriname/?lang=pt-br" text="Leia o guia"></app-button>

@@ -9,4 +9,4 @@ Leia algumas diretrizes para usar a nuvem da comunidade e saiba mais lendo a doc
 
 <app-button :color="true" target="_self" link="/guide-lines" text="Read guide-lines"></app-button>
 
-<app-button localurl=":8086/all/https://docs.earthdefenderstoolkit.com/device-usage/bundled-applications/file-management/storing-locally" text="Read documentation"></app-button>
+<app-button localurl=":8086/all/https://docs.earthdefenderstoolkit.com/device-usage/bundled-applications/file-management/storing-locally" text="Leia documentação"></app-button>

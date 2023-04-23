@@ -8,7 +8,8 @@ By having control over data, communities can decide which data gets disseminated
 =======
 
 To start exploring and contributing to the local cloud **signup for an account** or check the **documentation** to learn more.
->>>>>>> 9cf4def (Update source file index.md)
+
+> > > > > > > 9cf4def (Update source file index.md)
 
 To start exploring and contributing to the local cloud **signup for an account** or check the **documentation** to learn more.
 
