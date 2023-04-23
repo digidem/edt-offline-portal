@@ -14,7 +14,7 @@
         font !== 'inherit' ? font : color ? 'white' : 'black'
       } !important;
       `"
-      :class="!noMargin && 'mt-4 md:mt-4 md:mx-2'"
+      :class="!noMargin && 'my-4 md:mx-2'"
       class="px-6"
     >
       {{ $t(`${text}`) }}
