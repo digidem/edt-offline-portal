@@ -1,11 +1,11 @@
 ---
-title: Store and Sync Local Files
+title: Guardar y sincronizar archivos locales
 image: toolkit.png
 ---
 
-By having control over data, communities can decide which data gets disseminated to the public and what does not. This device has a file browser that can be used even offline, similar to other clouds on Internet.
+Al tener control sobre los datos, las comunidades pueden decidir qué datos se difunden al público y qué no. Este dispositivo tiene un navegador de archivos que puede ser usado incluso offline, similar a otras nubes en Internet.
 
-To start exploring and contributing to the local cloud **signup for an account** or check the **documentation** to learn more.
+Para comenzar a explorar y contribuir a la nube local **registra una cuenta** o revise la **documentación** para obtener más información.
 
 <app-button :color="true" localUrl=":8081/login" text="Login or Signup"></app-button>
 <app-button target="_self" link="storing-sharing#Documentation" text="Read documentation"></app-button>
