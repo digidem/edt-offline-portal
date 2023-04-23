@@ -1,11 +1,11 @@
 ---
-title: A Digital Toolset
+title: Un Conjunto de Herramientas Digitales
 image: mapeo.png
 category: documentation
 ---
 
-Mapeo is a free digital toolset for documenting, monitoring, and mapping many types of data. It was built with and for earth defenders to easily document environmental and human rights information and to collect data about their land.
+Mapeo es un conjunto gratuito de herramientas digitales para documentar, monitorear y mapear muchos tipos de datos. Fue construido con y para los defensores de la tierra para documentar fácilmente la información medioambiental y de los derechos humanos y para recopilar datos sobre sus tierras.
 
-To get started with Mapeo we recommend reading the **Mapeo: Monitor and document the world around you** guide written for the Earth Defenders Toolkit platform.
+Para empezar con Mapeo recomendamos leer la **Mapeo: Monitorea y documenta el mundo que te rodea** guía escrita para la plataforma Earth Defenders Toolkit.
 
 <app-button :color="true" localurl=":8086/all/https://www.earthdefenderstoolkit.com/toolkit/mapeo-monitor-and-document-the-world-around-you/" text="Read the guide"></app-button>
