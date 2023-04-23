@@ -4,6 +4,6 @@ image: filebrowser.webp
 category: documentation
 ---
 
-To dive deeper into the **Local Community Cloud** refer to the full documentation. It's specially important for project coordinators to learn how to properly protect community data through administrator accounts and passwords.
+Para profundizar más en la **Nube Comunitaria Local** consulte toda la documentación. Es especialmente importante que los coordinadores del proyecto aprendan cómo proteger adecuadamente los datos de la comunidad a través de cuentas de administrador y contraseñas.
 
 <app-button :color="true" localurl=":8086/all/https://docs.earthdefenderstoolkit.com/device-usage/bundled-applications/file-management" text="Read documentation"></app-button>
