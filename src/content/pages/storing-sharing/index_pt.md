@@ -4,12 +4,6 @@ image: toolkit.png
 ---
 
 Ao ter controlo sobre os dados, as comunidades podem decidir quais os dados que são divulgados ao público e quais não. Este dispositivo tem um explorador de arquivos que pode ser usado offline, semelhante as nuvens na Internet.
-<<<<<<< HEAD
-=======
-
-Para começar a explorar e contribuir com a nuvem local **crie uma conta** ou consulte a **documentação** para saber mais.
-
-> > > > > > > 9cf4def (Update source file index.md)
 
 Para começar a explorar e contribuir com a nuvem local **crie uma conta** ou consulte a **documentação** para saber mais.
 
