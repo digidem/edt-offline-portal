@@ -14,7 +14,7 @@
         font !== 'inherit' ? font : color ? 'white' : 'black'
       } !important;
       `"
-      :class="!noMargin && 'my-4 md:mx-2'"
+      :class="!nomargin && 'my-4 md:mx-2'"
       class="px-6"
     >
       {{ $t(`${text}`) }}
@@ -60,7 +60,7 @@ export default {
       type: String,
       default: "inherit",
     },
-    noMargin: {
+    nomargin: {
       type: Boolean,
       default: false,
     },
