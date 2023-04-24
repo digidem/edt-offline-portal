@@ -138,11 +138,11 @@ export default {
 }
 
 .nuxt-content p {
-  padding: 15px 0;
+  padding: 25px 0;
 }
 
 .nuxt-content hr {
-  padding: 15px 0;
+  padding: 25px 0;
 }
 
 .content h2 {

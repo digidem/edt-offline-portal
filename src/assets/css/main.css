@@ -1863,7 +1863,7 @@ i {
 }
 
 p {
-  margin: 0 0 2rem 0;
+  /* margin: 0 0 2rem 0; */
 }
 p.major {
   font-size: 1.25rem;
