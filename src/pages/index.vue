@@ -83,7 +83,7 @@ export default {
       return this.$i18n.locales.filter((i) => i.code !== this.$i18n.locale);
     },
   },
-  mounted() {
+  async mounted() {
     // eslint-disable-next-line no-console
     console.log(
       "Browser locale",
@@ -91,6 +91,11 @@ export default {
       " Saved locale",
       this.locale
     );
+    if (this.locale !== "en") {
+      this.index = await getLocalizedIndex(this.$content, this.locale);
+      const categories = await this.$content("blocks").fetch();
+      this.blocks = getParsedBlocks(categories, this.locale, true);
+    }
     // TODO: add endpoint
     // this.auth();
   },
