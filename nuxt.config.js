@@ -1,13 +1,5 @@
 import messages from "./src/messages";
 
-/* TODO: get from content/pages directory */
-const pages = [
-  "/geo-storytelling",
-  "/mapping-and-monitoring",
-  "/storing-sharing",
-  "/guide-lines",
-  "/apps",
-];
 const routerBase = process.env.ROUTER_BASE || "/";
 
 export default {
@@ -15,16 +7,6 @@ export default {
   target: "static", // default is 'server'
   generate: {
     fallback: true,
-    routes: () => {
-      const localizedPages = [];
-      pages.forEach((p) => {
-        localizedPages.push(p);
-        localizedPages.push(`${p}_pt`);
-        localizedPages.push(`${p}_es`);
-        return [...localizedPages];
-      });
-      return [...localizedPages];
-    },
   },
   head: {
     titleTemplate: "Earth Defenders Toolkit",
