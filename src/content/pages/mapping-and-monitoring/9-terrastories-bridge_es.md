@@ -7,7 +7,7 @@ Como Mapeo, [Terrastories](/geo-storytelling) es otra poderosa herramienta de ma
 
 <app-button :color="true" localurl=":8083/home" text="Use Terrastories"></app-button>
 
-<app-button :noMargin="true" localurl=":8086/all/https://docs.earthdefenderstoolkit.com/device-usage/bundled-applications/mapeo-data-hub/mapeo-observations-as-terrastories-places" text="Toolkit documentation"></app-button>
+<app-button :nomargin="true" localurl=":8086/all/https://docs.earthdefenderstoolkit.com/device-usage/bundled-applications/mapeo-data-hub/mapeo-observations-as-terrastories-places" text="Toolkit documentation"></app-button>
 
 Extraiga el archivo zip y el `csv` dentro de él se puede importar en Terrastories como Lugares para las historias. Consulta la documentación de **Terrastories** para aprender más sobre la importación.
 
