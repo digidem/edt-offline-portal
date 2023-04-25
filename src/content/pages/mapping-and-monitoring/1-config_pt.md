@@ -9,6 +9,6 @@ A configuração pode ser personalizada, então fornecemos alguns arquivos de co
 
 Os arquivos de configuração padrão vêm prontos para serem usados para sincronização com o [Centro de Dados do Mapeo](/mapping-and-monitoring#mapeo-data-hub).
 
-<app-button :color="true" localurl=":8087" download="/mapeo/mapeo-workshop-dweb-v1.0.0.mapeosettings" text="Baixar configuração"></app-button>
+<app-button :color="true" localurl=":8087" download="/mapeo/config.mapeosettings" text="Baixar configuração"></app-button>
 
 <app-button localurl=":8086/all/https://docs.mapeo.app/v/espanol/guia-de-referencia-completa/mapeo-mobile-installation-setup/importing-configurations" text="Leia a documentação"></app-button>

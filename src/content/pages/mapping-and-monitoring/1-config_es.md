@@ -9,6 +9,6 @@ La configuración puede ser personalizada, para que proporcionemos algunos archi
 
 Los archivos de configuración predeterminados están listos para ser usados para sincronizar con el [Mapeo Data Hub](/mapping-and-monitoring#mapeo-data-hub).
 
-<app-button :color="true" localurl=":8087" download="/mapeo/mapeo-workshop-dweb-v1.0.0.mapeosettings" text="Descargar config"></app-button>
+<app-button :color="true" localurl=":8087" download="/mapeo/config.mapeosettings" text="Descargar config"></app-button>
 
 <app-button localurl=":8086/all/https://docs.mapeo.app/v/espanol/guia-de-referencia-completa/mapeo-mobile-installation-setup/importing-configurations" text="Lea documentación"></app-button>
