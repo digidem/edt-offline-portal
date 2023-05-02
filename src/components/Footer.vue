@@ -27,7 +27,7 @@
       <br />
       <span class="text-light-800">
         {{ $t("madeWithLove") }}
-        <a href="https://digital-democarcy.org">Digital Democracy</a>
+        <a href="https://digital-democracy.org">Digital Democracy</a>
         {{ $t("withSupport") }}
         <a href="http://earthdefenderstoolkit.com/">Sponsors</a>
         <!-- <img src="~/assets/cc.svg" alt="cc" class="h-20px w-20px" /> -->
