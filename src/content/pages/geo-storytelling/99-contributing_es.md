@@ -12,7 +12,7 @@ Si eres un desarrollador o cómodo usando GitHub, puedes archivar un problema en
 
 ### Acceso al servidor online
 
-Digital Democracy mantiene un servidor Terrastories online en https://our.terrastories.app. Si desea solicitar una cuenta de la comunidad en nuestro servidor, por favor escríbanos a nosotros.
+Con este dispositivo puedes usar Terrastories localmente, pero Digital Democracy mantiene un servidor Terrastories online en https://our.terrastories.app. Si desea solicitar una cuenta de la comunidad en nuestro servidor, por favor escríbanos a nosotros.
 
 ### Apoyar el inicio de un proyecto Terrastories
 
