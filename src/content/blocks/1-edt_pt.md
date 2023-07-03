@@ -1,9 +1,9 @@
 ---
-title: Kit de Ferramentas Offline para Defensores da Terra
-image: oca.jpg
+title: Kakawa
+image: kakawa.jpeg
 ---
 
-Esse é o Kit de Ferramentas Offline para Defensores da Terra. Leia a documentação para aprender sobre todas as funcionalidades deste dispositivo:
+Esse é o Kakawa, um Kit de Ferramentas Offline para Defensores da Terra. Leia a documentação para aprender sobre todas as funcionalidades deste dispositivo:
 
 <app-button :nomargin="true" localurl=":8086/all/https://docs.earthdefenderstoolkit.com/device-usage/first-steps" text="Leia documentação"></app-button>
 

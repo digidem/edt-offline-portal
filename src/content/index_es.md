@@ -7,4 +7,5 @@ background: edt3.png
 ---
 
 Para una mejor experiencia, visita la siguiente URL en tu navegador para empezar:
+
 <copy-url />

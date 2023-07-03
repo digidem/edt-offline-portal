@@ -1,9 +1,9 @@
 ---
-title: Earth Defenders Offline Toolkit
-image: oca.jpg
+title: Kakawa
+image: kakawa.jpeg
 ---
 
-This is the Earth Defenders Offline Toolkit. Read the documentation to learn about all the functionalities of this device:
+This is Kakawa, the Earth Defenders Offline Toolkit. Read the documentation to learn about all the functionalities of this device:
 
 <app-button :nomargin="true" localurl=":8086/all/https://docs.earthdefenderstoolkit.com/device-usage/first-steps" text="Read documentation"></app-button>
 
