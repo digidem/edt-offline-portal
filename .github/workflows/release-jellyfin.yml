@@ -1,0 +1,43 @@
+name: Release Jellyfin
+on:
+  push:
+    branches:
+      - jellyfin
+
+jobs:
+  generate-app:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: jellyfin
+      - name: Generate Nuxt
+        id: generate-nuxt
+        uses: ./.github/actions/generate-nuxt
+        with:
+          router-base: "/"
+  release-docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Release Docker
+        id: release-docker
+        uses: ./.github/actions/release-docker
+        with:
+          docker-repository: communityfirst/edt-offline-portal
+          docker-username: ${{ secrets.DOCKERHUB_USERNAME }}
+          docker-token: ${{ secrets.DOCKERHUB_TOKEN }}
+          image-tag: jellyfin
+  release-github:
+    runs-on: ubuntu-latest
+    needs: [generate-app]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Create Github pre-release
+        uses: ./.github/actions/release-github
+        with:
+          pre-release: true
+          repo_token: "${{ secrets.PAT }}"
