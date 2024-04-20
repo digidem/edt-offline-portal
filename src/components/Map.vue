@@ -38,7 +38,10 @@
 </template>
 
 <script>
-import getLocalUrl from "@/libs/getLocalUrl";
+// import getLocalUrl from "@/libs/getLocalUrl";
+function getLocalUrl() {
+  return "http://192.168.42.1";
+}
 
 export default {
   components: {
@@ -46,14 +49,18 @@ export default {
       if (process.client) {
         return import("vue-mapbox")
           .then((m) => m.MglMarker)
-          .catch();
+          .catch((error) =>
+            console.error("Failed to load MglMarker component:", error)
+          );
       }
     },
     MglPopup: () => {
       if (process.client) {
         return import("vue-mapbox")
           .then((m) => m.MglPopup)
-          .catch();
+          .catch((error) =>
+            console.error("Failed to load MglPopup component:", error)
+          );
       }
     },
   },
@@ -63,7 +70,7 @@ export default {
   },
   data() {
     return {
-      token: process.env.MAPBOX_TOKEN,
+      token: null,
       nativelands: true,
       map: null,
       hoveredStateId: null,
@@ -79,7 +86,7 @@ export default {
     mapStyle() {
       const url = getLocalUrl();
       return (
-        process.env.OFFLINE_MAP_STYLE ||
+        process.env.VUE_APP_OFFLINE_MAP_STYLE ||
         `${url}:8085/styles/terrastories-map/style.json`
       );
     },
@@ -89,6 +96,7 @@ export default {
     accessToken() {
       return (
         this.token ||
+        process.env.VUE_APP_MAPBOX_DEFAULT_TOKEN ||
         "pk.eyJ1IjoibHVhbmRybyIsImEiOiJjanY2djRpdnkwOWdqM3lwZzVuaGIxa3VsIn0.jamcK2t2I1j3TXkUQFIsjQ"
       );
     },
@@ -101,8 +109,7 @@ export default {
       const url = getLocalUrl();
       try {
         const res = await this.$axios(`${url}:3000/mapeo`);
-        // this.hostname = res?.data?.network?.hostname;
-        console.log("RES", res);
+        console.log("res", res);
         this.mapeoObs = res;
       } catch (err) {
         // eslint-disable-next-line no-console
@@ -151,12 +158,11 @@ export default {
       // win.focus();
     },
     getRandomColor() {
-      const letters = "0123456789ABCDEF";
-      let color = "#";
-      for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-      }
-      return color;
+      // This is a placeholder for a more sophisticated color generation logic
+      // that ensures better contrast. You might want to replace this with
+      // an actual implementation that suits your needs.
+      const hue = Math.floor(Math.random() * 360);
+      return `hsl(${hue}, 100%, 50%)`;
     },
   },
 };

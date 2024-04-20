@@ -30,6 +30,7 @@ export default {
   },
   env: {
     edtHost: process.env.EDT_HOST,
+    mapboxDefaultToken: process.env.VUE_APP_MAPBOX_DEFAULT_TOKEN,
   },
   plugins: [{ src: "~/plugins/mapbox.client" }],
   modules: ["@nuxt/content", "@nuxtjs/i18n", "@nuxtjs/axios", "nuxt-clipboard"],
