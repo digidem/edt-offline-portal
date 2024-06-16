@@ -13,3 +13,5 @@ src/static/sw.js
 .nuxt/
 .env
 .eslintcache
+.aider*
+.history
