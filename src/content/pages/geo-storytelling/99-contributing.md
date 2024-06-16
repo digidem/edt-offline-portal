@@ -12,7 +12,7 @@ If you're a developer or comfortable using GitHub, you can file an issue in the 
 
 ### Online server access
 
-Digital Democracy maintains an online Terrastories server at https://our.terrastories.app. If you would like to request a community account on our server, please write to us.
+With this device you can use Terrastories locally, but Digital Democracy also maintains an online Terrastories server at https://our.terrastories.app. If you would like to request a community account on our server, please write to us at: @
 
 ### Support starting a Terrastories project
 
