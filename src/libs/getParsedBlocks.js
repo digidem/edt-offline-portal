@@ -14,10 +14,10 @@ export default (pages, locale, root) => {
     return localizedBlocks;
   } else {
     const blocks = localizedBlocks.filter(
-      (b) => b.category !== "documentation"
+      (b) => b.category !== "documentation",
     );
     const documentation = localizedBlocks.filter(
-      (b) => b.category === "documentation"
+      (b) => b.category === "documentation",
     );
     return {
       blocks,

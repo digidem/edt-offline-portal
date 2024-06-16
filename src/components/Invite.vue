@@ -27,7 +27,7 @@ export default {
       const { hostname, protocol } = window.location;
       try {
         const res = await this.$axios.$get(
-          `${protocol}//${hostname}:8813/ssb.json`
+          `${protocol}//${hostname}:8813/ssb.json`,
         );
         if (res && res.pub && res.pub.invite) this.code = res.pub.invite;
       } catch (err) {

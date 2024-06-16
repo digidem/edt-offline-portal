@@ -75,7 +75,7 @@ export default {
     },
     currentLocale() {
       const current = this.$i18n.locales.filter(
-        (i) => i.code === this.$i18n.locale
+        (i) => i.code === this.$i18n.locale,
       )[0];
       return current?.name;
     },
@@ -89,7 +89,7 @@ export default {
       "Browser locale",
       this.$i18n.getBrowserLocale(),
       " Saved locale",
-      this.locale
+      this.locale,
     );
     if (this.locale !== "en") {
       this.index = await getLocalizedIndex(this.$content, this.locale);
@@ -117,7 +117,7 @@ export default {
             headers: {
               "Content-Type": "application/json",
             },
-          }
+          },
         );
         this.ip = ip;
         this.authenticated = true;

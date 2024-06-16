@@ -74,7 +74,7 @@ export default {
     async getLocaAppManifest() {
       try {
         const res = await this.$axios(
-          `${this.installerUrl}/localAppManifest.json`
+          `${this.installerUrl}/localAppManifest.json`,
         );
         return res.data;
       } catch (err) {

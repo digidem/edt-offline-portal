@@ -27,7 +27,7 @@ export default {
     },
     currentLocale() {
       const current = this.$i18n.locales.filter(
-        (i) => i.code === this.$i18n.locale
+        (i) => i.code === this.$i18n.locale,
       )[0];
       return current?.name;
     },
@@ -65,7 +65,7 @@ export default {
   font-weight: 400;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (width >= 1024px) {
   .nuxt-content-container {
     max-width: 968px;
     margin: 0 auto;
