@@ -12,7 +12,7 @@ runs:
     - name: Download all workflow artifacts
       uses: actions/download-artifact@v3
     - name: Archive Release
-      uses: thedoctor0/zip-release@0.7.0
+      uses: thedoctor0/zip-release@0.7.5
       with:
         type: "tar"
         filename: "portal.tar.gz"
