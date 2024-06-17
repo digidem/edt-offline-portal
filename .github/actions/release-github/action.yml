@@ -11,12 +11,14 @@ runs:
   steps:
     - name: Download all workflow artifacts
       uses: actions/download-artifact@v3
+      with:
+        path: "./"
     - name: Archive Release
-      uses: thedoctor0/zip-release@0.7.3
+      uses: thedoctor0/zip-release@0.7.5
       with:
         type: "tar"
         filename: "portal.tar.gz"
-        path: "nuxt-app/*"
+        path: "/home/runner/work/edt-offline-portal/edt-offline-portal/nuxt-app/*"
     - name: "✏️ Upload imgs and release"
       uses: "marvinpinto/action-automatic-releases@latest"
       with:
