@@ -14,15 +14,11 @@ runs:
       with:
         path: "./"
     - name: Archive Release
-      uses: thedoctor0/zip-release@0.7.5
-      with:
-        type: "tar"
-        filename: "portal.tar.gz"
-        path: "./nuxt-app/*"
+      run: zip -r portal.zip ./nuxt-app/*
     - name: "✏️ Upload imgs and release"
       uses: "marvinpinto/action-automatic-releases@latest"
       with:
         repo_token: "${{ inputs.repo_token }}"
         prerelease: ${{ inputs.pre-release }}
         files: |
-          *.tar.gz
+          portal.zip
