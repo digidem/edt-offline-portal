@@ -53,14 +53,18 @@ import getLocalizedIndex from "@/libs/getLocalizedIndex";
 import getParsedBlocks from "@/libs/getParsedBlocks";
 
 export default {
-  async asyncData({ $content, i18n }) {
+  async asyncData({ $content, i18n, $config }) {
     const locale = i18n.getLocaleCookie();
     const index = await getLocalizedIndex($content, locale);
     const categories = await $content("blocks").fetch();
     const blocks = getParsedBlocks(categories, locale, true);
+    const { trainingMode } = $config;
+    console.log("Training mode", trainingMode);
+
     return {
       index,
       blocks,
+      trainingMode,
     };
   },
   data() {
@@ -90,6 +94,10 @@ export default {
       this.$i18n.getBrowserLocale(),
       " Saved locale",
       this.locale,
+      "config",
+      this.$config,
+      "trainingMode",
+      this.trainingMode,
     );
     if (this.locale !== "en") {
       this.index = await getLocalizedIndex(this.$content, this.locale);
@@ -97,8 +105,7 @@ export default {
       this.blocks = getParsedBlocks(categories, this.locale, true);
     }
     // Check for portal mode and redirect if necessary
-    const { trainingMode } = process.env;
-    if (trainingMode === "mapeo") {
+    if (this.trainingMode) {
       window.location.href = "/training/mapeo";
     }
     // TODO: add endpoint

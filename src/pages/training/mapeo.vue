@@ -1,6 +1,15 @@
 <template>
   <article>
-    <div v-if="installer" class="bg-blue-700 rounded-lg shadow-md text-center">
+    <div v-if="loading" class="text-center py-8">
+      <p>Loading...</p>
+    </div>
+    <div v-if="error" class="text-center py-8 text-red-500">
+      <p>{{ error }}</p>
+    </div>
+    <div
+      v-if="installer && !loading && !error"
+      class="bg-blue-700 rounded-lg shadow-md text-center"
+    >
       <div class="flex items-center justify-center py-4">
         <img
           src="~/assets/images/mapeo-map.png"
@@ -78,6 +87,8 @@ export default {
     return {
       installer: null,
       port: ":8087",
+      loading: true,
+      error: null,
     };
   },
   computed: {
@@ -88,12 +99,18 @@ export default {
     },
   },
   async mounted() {
-    const apps = await this.getLocaAppManifest();
-    const mapeo = apps.filter((i) => i.slug === "mapeo")[0];
-    const mapeoInstaller = mapeo?.localInstallers.filter(
-      (i) => i.platform === "android",
-    )[0];
-    this.installer = mapeoInstaller;
+    try {
+      const apps = await this.getLocaAppManifest();
+      const mapeo = apps.filter((i) => i.slug === "mapeo")[0];
+      const mapeoInstaller = mapeo?.localInstallers.filter(
+        (i) => i.platform === "android",
+      )[0];
+      this.installer = mapeoInstaller;
+    } catch (err) {
+      this.error = "Failed to load data. Please try again later.";
+    } finally {
+      this.loading = false;
+    }
   },
   methods: {
     async getLocaAppManifest() {
@@ -105,6 +122,7 @@ export default {
       } catch (err) {
         // eslint-disable-next-line no-console
         console.error(err);
+        throw err;
       }
     },
   },

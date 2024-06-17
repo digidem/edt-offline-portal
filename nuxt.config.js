@@ -16,9 +16,11 @@ export default {
       { hid: "description", name: "description", content: "Meta description" },
     ],
   },
+  publicRuntimeConfig: {
+    trainingMode: process.env.TRAINING,
+  },
   env: {
     edtHost: process.env.EDT_HOST,
-    trainingMode: process.env.TRAINING,
   },
   modules: ["@nuxt/content", "@nuxtjs/i18n", "@nuxtjs/axios", "nuxt-clipboard"],
   i18n: {
@@ -67,7 +69,7 @@ export default {
   ],
   components: true,
   build: {
-    extend(config, ctx) {}, // blah blah
+    extend(config, ctx) {},
   },
   router: {
     base: routerBase,

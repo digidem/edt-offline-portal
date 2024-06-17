@@ -27,12 +27,21 @@
       <br />
       <span class="text-light-800">
         {{ $t("madeWithLove") }}
-        <a href="https://digital-democracy.org">Digital Democracy</a>
+        <a
+          href="https://digital-democracy.org"
+          class="no-underline text-white font-bold"
+          >Digital Democracy</a
+        >
         {{ $t("withSupport") }}
-        <a href="http://earthdefenderstoolkit.com/">Sponsors</a>
+        <a
+          href="http://earthdefenderstoolkit.com/"
+          class="no-underline text-white font-bold"
+          >Sponsors</a
+        >
         <!-- <img src="~/assets/cc.svg" alt="cc" class="h-20px w-20px" /> -->
         {{ new Date().getFullYear() }}
       </span>
+      <div v-if="mode" class="text-red-500">Training mode: {{ mode }}</div>
     </div>
   </div>
 </template>
@@ -43,6 +52,7 @@ export default {
   data() {
     return {
       defaultStyle: null,
+      mode: this.$config.trainingMode,
     };
   },
   computed: {
