@@ -40,5 +40,5 @@ jobs:
       - name: Create Github release
         uses: ./.github/actions/release-github
         with:
-          repo_token: "${{ secrets.PAT }}"
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
           pre-release: false
