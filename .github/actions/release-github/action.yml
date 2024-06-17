@@ -15,6 +15,7 @@ runs:
         path: "./"
     - name: Archive Release
       run: zip -r portal.zip ./nuxt-app/*
+      shell: bash
     - name: "✏️ Upload imgs and release"
       uses: "marvinpinto/action-automatic-releases@latest"
       with:
