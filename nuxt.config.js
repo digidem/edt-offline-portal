@@ -18,6 +18,7 @@ export default {
   },
   env: {
     edtHost: process.env.EDT_HOST,
+    trainingMode: process.env.TRAINING,
   },
   modules: ["@nuxt/content", "@nuxtjs/i18n", "@nuxtjs/axios", "nuxt-clipboard"],
   i18n: {

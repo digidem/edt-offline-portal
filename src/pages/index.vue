@@ -96,6 +96,11 @@ export default {
       const categories = await this.$content("blocks").fetch();
       this.blocks = getParsedBlocks(categories, this.locale, true);
     }
+    // Check for portal mode and redirect if necessary
+    const { trainingMode } = process.env;
+    if (trainingMode === "mapeo") {
+      window.location.href = "/training/mapeo";
+    }
     // TODO: add endpoint
     // this.auth();
   },
