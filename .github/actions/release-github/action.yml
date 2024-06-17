@@ -18,7 +18,7 @@ runs:
       with:
         type: "tar"
         filename: "portal.tar.gz"
-        path: "/home/runner/work/edt-offline-portal/edt-offline-portal/nuxt-app/*"
+        path: "./nuxt-app/*"
     - name: "✏️ Upload imgs and release"
       uses: "marvinpinto/action-automatic-releases@latest"
       with:
